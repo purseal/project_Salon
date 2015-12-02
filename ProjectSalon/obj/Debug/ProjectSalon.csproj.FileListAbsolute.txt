@@ -1,0 +1,8 @@
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\bin\Debug\ProjectSalon.exe.config
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\bin\Debug\ProjectSalon.exe
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\bin\Debug\ProjectSalon.pdb
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.csprojResolveAssemblyReference.cache
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.Properties.Resources.resources
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.csproj.GenerateResource.Cache
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.exe
+c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.pdb
