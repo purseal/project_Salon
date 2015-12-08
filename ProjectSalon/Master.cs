@@ -13,6 +13,7 @@ namespace ProjectSalon
         String id;
         Salon[] employerList = new Salon[3];
         List<Service> serviceList;
+        List<Record> recordList;
 
         public Master(String name, int salary, String id)
         {

@@ -6,3 +6,6 @@ c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon
 c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.csproj.GenerateResource.Cache
 c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.exe
 c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon\obj\Debug\ProjectSalon.pdb
+C:\Users\Gennady\Documents\Visual Studio 2015\Projects\ProjectSalon\project_Salon\ProjectSalon\bin\Debug\ProjectSalon.exe.config
+C:\Users\Gennady\Documents\Visual Studio 2015\Projects\ProjectSalon\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.exe
+C:\Users\Gennady\Documents\Visual Studio 2015\Projects\ProjectSalon\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.pdb

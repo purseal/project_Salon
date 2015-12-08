@@ -12,7 +12,7 @@ namespace ProjectSalon
         public int price;
         public int duration;
         String id;
-        List<Salon> salonList;
+        List<Record> recordList;
         List<Master> masterList;
 
         public Service(String name, int price, int duration, String id)

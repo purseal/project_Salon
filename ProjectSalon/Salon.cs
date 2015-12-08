@@ -12,8 +12,7 @@ namespace ProjectSalon
         public String name;
         String id;
         List<Master> masterList;
-        List<Service> serviceList;
-        List<Client> clientList;
+        List<Record> recordList;
 
         public Salon(String address, String name, String id)
         {

@@ -11,7 +11,7 @@ namespace ProjectSalon
     {
         public String name;
         public DateTime birth;
-        List<Salon> salons;
+        List<Record> records;
 
         public Client(String name, DateTime birth)
         {
