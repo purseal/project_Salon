@@ -9,3 +9,12 @@ c:\users\gennady\documents\visual studio 2015\Projects\ProjectSalon\ProjectSalon
 C:\Users\Gennady\Documents\Visual Studio 2015\Projects\ProjectSalon\project_Salon\ProjectSalon\bin\Debug\ProjectSalon.exe.config
 C:\Users\Gennady\Documents\Visual Studio 2015\Projects\ProjectSalon\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.exe
 C:\Users\Gennady\Documents\Visual Studio 2015\Projects\ProjectSalon\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.pdb
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\bin\Debug\ProjectSalon.exe.config
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\obj\Debug\ProjectSalon.exe
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\obj\Debug\ProjectSalon.pdb
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\bin\Debug\ProjectSalon.exe
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\bin\Debug\ProjectSalon.pdb
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\obj\Debug\ProjectSalon.csprojResolveAssemblyReference.cache
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\obj\Debug\ProjectSalon.Properties.Resources.resources
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\obj\Debug\ProjectSalon.csproj.GenerateResource.Cache
+C:\Users\admin\Downloads\project_Salon-0.2.0\project_Salon-0.2.0\ProjectSalon\obj\Debug\ProjectSalon.MainForm.resources

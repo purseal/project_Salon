@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.2/Umlnotation" xmi:id="_sWMe4Y0kEeWs5Z__Uhgw-Q" name="Диаграмма классов итр1">
+  <eAnnotations xmi:id="_sWMe4o0kEeWs5Z__Uhgw-Q" source="uml2.diagrams" references="_sWMe440kEeWs5Z__Uhgw-Q">
+    <contents xmi:type="notation:Diagram" xmi:id="_sWMe440kEeWs5Z__Uhgw-Q" type="Class" name="Main">
+      <children xmi:id="_sWMe9I0kEeWs5Z__Uhgw-Q" element="_sWMf740kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_sWMe9Y0kEeWs5Z__Uhgw-Q" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_sWMe9o0kEeWs5Z__Uhgw-Q" width="1320" height="1320"/>
+        </children>
+        <children xmi:id="_sWMe940kEeWs5Z__Uhgw-Q" type="Stereotype"/>
+        <children xmi:id="_sWMe-I0kEeWs5Z__Uhgw-Q" type="Name"/>
+        <children xmi:id="_sWMe-Y0kEeWs5Z__Uhgw-Q" type="Parent"/>
+        <children xmi:id="_sWMe-o0kEeWs5Z__Uhgw-Q" type="AttributeCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMe-40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMe_I0kEeWs5Z__Uhgw-Q" type="OperationCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMe_Y0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMe_o0kEeWs5Z__Uhgw-Q" visible="false" type="SignalCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMe_40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfAI0kEeWs5Z__Uhgw-Q" visible="false" type="StructureCompartment">
+          <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_sWMfAY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sWMfAo0kEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Label"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sWMfA40kEeWs5Z__Uhgw-Q" x="396" y="5280"/>
+      </children>
+      <children xmi:id="_sWMfBI0kEeWs5Z__Uhgw-Q" element="_sWMgBo0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_sWMfBY0kEeWs5Z__Uhgw-Q" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_sWMfBo0kEeWs5Z__Uhgw-Q" width="1320" height="1320"/>
+        </children>
+        <children xmi:id="_sWMfB40kEeWs5Z__Uhgw-Q" type="Stereotype"/>
+        <children xmi:id="_sWMfCI0kEeWs5Z__Uhgw-Q" type="Name"/>
+        <children xmi:id="_sWMfCY0kEeWs5Z__Uhgw-Q" type="Parent"/>
+        <children xmi:id="_sWMfCo0kEeWs5Z__Uhgw-Q" type="AttributeCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfC40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfDI0kEeWs5Z__Uhgw-Q" type="OperationCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfDY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfDo0kEeWs5Z__Uhgw-Q" visible="false" type="SignalCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfD40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfEI0kEeWs5Z__Uhgw-Q" visible="false" type="StructureCompartment">
+          <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_sWMfEY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sWMfEo0kEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Label"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sWMfE40kEeWs5Z__Uhgw-Q" x="10560" y="2112"/>
+      </children>
+      <children xmi:id="_sWMfFI0kEeWs5Z__Uhgw-Q" element="_sWMgIY0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_sWMfFY0kEeWs5Z__Uhgw-Q" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_sWMfFo0kEeWs5Z__Uhgw-Q" width="1320" height="1320"/>
+        </children>
+        <children xmi:id="_sWMfF40kEeWs5Z__Uhgw-Q" type="Stereotype"/>
+        <children xmi:id="_sWMfGI0kEeWs5Z__Uhgw-Q" type="Name"/>
+        <children xmi:id="_sWMfGY0kEeWs5Z__Uhgw-Q" type="Parent"/>
+        <children xmi:id="_sWMfGo0kEeWs5Z__Uhgw-Q" type="AttributeCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfG40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfHI0kEeWs5Z__Uhgw-Q" type="OperationCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfHY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfHo0kEeWs5Z__Uhgw-Q" visible="false" type="SignalCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfH40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfII0kEeWs5Z__Uhgw-Q" visible="false" type="StructureCompartment">
+          <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_sWMfIY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sWMfIo0kEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Label"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sWMfI40kEeWs5Z__Uhgw-Q" x="18612" y="6600"/>
+      </children>
+      <children xmi:id="_sWMfJI0kEeWs5Z__Uhgw-Q" element="_sWMgMY0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_sWMfJY0kEeWs5Z__Uhgw-Q" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_sWMfJo0kEeWs5Z__Uhgw-Q" width="1320" height="1320"/>
+        </children>
+        <children xmi:id="_sWMfJ40kEeWs5Z__Uhgw-Q" type="Stereotype"/>
+        <children xmi:id="_sWMfKI0kEeWs5Z__Uhgw-Q" type="Name"/>
+        <children xmi:id="_sWMfKY0kEeWs5Z__Uhgw-Q" type="Parent"/>
+        <children xmi:id="_sWMfKo0kEeWs5Z__Uhgw-Q" type="AttributeCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfK40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfLI0kEeWs5Z__Uhgw-Q" type="OperationCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfLY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfLo0kEeWs5Z__Uhgw-Q" visible="false" type="SignalCompartment">
+          <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfL40kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <children xmi:id="_sWMfMI0kEeWs5Z__Uhgw-Q" visible="false" type="StructureCompartment">
+          <styles xmi:type="umlnotation:UMLShapeCompartmentStyle" xmi:id="_sWMfMY0kEeWs5Z__Uhgw-Q"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLShapeStyle" xmi:id="_sWMfMo0kEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Label"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sWMfM40kEeWs5Z__Uhgw-Q" x="10296" y="8976"/>
+      </children>
+      <styles xmi:type="umlnotation:UMLDiagramStyle" xmi:id="_sWMfRI0kEeWs5Z__Uhgw-Q"/>
+      <edges xmi:id="_sWMfaI0kEeWs5Z__Uhgw-Q" element="_sWMgfY0kEeWs5Z__Uhgw-Q" source="_sWMfBI0kEeWs5Z__Uhgw-Q" target="_sWMe9I0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_sWMfaY0kEeWs5Z__Uhgw-Q" type="NameLabel">
+          <children xmi:id="_sWMfao0kEeWs5Z__Uhgw-Q" type="Stereotype"/>
+          <children xmi:id="_sWMfa40kEeWs5Z__Uhgw-Q" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sWMfbI0kEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_sWMfbY0kEeWs5Z__Uhgw-Q" type="ToMultiplicityLabel" element="_sWMf_Y0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfbo0kEeWs5Z__Uhgw-Q" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfb40kEeWs5Z__Uhgw-Q" y="396"/>
+        </children>
+        <children xmi:id="_sWMfcI0kEeWs5Z__Uhgw-Q" visible="false" type="ToRoleLabel" element="_sWMf_Y0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfcY0kEeWs5Z__Uhgw-Q" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfco0kEeWs5Z__Uhgw-Q" y="-397"/>
+        </children>
+        <children xmi:id="_sWMfc40kEeWs5Z__Uhgw-Q" type="FromMultiplicityLabel" element="_sWMgG40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfdI0kEeWs5Z__Uhgw-Q" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfdY0kEeWs5Z__Uhgw-Q" y="396"/>
+        </children>
+        <children xmi:id="_sWMfdo0kEeWs5Z__Uhgw-Q" visible="false" type="FromRoleLabel" element="_sWMgG40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfd40kEeWs5Z__Uhgw-Q" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfeI0kEeWs5Z__Uhgw-Q" y="-397"/>
+        </children>
+        <children xmi:id="_sWMfeY0kEeWs5Z__Uhgw-Q" type="ToQualifierLabel" element="_sWMf_Y0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfeo0kEeWs5Z__Uhgw-Q" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfe40kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMffI0kEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_sWMffY0kEeWs5Z__Uhgw-Q" type="FromQualifierLabel" element="_sWMgG40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMffo0kEeWs5Z__Uhgw-Q" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMff40kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfgI0kEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_sWMfgY0kEeWs5Z__Uhgw-Q" type="ToConstraintLabel" element="_sWMf_Y0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfgo0kEeWs5Z__Uhgw-Q" type="ToConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfg40kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfhI0kEeWs5Z__Uhgw-Q" y="1058"/>
+        </children>
+        <children xmi:id="_sWMfhY0kEeWs5Z__Uhgw-Q" type="FromConstraintLabel" element="_sWMgG40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfho0kEeWs5Z__Uhgw-Q" type="FromConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfh40kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfiI0kEeWs5Z__Uhgw-Q" y="1058"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sWMfiY0kEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sWMfio0kEeWs5Z__Uhgw-Q" points="[-114, 22, 260, -39]$[-260, 59, 114, -2]"/>
+      </edges>
+      <edges xmi:id="_sWMfi40kEeWs5Z__Uhgw-Q" element="_sWMggY0kEeWs5Z__Uhgw-Q" source="_sWMe9I0kEeWs5Z__Uhgw-Q" target="_sWMfJI0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_sWMfjI0kEeWs5Z__Uhgw-Q" type="NameLabel">
+          <children xmi:id="_sWMfjY0kEeWs5Z__Uhgw-Q" type="Stereotype"/>
+          <children xmi:id="_sWMfjo0kEeWs5Z__Uhgw-Q" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sWMfj40kEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_sWMfkI0kEeWs5Z__Uhgw-Q" type="ToMultiplicityLabel" element="_sWMgOY0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfkY0kEeWs5Z__Uhgw-Q" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfko0kEeWs5Z__Uhgw-Q" y="396"/>
+        </children>
+        <children xmi:id="_sWMfk40kEeWs5Z__Uhgw-Q" visible="false" type="ToRoleLabel" element="_sWMgOY0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMflI0kEeWs5Z__Uhgw-Q" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMflY0kEeWs5Z__Uhgw-Q" y="-397"/>
+        </children>
+        <children xmi:id="_sWMflo0kEeWs5Z__Uhgw-Q" type="FromMultiplicityLabel" element="_sWMgA40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfl40kEeWs5Z__Uhgw-Q" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfmI0kEeWs5Z__Uhgw-Q" y="396"/>
+        </children>
+        <children xmi:id="_sWMfmY0kEeWs5Z__Uhgw-Q" visible="false" type="FromRoleLabel" element="_sWMgA40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfmo0kEeWs5Z__Uhgw-Q" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfm40kEeWs5Z__Uhgw-Q" x="-554" y="-21"/>
+        </children>
+        <children xmi:id="_sWMfnI0kEeWs5Z__Uhgw-Q" type="ToQualifierLabel" element="_sWMgOY0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfnY0kEeWs5Z__Uhgw-Q" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfno0kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfn40kEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_sWMfoI0kEeWs5Z__Uhgw-Q" type="FromQualifierLabel" element="_sWMgA40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfoY0kEeWs5Z__Uhgw-Q" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfoo0kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfo40kEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_sWMfpI0kEeWs5Z__Uhgw-Q" type="ToConstraintLabel" element="_sWMgOY0kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfpY0kEeWs5Z__Uhgw-Q" type="ToConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfpo0kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfp40kEeWs5Z__Uhgw-Q" y="1058"/>
+        </children>
+        <children xmi:id="_sWMfqI0kEeWs5Z__Uhgw-Q" type="FromConstraintLabel" element="_sWMgA40kEeWs5Z__Uhgw-Q">
+          <children xmi:id="_sWMfqY0kEeWs5Z__Uhgw-Q" type="FromConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_sWMfqo0kEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_sWMfq40kEeWs5Z__Uhgw-Q" y="1058"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_sWMfrI0kEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sWMfrY0kEeWs5Z__Uhgw-Q" points="[66, 49, -348, -171]$[300, 243, -114, 23]"/>
+        <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sWMfro0kEeWs5Z__Uhgw-Q" id="(0.6484907,0.97393274)"/>
+        <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sWMfr40kEeWs5Z__Uhgw-Q" id="(0.0040571243,0.40876463)"/>
+      </edges>
+      <edges xmi:id="_BfoVE40lEeWs5Z__Uhgw-Q" element="_BfekEI0lEeWs5Z__Uhgw-Q" source="_sWMfFI0kEeWs5Z__Uhgw-Q" target="_sWMfBI0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_BfoVFo0lEeWs5Z__Uhgw-Q" type="NameLabel">
+          <children xmi:id="_BfoVGI0lEeWs5Z__Uhgw-Q" type="Stereotype"/>
+          <children xmi:id="_BfoVGY0lEeWs5Z__Uhgw-Q" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfoVF40lEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_BfoVGo0lEeWs5Z__Uhgw-Q" type="ToMultiplicityLabel" element="_BfoVEI0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVHI0lEeWs5Z__Uhgw-Q" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVG40lEeWs5Z__Uhgw-Q" y="396"/>
+        </children>
+        <children xmi:id="_BfoVHY0lEeWs5Z__Uhgw-Q" visible="false" type="ToRoleLabel" element="_BfoVEI0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVH40lEeWs5Z__Uhgw-Q" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVHo0lEeWs5Z__Uhgw-Q" y="-397"/>
+        </children>
+        <children xmi:id="_BfoVII0lEeWs5Z__Uhgw-Q" type="FromMultiplicityLabel" element="_BfekEY0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVIo0lEeWs5Z__Uhgw-Q" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVIY0lEeWs5Z__Uhgw-Q" y="396"/>
+        </children>
+        <children xmi:id="_BfoVI40lEeWs5Z__Uhgw-Q" visible="false" type="FromRoleLabel" element="_BfekEY0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVJY0lEeWs5Z__Uhgw-Q" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVJI0lEeWs5Z__Uhgw-Q" y="-397"/>
+        </children>
+        <children xmi:id="_BfoVJo0lEeWs5Z__Uhgw-Q" type="ToQualifierLabel" element="_BfoVEI0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVKI0lEeWs5Z__Uhgw-Q" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BfoVKY0lEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVJ40lEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_BfoVKo0lEeWs5Z__Uhgw-Q" type="FromQualifierLabel" element="_BfekEY0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVLI0lEeWs5Z__Uhgw-Q" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BfoVLY0lEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVK40lEeWs5Z__Uhgw-Q" y="-186"/>
+        </children>
+        <children xmi:id="_BfoVLo0lEeWs5Z__Uhgw-Q" type="ToConstraintLabel" element="_BfoVEI0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVMI0lEeWs5Z__Uhgw-Q" type="ToConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BfoVMY0lEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVL40lEeWs5Z__Uhgw-Q" y="1058"/>
+        </children>
+        <children xmi:id="_BfoVMo0lEeWs5Z__Uhgw-Q" type="FromConstraintLabel" element="_BfekEY0lEeWs5Z__Uhgw-Q">
+          <children xmi:id="_BfoVNI0lEeWs5Z__Uhgw-Q" type="FromConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_BfoVNY0lEeWs5Z__Uhgw-Q"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_BfoVM40lEeWs5Z__Uhgw-Q" y="1058"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_BfoVFI0lEeWs5Z__Uhgw-Q" fontName="Segoe UI" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BfoVFY0lEeWs5Z__Uhgw-Q" points="[-73, -31, 175, 82]$[-202, -80, 46, 33]"/>
+      </edges>
+      <edges xmi:id="_mwXmYJN1EeWG4LUn3LvqNA" element="_mwN1YJN1EeWG4LUn3LvqNA" source="_sWMfBI0kEeWs5Z__Uhgw-Q" target="_sWMfJI0kEeWs5Z__Uhgw-Q">
+        <children xmi:id="_mwXmY5N1EeWG4LUn3LvqNA" type="NameLabel">
+          <children xmi:id="_mwXmZZN1EeWG4LUn3LvqNA" type="Stereotype"/>
+          <children xmi:id="_mwXmZpN1EeWG4LUn3LvqNA" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mwXmZJN1EeWG4LUn3LvqNA" y="-186"/>
+        </children>
+        <children xmi:id="_mwXmZ5N1EeWG4LUn3LvqNA" type="ToMultiplicityLabel" element="_mwN1ZJN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmaZN1EeWG4LUn3LvqNA" type="ToMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXmaJN1EeWG4LUn3LvqNA" y="396"/>
+        </children>
+        <children xmi:id="_mwXmapN1EeWG4LUn3LvqNA" visible="false" type="ToRoleLabel" element="_mwN1ZJN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmbJN1EeWG4LUn3LvqNA" type="ToRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXma5N1EeWG4LUn3LvqNA" y="-397"/>
+        </children>
+        <children xmi:id="_mwXmbZN1EeWG4LUn3LvqNA" type="FromMultiplicityLabel" element="_mwN1YZN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmb5N1EeWG4LUn3LvqNA" type="FromMultiplicity"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXmbpN1EeWG4LUn3LvqNA" y="396"/>
+        </children>
+        <children xmi:id="_mwXmcJN1EeWG4LUn3LvqNA" visible="false" type="FromRoleLabel" element="_mwN1YZN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmcpN1EeWG4LUn3LvqNA" type="FromRole"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXmcZN1EeWG4LUn3LvqNA" y="-397"/>
+        </children>
+        <children xmi:id="_mwXmc5N1EeWG4LUn3LvqNA" type="ToQualifierLabel" element="_mwN1ZJN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmdZN1EeWG4LUn3LvqNA" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_mwXmdpN1EeWG4LUn3LvqNA"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXmdJN1EeWG4LUn3LvqNA" y="-186"/>
+        </children>
+        <children xmi:id="_mwXmd5N1EeWG4LUn3LvqNA" type="FromQualifierLabel" element="_mwN1YZN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmeZN1EeWG4LUn3LvqNA" type="QualifierCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_mwXmepN1EeWG4LUn3LvqNA"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXmeJN1EeWG4LUn3LvqNA" y="-186"/>
+        </children>
+        <children xmi:id="_mwXme5N1EeWG4LUn3LvqNA" type="ToConstraintLabel" element="_mwN1ZJN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwXmfZN1EeWG4LUn3LvqNA" type="ToConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_mwXmfpN1EeWG4LUn3LvqNA"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXmfJN1EeWG4LUn3LvqNA" y="1058"/>
+        </children>
+        <children xmi:id="_mwgwUJN1EeWG4LUn3LvqNA" type="FromConstraintLabel" element="_mwN1YZN1EeWG4LUn3LvqNA">
+          <children xmi:id="_mwgwUpN1EeWG4LUn3LvqNA" type="FromConstraintCompartment">
+            <styles xmi:type="umlnotation:UMLListCompartmentStyle" xmi:id="_mwgwU5N1EeWG4LUn3LvqNA"/>
+          </children>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_mwgwUZN1EeWG4LUn3LvqNA" y="1058"/>
+        </children>
+        <styles xmi:type="umlnotation:UMLConnectorStyle" xmi:id="_mwXmYZN1EeWG4LUn3LvqNA" fontName="Segoe UI" showStereotype="Text"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mwXmYpN1EeWG4LUn3LvqNA" points="[-3, 33, 7, -243]$[-59, 325, -49, 49]"/>
+      </edges>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:id="_sWMf6I0kEeWs5Z__Uhgw-Q">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sWMf6Y0kEeWs5Z__Uhgw-Q" name="Сеть салонов">
+    <ownedAttribute xmi:id="_sWMf6o0kEeWs5Z__Uhgw-Q" name="Название" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf640kEeWs5Z__Uhgw-Q" name="Владелец" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf7I0kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" aggregation="shared" association="_sWMgPI0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMf7Y0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMf7o0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sWMf740kEeWs5Z__Uhgw-Q" name="Мастер">
+    <ownedAttribute xmi:id="_sWMf8I0kEeWs5Z__Uhgw-Q" name="ФИО" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf8o0kEeWs5Z__Uhgw-Q" name="Зарплата" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf840kEeWs5Z__Uhgw-Q" name="Идентификационный номер" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf9I0kEeWs5Z__Uhgw-Q" name="запись" visibility="private" type="_sWMgYo0kEeWs5Z__Uhgw-Q" association="_sWMgbo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMf9Y0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMf9o0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf940kEeWs5Z__Uhgw-Q" name="услуга" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_sWMgTo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMf-I0kEeWs5Z__Uhgw-Q" value="10"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMf-Y0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf-o0kEeWs5Z__Uhgw-Q" name="услуга2" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_sWMgfI0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMf-40kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMf_I0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMf_Y0kEeWs5Z__Uhgw-Q" name="работодатель" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgfY0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMf_o0kEeWs5Z__Uhgw-Q" value="3"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMf_40kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgAI0kEeWs5Z__Uhgw-Q" name="структура" visibility="private" type="_sWMgYo0kEeWs5Z__Uhgw-Q" association="_sWMgf40kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgAY0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgAo0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgA40kEeWs5Z__Uhgw-Q" name="действие" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_sWMggY0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgBI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgBY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sWMgBo0kEeWs5Z__Uhgw-Q" name="Салон">
+    <ownedAttribute xmi:id="_sWMgB40kEeWs5Z__Uhgw-Q" name="сеть салонов" visibility="private" type="_sWMf6Y0kEeWs5Z__Uhgw-Q" association="_sWMgPI0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgCI0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgCY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgCo0kEeWs5Z__Uhgw-Q" name="Адрес" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgC40kEeWs5Z__Uhgw-Q" name="Идентификационный номер" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgDI0kEeWs5Z__Uhgw-Q" name="услуга" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" aggregation="shared" association="_sWMgVo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgDY0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgDo0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgD40kEeWs5Z__Uhgw-Q" name="мастер" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMgWo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgEI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgEY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgEo0kEeWs5Z__Uhgw-Q" name="услуга2" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_sWMgXo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgE40kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgFI0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgFY0kEeWs5Z__Uhgw-Q" name="запись" visibility="private" type="_sWMgYo0kEeWs5Z__Uhgw-Q" association="_sWMgdo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgFo0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgF40kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgGI0kEeWs5Z__Uhgw-Q" name="клиент" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q" association="_sWMgSo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgGY0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgGo0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgG40kEeWs5Z__Uhgw-Q" name="работник" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMgfY0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgHI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgHY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgHo0kEeWs5Z__Uhgw-Q" name="посетитель" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q" association="_sWMgfo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgH40kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgII0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_AMKiEY0lEeWs5Z__Uhgw-Q" name="услуга3" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_AMKiEI0lEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AMKiE40lEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AMKiEo0lEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_BfoVEI0lEeWs5Z__Uhgw-Q" name="клиент2" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q" association="_BfekEI0lEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BfoVEo0lEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BfoVEY0lEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_mwN1YZN1EeWG4LUn3LvqNA" name="услуга4" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_mwN1YJN1EeWG4LUn3LvqNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mwN1Y5N1EeWG4LUn3LvqNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mwN1YpN1EeWG4LUn3LvqNA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sWMgIY0kEeWs5Z__Uhgw-Q" name="Клиент">
+    <ownedAttribute xmi:id="_sWMgIo0kEeWs5Z__Uhgw-Q" name="ФИО" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgJI0kEeWs5Z__Uhgw-Q" name="Дата рождения" visibility="public" type="_sWMgPo0kEeWs5Z__Uhgw-Q"/>
+    <ownedAttribute xmi:id="_sWMgJY0kEeWs5Z__Uhgw-Q" name="запись" visibility="private" type="_sWMgYo0kEeWs5Z__Uhgw-Q" association="_sWMgco0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgJo0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgJ40kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgKI0kEeWs5Z__Uhgw-Q" name="услуга" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" association="_sWMgUo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgKY0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgKo0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgK40kEeWs5Z__Uhgw-Q" name="заведение" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgfo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgLI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgLY0kEeWs5Z__Uhgw-Q"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgLo0kEeWs5Z__Uhgw-Q" name="структура" visibility="private" type="_sWMgYo0kEeWs5Z__Uhgw-Q" association="_sWMggI0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgL40kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgMI0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_BfekEY0lEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_BfekEI0lEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BfekE40lEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BfekEo0lEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sWMgMY0kEeWs5Z__Uhgw-Q" name="Услуга">
+    <ownedAttribute xmi:id="_sWMgMo0kEeWs5Z__Uhgw-Q" name="Название" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgM40kEeWs5Z__Uhgw-Q" name="Цена" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgNI0kEeWs5Z__Uhgw-Q" name="Длительность выполнения" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgNY0kEeWs5Z__Uhgw-Q" name="Идентификационный номер" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgNo0kEeWs5Z__Uhgw-Q" name="мастер" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMgfI0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgN40kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgOI0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgOY0kEeWs5Z__Uhgw-Q" name="субъект действия" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMggY0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgOo0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgO40kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_AMKiFI0lEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_AMKiEI0lEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AMKiFo0lEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AMKiFY0lEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_mwN1ZJN1EeWG4LUn3LvqNA" name="салон2" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_mwN1YJN1EeWG4LUn3LvqNA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mwN1ZpN1EeWG4LUn3LvqNA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mwN1ZZN1EeWG4LUn3LvqNA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgPI0kEeWs5Z__Uhgw-Q" name="входит в состав" memberEnd="_sWMf7I0kEeWs5Z__Uhgw-Q _sWMgB40kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_sWMgPY0kEeWs5Z__Uhgw-Q" name="PrimitiveTypes">
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sWMgPo0kEeWs5Z__Uhgw-Q" name="Date"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sWMgP40kEeWs5Z__Uhgw-Q" name="enum"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sWMgQI0kEeWs5Z__Uhgw-Q" name="Статус"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sWMgQY0kEeWs5Z__Uhgw-Q" name="Status"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sWMgQo0kEeWs5Z__Uhgw-Q" name="ТипСтатуса"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_B6yVII0nEeWs5Z__Uhgw-Q" name="List&lt;Мастер>"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_MPrFUI0nEeWs5Z__Uhgw-Q" name="List&lt;Услуга>"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_QzfOwI0nEeWs5Z__Uhgw-Q" name="List&lt;Клиент>"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_WQ22YI0nEeWs5Z__Uhgw-Q" name="List&lt;Салон>"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgQ40kEeWs5Z__Uhgw-Q" name="работает" memberEnd="_sWMgR40kEeWs5Z__Uhgw-Q _sWMgRI0kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgRI0kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgQ40kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgRY0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgRo0kEeWs5Z__Uhgw-Q"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_sWMgR40kEeWs5Z__Uhgw-Q" name="мастер" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" aggregation="shared" association="_sWMgQ40kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgSI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgSY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgSo0kEeWs5Z__Uhgw-Q" name="посещение" memberEnd="_sWMgGI0kEeWs5Z__Uhgw-Q _sWMgS40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgS40kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgSo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgTI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgTY0kEeWs5Z__Uhgw-Q"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgTo0kEeWs5Z__Uhgw-Q" name="оказание" memberEnd="_sWMf940kEeWs5Z__Uhgw-Q _sWMgT40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgT40kEeWs5Z__Uhgw-Q" name="мастер" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMgTo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgUI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgUY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgUo0kEeWs5Z__Uhgw-Q" name="пользование" memberEnd="_sWMgU40kEeWs5Z__Uhgw-Q _sWMgKI0kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgU40kEeWs5Z__Uhgw-Q" name="клиент" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q" association="_sWMgUo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgVI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgVY0kEeWs5Z__Uhgw-Q"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgVo0kEeWs5Z__Uhgw-Q" name="предоставляет" memberEnd="_sWMgDI0kEeWs5Z__Uhgw-Q _sWMgV40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgV40kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgVo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgWI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgWY0kEeWs5Z__Uhgw-Q"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgWo0kEeWs5Z__Uhgw-Q" name="работа" memberEnd="_sWMgW40kEeWs5Z__Uhgw-Q _sWMgD40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgW40kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgWo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgXI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgXY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgXo0kEeWs5Z__Uhgw-Q" memberEnd="_sWMgEo0kEeWs5Z__Uhgw-Q _sWMgX40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgX40kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgXo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgYI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgYY0kEeWs5Z__Uhgw-Q"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sWMgYo0kEeWs5Z__Uhgw-Q" name="Запись" clientDependency="_sWMgeo0kEeWs5Z__Uhgw-Q _sWMge40kEeWs5Z__Uhgw-Q _sWMggo0kEeWs5Z__Uhgw-Q _sWMgio0kEeWs5Z__Uhgw-Q _sWMgi40kEeWs5Z__Uhgw-Q">
+    <ownedAttribute xmi:id="_sWMgY40kEeWs5Z__Uhgw-Q" name="Дата" visibility="private" type="_sWMgPo0kEeWs5Z__Uhgw-Q"/>
+    <ownedAttribute xmi:id="_sWMgZI0kEeWs5Z__Uhgw-Q" name="Статус" visibility="private" type="_sWMgQo0kEeWs5Z__Uhgw-Q"/>
+    <ownedAttribute xmi:id="_sWMgZY0kEeWs5Z__Uhgw-Q" name="содержимое структуры" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMgf40kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgZo0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgZ40kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMgaI0kEeWs5Z__Uhgw-Q" name="содержимое структуры" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q" association="_sWMggI0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgaY0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgao0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sWMga40kEeWs5Z__Uhgw-Q" name="Мастер" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q"/>
+    <ownedAttribute xmi:id="_sWMgbI0kEeWs5Z__Uhgw-Q" name="Клиент" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q"/>
+    <ownedAttribute xmi:id="_sWMgbY0kEeWs5Z__Uhgw-Q" name="Услуга" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgbo0kEeWs5Z__Uhgw-Q" name="выполнил" memberEnd="_sWMf9I0kEeWs5Z__Uhgw-Q _sWMgb40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgb40kEeWs5Z__Uhgw-Q" name="мастер" visibility="private" type="_sWMf740kEeWs5Z__Uhgw-Q" association="_sWMgbo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgcI0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgcY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgco0kEeWs5Z__Uhgw-Q" name="воспользовался" memberEnd="_sWMgc40kEeWs5Z__Uhgw-Q _sWMgJY0kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgc40kEeWs5Z__Uhgw-Q" name="клиент" visibility="private" type="_sWMgIY0kEeWs5Z__Uhgw-Q" association="_sWMgco0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgdI0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgdY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgdo0kEeWs5Z__Uhgw-Q" memberEnd="_sWMgFY0kEeWs5Z__Uhgw-Q _sWMgd40kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMgd40kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgdo0kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgeI0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgeY0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_sWMgeo0kEeWs5Z__Uhgw-Q" supplier="_sWMgMY0kEeWs5Z__Uhgw-Q" client="_sWMgYo0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_sWMge40kEeWs5Z__Uhgw-Q" supplier="_sWMgMY0kEeWs5Z__Uhgw-Q" client="_sWMgYo0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgfI0kEeWs5Z__Uhgw-Q" name="оказывает" memberEnd="_sWMf-o0kEeWs5Z__Uhgw-Q _sWMgNo0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgfY0kEeWs5Z__Uhgw-Q" name="Работает" memberEnd="_sWMgG40kEeWs5Z__Uhgw-Q _sWMf_Y0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgfo0kEeWs5Z__Uhgw-Q" memberEnd="_sWMgHo0kEeWs5Z__Uhgw-Q _sWMgK40kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgf40kEeWs5Z__Uhgw-Q" memberEnd="_sWMgAI0kEeWs5Z__Uhgw-Q _sWMgZY0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMggI0kEeWs5Z__Uhgw-Q" memberEnd="_sWMgLo0kEeWs5Z__Uhgw-Q _sWMgaI0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMggY0kEeWs5Z__Uhgw-Q" name="Выполнение" memberEnd="_sWMgA40kEeWs5Z__Uhgw-Q _sWMgOY0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_sWMggo0kEeWs5Z__Uhgw-Q" name="использует" supplier="_sWMgMY0kEeWs5Z__Uhgw-Q" client="_sWMgYo0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sWMgg40kEeWs5Z__Uhgw-Q" name="содержит" memberEnd="_sWMgh40kEeWs5Z__Uhgw-Q _sWMghI0kEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_sWMghI0kEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_sWMgg40kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMghY0kEeWs5Z__Uhgw-Q" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgho0kEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_sWMgh40kEeWs5Z__Uhgw-Q" name="запись2" visibility="private" type="_sWMgYo0kEeWs5Z__Uhgw-Q" aggregation="composite" association="_sWMgg40kEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sWMgiI0kEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sWMgiY0kEeWs5Z__Uhgw-Q"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_sWMgio0kEeWs5Z__Uhgw-Q" name="использует" supplier="_sWMf740kEeWs5Z__Uhgw-Q" client="_sWMgYo0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_sWMgi40kEeWs5Z__Uhgw-Q" name="использует" supplier="_sWMgIY0kEeWs5Z__Uhgw-Q" client="_sWMgYo0kEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AMKiEI0lEeWs5Z__Uhgw-Q" name="" memberEnd="_AMKiEY0lEeWs5Z__Uhgw-Q _AMKiFI0lEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BfekEI0lEeWs5Z__Uhgw-Q" name="Посещение" memberEnd="_BfekEY0lEeWs5Z__Uhgw-Q _BfoVEI0lEeWs5Z__Uhgw-Q"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_aPruUI0lEeWs5Z__Uhgw-Q" name="Оказание" memberEnd="_aPruUY0lEeWs5Z__Uhgw-Q _aPruVI0lEeWs5Z__Uhgw-Q">
+    <ownedEnd xmi:id="_aPruVI0lEeWs5Z__Uhgw-Q" name="салон" visibility="private" type="_sWMgBo0kEeWs5Z__Uhgw-Q" association="_aPruUI0lEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aPruVo0lEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aPruVY0lEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_aPruUY0lEeWs5Z__Uhgw-Q" name="услуга4" visibility="private" type="_sWMgMY0kEeWs5Z__Uhgw-Q" aggregation="composite" association="_aPruUI0lEeWs5Z__Uhgw-Q">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aPruU40lEeWs5Z__Uhgw-Q" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aPruUo0lEeWs5Z__Uhgw-Q" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mwN1YJN1EeWG4LUn3LvqNA" name="оказание" memberEnd="_mwN1YZN1EeWG4LUn3LvqNA _mwN1ZJN1EeWG4LUn3LvqNA"/>
+  <profileApplication xmi:id="_sWMgjI0kEeWs5Z__Uhgw-Q">
+    <eAnnotations xmi:id="_sWMgjY0kEeWs5Z__Uhgw-Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_sWMgjo0kEeWs5Z__Uhgw-Q">
+    <eAnnotations xmi:id="_sWMgj40kEeWs5Z__Uhgw-Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_IN8k8MmBEdqBcN1R6EvWUw?Default/Default?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+  </profileApplication>
+  <profileApplication xmi:id="_sWMgkI0kEeWs5Z__Uhgw-Q">
+    <eAnnotations xmi:id="_sWMgkY0kEeWs5Z__Uhgw-Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_IrdAUMmBEdqBcN1R6EvWUw?Deployment/Deployment?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+  </profileApplication>
+</uml:Package>
