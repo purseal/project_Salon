@@ -37,18 +37,18 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.leftPanel = new System.Windows.Forms.Panel();
-            this.mainPanelClient = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.mainPanelClient = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.mainPanelMaster = new System.Windows.Forms.Panel();
             this.mainPanelRecord = new System.Windows.Forms.Panel();
@@ -124,7 +124,7 @@
             this.toolStripButton2.Image = global::ProjectSalon.Properties.Resources.addClient;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(126, 47);
+            this.toolStripButton2.Size = new System.Drawing.Size(126, 22);
             this.toolStripButton2.Text = "Добавить клиента";
             // 
             // toolStripButton3
@@ -132,7 +132,7 @@
             this.toolStripButton3.Image = global::ProjectSalon.Properties.Resources.addMaster;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(127, 47);
+            this.toolStripButton3.Size = new System.Drawing.Size(127, 22);
             this.toolStripButton3.Text = "Добавить мастера";
             // 
             // leftPanel
@@ -142,21 +142,6 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(301, 471);
             this.leftPanel.TabIndex = 2;
-            // 
-            // mainPanelClient
-            // 
-            this.mainPanelClient.Location = new System.Drawing.Point(307, 77);
-            this.mainPanelClient.Name = "mainPanelClient";
-            this.mainPanelClient.Size = new System.Drawing.Size(445, 471);
-            this.mainPanelClient.TabIndex = 3;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 551);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1016, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // tabControl1
             // 
@@ -181,67 +166,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Клиент";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(275, 465);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Запись";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(275, 465);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Мастер";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(275, 465);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Услуга";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(5, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Фамилия, имя, отчество клиента, идентификатор...";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(5, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(5, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 20);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(5, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(263, 20);
-            this.textBox4.TabIndex = 1;
             // 
             // listBox1
             // 
@@ -283,6 +207,82 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(271, 379);
             this.listBox1.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.Location = new System.Drawing.Point(5, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(272, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Фамилия, имя, отчество клиента, идентификатор...";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(283, 420);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Запись";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(5, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(263, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(283, 420);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Мастер";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(5, 5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(263, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(283, 420);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Услуга";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(5, 5);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(263, 20);
+            this.textBox4.TabIndex = 1;
+            // 
+            // mainPanelClient
+            // 
+            this.mainPanelClient.Location = new System.Drawing.Point(307, 77);
+            this.mainPanelClient.Name = "mainPanelClient";
+            this.mainPanelClient.Size = new System.Drawing.Size(445, 471);
+            this.mainPanelClient.TabIndex = 3;
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 551);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1016, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // rightPanel
             // 
