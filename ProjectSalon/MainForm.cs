@@ -16,5 +16,17 @@ namespace ProjectSalon
         {
             InitializeComponent();
         }
+
+        private void newRecordToolboxButton_Click(object sender, EventArgs e)
+        {
+            Form newRecordForm = new RecordForm();
+            newRecordForm.ShowDialog(this);
+        }
+
+        private void newClientToolboxButton_Click(object sender, EventArgs e)
+        {
+            Form newClientForm = new ClientForm();
+            newClientForm.ShowDialog(this);
+        }
     }
 }

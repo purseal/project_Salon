@@ -17,7 +17,6 @@ namespace ProjectSalon
         {
             this.name = name;
             this.birth = birth;
-            4884848484
         }
 
 
