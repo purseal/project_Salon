@@ -38,3 +38,6 @@ C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\Pr
 C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\bin\Debug\ProjectSalon.pdb
 C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.clientForm.resources
 C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.RecordForm.resources
+C:\Users\Gennady\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.ClientForm.resources
+C:\Users\Gennady\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.RecordForm.resources
+C:\Users\Gennady\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.MasterForm.resources

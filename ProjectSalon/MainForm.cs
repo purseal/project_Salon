@@ -28,5 +28,11 @@ namespace ProjectSalon
             Form newClientForm = new ClientForm();
             newClientForm.ShowDialog(this);
         }
+
+        private void newMasterToolboxButton_Click(object sender, EventArgs e)
+        {
+            Form newMasterForm = new MasterForm();
+            newMasterForm.ShowDialog(this);
+        }
     }
 }
