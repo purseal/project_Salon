@@ -22,6 +22,26 @@ namespace ProjectSalon
             this.id = id;
         }
 
+        /// <summary>
+        /// Присоединяет запись к мастеру
+        /// </summary>
+        /// <param name="recordToLink">запись, которая будет присоединена</param>
+        public void linkRecord(Record recordToLink)
+        {
+            this.recordList.Add(recordToLink);
+        }
+
+        /// <summary>
+        /// Добавляет услугу, оказываемую мастером
+        /// </summary>
+        /// <param name="serviceToAdd">услуга, которую оказывает мастер</param>
+        public void addService(Service serviceToAdd)
+        {
+            //XXX:делать клонирование объекта или передавать ссылку
+            //на тот, который был создан в интерфейсе?
+            this.serviceList.Add(serviceToAdd);
+        } 
+
 
     }
 }

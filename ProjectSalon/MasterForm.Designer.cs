@@ -31,11 +31,12 @@
             this.masterNameTitle = new System.Windows.Forms.Label();
             this.masterSalaryTitle = new System.Windows.Forms.Label();
             this.masterServicesTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxSalary = new System.Windows.Forms.TextBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.listBoxService = new System.Windows.Forms.ListBox();
+            this.buttonAddService = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // masterNameTitle
@@ -65,56 +66,68 @@
             this.masterServicesTitle.TabIndex = 2;
             this.masterServicesTitle.Text = "Список услуг";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 20);
-            this.textBox1.TabIndex = 3;
+            this.textBoxName.Location = new System.Drawing.Point(172, 42);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(216, 20);
+            this.textBoxName.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxSalary
             // 
-            this.textBox2.Location = new System.Drawing.Point(256, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxSalary.Location = new System.Drawing.Point(256, 112);
+            this.textBoxSalary.Name = "textBoxSalary";
+            this.textBoxSalary.Size = new System.Drawing.Size(132, 20);
+            this.textBoxSalary.TabIndex = 4;
             // 
-            // richTextBox1
+            // buttonCancel
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(256, 182);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(132, 64);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.buttonCancel.Location = new System.Drawing.Point(160, 290);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(110, 25);
+            this.buttonCancel.TabIndex = 6;
+            this.buttonCancel.Text = "Отмена";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // button1
+            // buttonApply
             // 
-            this.button1.Location = new System.Drawing.Point(159, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 25);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Отмена";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonApply.Location = new System.Drawing.Point(300, 290);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(110, 25);
+            this.buttonApply.TabIndex = 7;
+            this.buttonApply.Text = "Применить";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
-            // button2
+            // listBoxService
             // 
-            this.button2.Location = new System.Drawing.Point(302, 270);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 25);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Применить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.listBoxService.FormattingEnabled = true;
+            this.listBoxService.Location = new System.Drawing.Point(172, 185);
+            this.listBoxService.Name = "listBoxService";
+            this.listBoxService.Size = new System.Drawing.Size(184, 56);
+            this.listBoxService.TabIndex = 8;
+            // 
+            // buttonAddService
+            // 
+            this.buttonAddService.Location = new System.Drawing.Point(362, 185);
+            this.buttonAddService.Name = "buttonAddService";
+            this.buttonAddService.Size = new System.Drawing.Size(26, 22);
+            this.buttonAddService.TabIndex = 9;
+            this.buttonAddService.Text = "+";
+            this.buttonAddService.UseVisualStyleBackColor = true;
             // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 317);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(424, 326);
+            this.Controls.Add(this.buttonAddService);
+            this.Controls.Add(this.listBoxService);
+            this.Controls.Add(this.buttonApply);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.textBoxSalary);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.masterServicesTitle);
             this.Controls.Add(this.masterSalaryTitle);
             this.Controls.Add(this.masterNameTitle);
@@ -135,10 +148,11 @@
         private System.Windows.Forms.Label masterNameTitle;
         private System.Windows.Forms.Label masterSalaryTitle;
         private System.Windows.Forms.Label masterServicesTitle;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxSalary;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonApply;
+        private System.Windows.Forms.ListBox listBoxService;
+        private System.Windows.Forms.Button buttonAddService;
     }
 }

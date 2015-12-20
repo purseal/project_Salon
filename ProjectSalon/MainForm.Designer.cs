@@ -34,7 +34,6 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.newRecordToolboxButton = new System.Windows.Forms.ToolStripButton();
-            this.newClientToolboxButton = new System.Windows.Forms.ToolStripButton();
             this.newMasterToolboxButton = new System.Windows.Forms.ToolStripButton();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.mainTabControl = new System.Windows.Forms.TabControl();
@@ -76,6 +75,8 @@
             this.serviceNameTitleRecord = new System.Windows.Forms.Label();
             this.masterNameTitleRecord = new System.Windows.Forms.Label();
             this.clientNameTitleRecord = new System.Windows.Forms.Label();
+            this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьМастераToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -104,6 +105,9 @@
             // 
             // добавлениеToolStripMenuItem
             // 
+            this.добавлениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.добавитьЗаписьToolStripMenuItem,
+            this.добавитьМастераToolStripMenuItem});
             this.добавлениеToolStripMenuItem.Name = "добавлениеToolStripMenuItem";
             this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.добавлениеToolStripMenuItem.Text = "Добавление";
@@ -127,7 +131,6 @@
             this.mainToolStrip.GripMargin = new System.Windows.Forms.Padding(10, 2, 2, 2);
             this.mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newRecordToolboxButton,
-            this.newClientToolboxButton,
             this.newMasterToolboxButton});
             this.mainToolStrip.Location = new System.Drawing.Point(0, 24);
             this.mainToolStrip.Name = "mainToolStrip";
@@ -143,15 +146,6 @@
             this.newRecordToolboxButton.Size = new System.Drawing.Size(119, 47);
             this.newRecordToolboxButton.Text = "Добавить запись";
             this.newRecordToolboxButton.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
-            // 
-            // newClientToolboxButton
-            // 
-            this.newClientToolboxButton.Image = global::ProjectSalon.Properties.Resources.addClient;
-            this.newClientToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newClientToolboxButton.Name = "newClientToolboxButton";
-            this.newClientToolboxButton.Size = new System.Drawing.Size(126, 47);
-            this.newClientToolboxButton.Text = "Добавить клиента";
-            this.newClientToolboxButton.Click += new System.EventHandler(this.newClientToolboxButton_Click);
             // 
             // newMasterToolboxButton
             // 
@@ -547,6 +541,20 @@
             this.clientNameTitleRecord.TabIndex = 0;
             this.clientNameTitleRecord.Text = "Клиент";
             // 
+            // добавитьЗаписьToolStripMenuItem
+            // 
+            this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
+            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
+            this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
+            // 
+            // добавитьМастераToolStripMenuItem
+            // 
+            this.добавитьМастераToolStripMenuItem.Name = "добавитьМастераToolStripMenuItem";
+            this.добавитьМастераToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.добавитьМастераToolStripMenuItem.Text = "Добавить мастера";
+            this.добавитьМастераToolStripMenuItem.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,7 +607,6 @@
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStrip mainToolStrip;
         private System.Windows.Forms.ToolStripButton newRecordToolboxButton;
-        private System.Windows.Forms.ToolStripButton newClientToolboxButton;
         private System.Windows.Forms.ToolStripButton newMasterToolboxButton;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel mainPanelClient;
@@ -641,6 +648,8 @@
         private System.Windows.Forms.Label serviceNameTitleRecord;
         private System.Windows.Forms.Label masterNameTitleRecord;
         private System.Windows.Forms.Label clientNameTitleRecord;
+        private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem добавитьМастераToolStripMenuItem;
     }
 }
 
