@@ -11,12 +11,22 @@ namespace ProjectSalon
     {
         public String name;
         public DateTime birth;
-        List<Record> records;
+        public int number;
+        List<Record> recordList;
 
         public Client(String name, DateTime birth)
         {
             this.name = name;
             this.birth = birth;
+        }
+
+        /// <summary>
+        /// Присоединяет запись к клиенту
+        /// </summary>
+        /// <param name="recordToLink">запись, которая будет присоединена</param>
+        public void linkRecord(Record recordToLink)
+        {
+            this.recordList.Add(recordToLink);
         }
 
 

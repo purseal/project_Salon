@@ -41,12 +41,13 @@
             this.comboBoxTime = new System.Windows.Forms.ComboBox();
             this.buttonApply = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonCheckClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clientNameTitleRecord
             // 
             this.clientNameTitleRecord.AutoSize = true;
-            this.clientNameTitleRecord.Location = new System.Drawing.Point(30, 30);
+            this.clientNameTitleRecord.Location = new System.Drawing.Point(30, 70);
             this.clientNameTitleRecord.Name = "clientNameTitleRecord";
             this.clientNameTitleRecord.Size = new System.Drawing.Size(43, 13);
             this.clientNameTitleRecord.TabIndex = 1;
@@ -55,7 +56,7 @@
             // clientNumberTitleRecord
             // 
             this.clientNumberTitleRecord.AutoSize = true;
-            this.clientNumberTitleRecord.Location = new System.Drawing.Point(30, 70);
+            this.clientNumberTitleRecord.Location = new System.Drawing.Point(30, 30);
             this.clientNumberTitleRecord.Name = "clientNumberTitleRecord";
             this.clientNumberTitleRecord.Size = new System.Drawing.Size(85, 13);
             this.clientNumberTitleRecord.TabIndex = 5;
@@ -114,16 +115,16 @@
             // 
             // textBoxClientName
             // 
-            this.textBoxClientName.Location = new System.Drawing.Point(149, 27);
+            this.textBoxClientName.Location = new System.Drawing.Point(149, 67);
             this.textBoxClientName.Name = "textBoxClientName";
             this.textBoxClientName.Size = new System.Drawing.Size(257, 20);
             this.textBoxClientName.TabIndex = 12;
             // 
             // textBoxClientNumber
             // 
-            this.textBoxClientNumber.Location = new System.Drawing.Point(149, 67);
+            this.textBoxClientNumber.Location = new System.Drawing.Point(149, 27);
             this.textBoxClientNumber.Name = "textBoxClientNumber";
-            this.textBoxClientNumber.Size = new System.Drawing.Size(257, 20);
+            this.textBoxClientNumber.Size = new System.Drawing.Size(148, 20);
             this.textBoxClientNumber.TabIndex = 13;
             // 
             // comboBoxTime
@@ -154,11 +155,22 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // buttonCheckClient
+            // 
+            this.buttonCheckClient.Location = new System.Drawing.Point(331, 25);
+            this.buttonCheckClient.Name = "buttonCheckClient";
+            this.buttonCheckClient.Size = new System.Drawing.Size(75, 23);
+            this.buttonCheckClient.TabIndex = 17;
+            this.buttonCheckClient.Text = "Проверить";
+            this.buttonCheckClient.UseVisualStyleBackColor = true;
+            this.buttonCheckClient.Click += new System.EventHandler(this.buttonCheckClient_Click);
+            // 
             // RecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 401);
+            this.Controls.Add(this.buttonCheckClient);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.comboBoxTime);
@@ -199,5 +211,6 @@
         private System.Windows.Forms.ComboBox comboBoxTime;
         private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonCheckClient;
     }
 }
