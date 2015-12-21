@@ -21,10 +21,13 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             int salary = Convert.ToInt32(textBoxSalary.Text);
             string name = textBoxName.Text;
 
 
+=======
+>>>>>>> origin/master
             this.Close();
         }
 
@@ -32,6 +35,7 @@ namespace ProjectSalon
         {
             this.Close();
         }
+<<<<<<< HEAD
 
         private void buttonAddService_Click(object sender, EventArgs e)
         {
@@ -49,5 +53,7 @@ namespace ProjectSalon
 
             }
         }
+=======
+>>>>>>> origin/master
     }
 }
