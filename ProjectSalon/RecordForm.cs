@@ -26,11 +26,5 @@ namespace ProjectSalon
         {
             this.Close();
         }
-
-        private void buttonCheckClient_Click(object sender, EventArgs e)
-        {
-            //TODO: Проверка наличия номера клиента
-
-        }
     }
 }
