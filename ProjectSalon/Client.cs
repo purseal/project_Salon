@@ -29,6 +29,10 @@ namespace ProjectSalon
             this.recordList.Add(recordToLink);
         }
 
+        override public String ToString()
+        {
+            return name;
+        }
 
     }
 }

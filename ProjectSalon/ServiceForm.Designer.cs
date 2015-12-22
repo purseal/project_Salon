@@ -34,7 +34,6 @@
             this.textBoxServicePrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxServiceDuration = new System.Windows.Forms.TextBox();
-            this.buttonCancle = new System.Windows.Forms.Button();
             this.buttonApply = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -87,15 +86,6 @@
             this.textBoxServiceDuration.Size = new System.Drawing.Size(126, 20);
             this.textBoxServiceDuration.TabIndex = 5;
             // 
-            // buttonCancle
-            // 
-            this.buttonCancle.Location = new System.Drawing.Point(143, 203);
-            this.buttonCancle.Name = "buttonCancle";
-            this.buttonCancle.Size = new System.Drawing.Size(84, 29);
-            this.buttonCancle.TabIndex = 9;
-            this.buttonCancle.Text = "Отмена";
-            this.buttonCancle.UseVisualStyleBackColor = true;
-            // 
             // buttonApply
             // 
             this.buttonApply.Location = new System.Drawing.Point(251, 203);
@@ -104,6 +94,7 @@
             this.buttonApply.TabIndex = 10;
             this.buttonApply.Text = "Применить";
             this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
             // label4
             // 
@@ -121,7 +112,6 @@
             this.ClientSize = new System.Drawing.Size(347, 244);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonApply);
-            this.Controls.Add(this.buttonCancle);
             this.Controls.Add(this.textBoxServiceDuration);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxServicePrice);
@@ -140,7 +130,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonCancle;
         private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox textBoxServiceName;

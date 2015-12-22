@@ -30,6 +30,8 @@
         {
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.добавлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьМастераToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -75,8 +77,7 @@
             this.serviceNameTitleRecord = new System.Windows.Forms.Label();
             this.masterNameTitleRecord = new System.Windows.Forms.Label();
             this.clientNameTitleRecord = new System.Windows.Forms.Label();
-            this.добавитьЗаписьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.добавитьМастераToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxServiceSearch = new System.Windows.Forms.TextBox();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -111,6 +112,20 @@
             this.добавлениеToolStripMenuItem.Name = "добавлениеToolStripMenuItem";
             this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.добавлениеToolStripMenuItem.Text = "Добавление";
+            // 
+            // добавитьЗаписьToolStripMenuItem
+            // 
+            this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
+            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
+            this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
+            // 
+            // добавитьМастераToolStripMenuItem
+            // 
+            this.добавитьМастераToolStripMenuItem.Name = "добавитьМастераToolStripMenuItem";
+            this.добавитьМастераToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.добавитьМастераToolStripMenuItem.Text = "Добавить мастера";
+            this.добавитьМастераToolStripMenuItem.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
             // 
             // правкаToolStripMenuItem
             // 
@@ -200,12 +215,11 @@
             // 
             // textBoxClientSearch
             // 
-            this.textBoxClientSearch.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBoxClientSearch.Location = new System.Drawing.Point(5, 5);
             this.textBoxClientSearch.Name = "textBoxClientSearch";
             this.textBoxClientSearch.Size = new System.Drawing.Size(270, 20);
             this.textBoxClientSearch.TabIndex = 0;
-            this.textBoxClientSearch.Text = "Фамилия, имя, отчество клиента, идентификатор...";
+            this.textBoxClientSearch.TextChanged += new System.EventHandler(this.textBoxClientSearch_TextChanged);
             // 
             // recordTabPage
             // 
@@ -235,6 +249,7 @@
             this.textBoxRecordSearch.Name = "textBoxRecordSearch";
             this.textBoxRecordSearch.Size = new System.Drawing.Size(263, 20);
             this.textBoxRecordSearch.TabIndex = 1;
+            this.textBoxRecordSearch.TextChanged += new System.EventHandler(this.textBoxRecordSearch_TextChanged);
             // 
             // masterTabPage
             // 
@@ -263,9 +278,11 @@
             this.textBoxMasterSearch.Name = "textBoxMasterSearch";
             this.textBoxMasterSearch.Size = new System.Drawing.Size(263, 20);
             this.textBoxMasterSearch.TabIndex = 1;
+            this.textBoxMasterSearch.TextChanged += new System.EventHandler(this.textBoxMasterSearch_TextChanged);
             // 
             // serviceTabPage
             // 
+            this.serviceTabPage.Controls.Add(this.textBoxServiceSearch);
             this.serviceTabPage.Controls.Add(this.serviceListBox);
             this.serviceTabPage.Location = new System.Drawing.Point(4, 22);
             this.serviceTabPage.Name = "serviceTabPage";
@@ -279,9 +296,9 @@
             this.serviceListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.serviceListBox.FormattingEnabled = true;
             this.serviceListBox.ItemHeight = 15;
-            this.serviceListBox.Location = new System.Drawing.Point(5, 10);
+            this.serviceListBox.Location = new System.Drawing.Point(5, 40);
             this.serviceListBox.Name = "serviceListBox";
-            this.serviceListBox.Size = new System.Drawing.Size(270, 409);
+            this.serviceListBox.Size = new System.Drawing.Size(270, 379);
             this.serviceListBox.TabIndex = 2;
             // 
             // mainPanelClient
@@ -541,19 +558,13 @@
             this.clientNameTitleRecord.TabIndex = 0;
             this.clientNameTitleRecord.Text = "Клиент";
             // 
-            // добавитьЗаписьToolStripMenuItem
+            // textBoxServiceSearch
             // 
-            this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
-            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
-            this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
-            // 
-            // добавитьМастераToolStripMenuItem
-            // 
-            this.добавитьМастераToolStripMenuItem.Name = "добавитьМастераToolStripMenuItem";
-            this.добавитьМастераToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
-            this.добавитьМастераToolStripMenuItem.Text = "Добавить мастера";
-            this.добавитьМастераToolStripMenuItem.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
+            this.textBoxServiceSearch.Location = new System.Drawing.Point(5, 5);
+            this.textBoxServiceSearch.Name = "textBoxServiceSearch";
+            this.textBoxServiceSearch.Size = new System.Drawing.Size(263, 20);
+            this.textBoxServiceSearch.TabIndex = 3;
+            this.textBoxServiceSearch.TextChanged += new System.EventHandler(this.textBoxServiceSearch_TextChanged);
             // 
             // MainForm
             // 
@@ -587,6 +598,7 @@
             this.masterTabPage.ResumeLayout(false);
             this.masterTabPage.PerformLayout();
             this.serviceTabPage.ResumeLayout(false);
+            this.serviceTabPage.PerformLayout();
             this.mainPanelClient.ResumeLayout(false);
             this.mainPanelClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recordGridView)).EndInit();
@@ -650,6 +662,7 @@
         private System.Windows.Forms.Label clientNameTitleRecord;
         private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьМастераToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBoxServiceSearch;
     }
 }
 

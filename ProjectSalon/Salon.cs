@@ -11,15 +11,17 @@ namespace ProjectSalon
         DataStorage mainDataStorage;
         public String address;
         public String name;
-        String id;
+        int id;
         List<Master> masterList;
         List<Record> recordList;
 
-        public Salon(String address, String name, String id)
+        public Salon(String address, String name, int id)
         {
             this.address = address;
             this.id = id;
             this.name = name;
+            this.masterList = new List<Master>();
+            this.recordList = new List<Record>();
             mainDataStorage = DataStorage.get();
         }
 
@@ -114,6 +116,11 @@ namespace ProjectSalon
                 if ((client.name.ToLower().Contains(text.ToLower())) || (client.number.ToString().Contains(text))) result.Add(client);
             }
             return result;
+        }
+
+        override public String ToString()
+        {
+            return name;
         }
     }
 }

@@ -40,8 +40,24 @@ namespace ProjectSalon
             //XXX:делать клонирование объекта или передавать ссылку
             //на тот, который был создан в интерфейсе?
             this.serviceList.Add(serviceToAdd);
-        } 
+        }
 
+        public void addSalon(Salon salon)
+        {
+            for (int i=0; i<=employerList.Length; i++)
+            {
+                if (employerList[i] != null)
+                {
+                    employerList[i] = salon;
+                    return;
+                }
+            }
+        }
+
+        override public String ToString()
+        {
+            return name;
+        }
 
     }
 }

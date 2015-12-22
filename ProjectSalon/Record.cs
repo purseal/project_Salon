@@ -23,5 +23,10 @@ namespace ProjectSalon
             this.client = client;
             status = false;
         }
+
+        override public String ToString()
+        {
+            return "Запись № " + id;
+        }
     }
 }

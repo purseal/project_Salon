@@ -15,6 +15,7 @@ namespace ProjectSalon
         private Salon salon;
         private readonly int masterID = 100;
         private readonly int serviceID = 200;
+        private readonly int salonDefaultID = 1;
 
         public static DataStorage get()
         {
@@ -55,6 +56,12 @@ namespace ProjectSalon
             Client client = new Client(name, birth);
             this.clientList.Add(client);
             return client;
+        }
+
+        public Salon newSalon(String address, String name)
+        {
+            this.salon = new Salon(address, name, salonDefaultID);
+            return this.salon;
         }
 
         public List<Service> getServices()

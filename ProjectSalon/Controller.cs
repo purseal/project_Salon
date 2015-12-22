@@ -32,10 +32,12 @@ namespace ProjectSalon
                     finalServiceList.Add(targetService);
             }
             Master master = mainDataStorage.newMaster(name, salary);
+            mainDataStorage.getSalon().addMaster(master);
 
             foreach (Service finalService in finalServiceList)
             {
                 master.addService(finalService);
+                finalService.addMaster(master);
             }
         }
 
@@ -47,6 +49,24 @@ namespace ProjectSalon
         {
 
         }
+
+        public void registerService(String name, int price, int duration)
+        {
+            Service newService = mainDataStorage.newService(name, price, duration);
+        }
+
+
+
+        /// <summary>
+        /// Проводит создание и начальную подготовку объекта класса Salon
+        /// </summary>
+        /// <param name="targetRecord">экземпляр объекта, сгенерированный в интерфейсе</param>
+        public void registerSalon(String adress, String name)
+        {
+            Salon newSalon = mainDataStorage.newSalon(adress, name);
+        }
+
+
 
         /// <summary>
         /// Выводит список клиентов салона 

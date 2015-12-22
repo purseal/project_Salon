@@ -12,9 +12,21 @@ namespace ProjectSalon
 {
     public partial class ServiceForm : Form
     {
-        public ServiceForm()
+        Controller mainController;
+        public ServiceForm(Controller controller)
         {
             InitializeComponent();
+            this.mainController = controller;
         }
+
+        private void buttonApply_Click(object sender, EventArgs e)
+        {
+            String name = textBoxServiceName.Text;
+            int price = Convert.ToInt32(textBoxServicePrice.Text);
+            int duration = Convert.ToInt32(textBoxServiceDuration.Text);
+            mainController.registerService(name, price, duration);
+            this.Close();
+        }
+
     }
 }

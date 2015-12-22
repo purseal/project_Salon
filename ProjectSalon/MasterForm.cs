@@ -51,13 +51,17 @@ namespace ProjectSalon
                 DialogResult dialogResult = MessageBox.Show("Еще нет ни одного мастера, оказывающего данную услугу, добавить новую?", "Новая услуга", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    ServiceForm newServiceForm = new ServiceForm();
+                    ServiceForm newServiceForm = new ServiceForm(mainController);
+                    newServiceForm.textBoxServiceName.Text = serviceName;
+                    newServiceForm.textBoxServiceName.Enabled = false;
                     newServiceForm.ShowDialog();
+                    listBoxService.Items.Add(serviceName);
+                    textBoxServiceName.Text = "";
                 }
                 else if (dialogResult == DialogResult.No)
                 {
                     textBoxServiceName.Text = "";
-                }
+                }                
             }
         }
     }

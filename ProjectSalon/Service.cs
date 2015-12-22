@@ -22,5 +22,20 @@ namespace ProjectSalon
             this.duration = duration;
             this.id = id;
         }
+
+        public void addMaster(Master master)
+        {
+            masterList.Add(master);
+        }
+
+        public void addRecord(Record record)
+        {
+            recordList.Add(record);
+        }
+
+        override public String ToString()
+        {
+            return name;
+        }
     }
 }

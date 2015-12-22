@@ -55,3 +55,4 @@ C:\Users\Анатолий\Desktop\project_Salon\ProjectSalon\obj\Debug\ProjectSa
 C:\Users\Анатолий\Desktop\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.ServiceForm.resources
 C:\Users\Анатолий\Desktop\project_Salon\ProjectSalon\bin\Debug\ProjectSalon.exe
 C:\Users\Анатолий\Desktop\project_Salon\ProjectSalon\bin\Debug\ProjectSalon.pdb
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Debug\ProjectSalon.ServiceForm.resources
