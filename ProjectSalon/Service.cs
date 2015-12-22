@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
-    class Service
+    public class Service
     {
         public String name;
         public int price;
         public int duration;
-        String id;
+        public int id;
         List<Record> recordList;
         List<Master> masterList;
 
-        public Service(String name, int price, int duration, String id)
+        public Service(String name, int price, int duration, int id)
         {
             this.name = name;
             this.price = price;

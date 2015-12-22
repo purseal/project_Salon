@@ -6,15 +6,37 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
-    class Controller
+    public class Controller
     {
+        DataStorage mainDataStorage;
+
+        public Controller()
+        {
+            this.mainDataStorage = DataStorage.get();
+        }
         /// <summary>
         /// Проводит создание и начальную подготовку объекта класса Master
         /// </summary>
         /// <param name="targetMaster">экземпляр объекта, сгенерированный в интерфейсе</param>
-        public void registerMaster(Master targetMaster)
+        public void registerMaster(string name, int salary, List<String> serviceNames)
         {
+            List<Service> finalServiceList = new List<Service>();
+            foreach (String serviceName in serviceNames)
+            {
+                Service targetService = getService(serviceName);
+                if (targetService == null)
+                {
+                    //Такого быть не должно
+                }
+                else
+                    finalServiceList.Add(targetService);
+            }
+            Master master = mainDataStorage.newMaster(name, salary);
 
+            foreach (Service finalService in finalServiceList)
+            {
+                master.addService(finalService);
+            }
         }
 
         /// <summary>
@@ -33,7 +55,9 @@ namespace ProjectSalon
         /// <returns>Список клиентов, содержащих в своих полях подстроку request</returns>
         public List<Client> getClientList(string request)
         {
-            return null;
+            Salon salon = mainDataStorage.getSalon();
+
+            return salon.getClientList(request);
         }
 
         /// <summary>
@@ -43,7 +67,9 @@ namespace ProjectSalon
         /// <returns>Список мастеров, содержащих в своих полях подстроку request</returns>
         public List<Master> getMasterList(string request)
         {
-            return null;
+            Salon salon = mainDataStorage.getSalon();
+
+            return salon.getMasterList(request);
         }
 
         /// <summary>
@@ -53,7 +79,9 @@ namespace ProjectSalon
         /// <returns>Список записей, содержащих в своих полях подстроку request</returns>
         public List<Record> getRecordList(string request)
         {
-            return null;
+            Salon salon = mainDataStorage.getSalon();
+
+            return salon.getRecordList(request);
         }
 
         /// <summary>
@@ -63,6 +91,21 @@ namespace ProjectSalon
         /// <returns>Список услуг, содержащих в своих полях подстроку request</returns>
         public List<Service> getServiceList(string request)
         {
+            Salon salon = mainDataStorage.getSalon();
+            
+            return salon.getServiceList(request);
+        }
+
+        public Service getService(string name)
+        {
+            List<Service> tmpServiceList = getServiceList(name);
+            foreach (Service tmpService in tmpServiceList)
+            {
+                if (tmpService.name == name)
+                {
+                    return tmpService;
+                }
+            }
             return null;
         }
     }

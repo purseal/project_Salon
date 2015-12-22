@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
-    class Record
+    public class Record
     {
-        DateTime date;
-        Boolean status;
-        Service service;
-        Master master;
-        Client client;
+        public DateTime date;
+        public Boolean status;
+        public Service service;
+        public Master master;
+        public Client client;
+        public int id;
 
-        Record(DateTime date, Service service, Master master, Client client)
+        public Record(DateTime date, Service service, Master master, Client client)
         {
             this.date = date;
             this.service = service;

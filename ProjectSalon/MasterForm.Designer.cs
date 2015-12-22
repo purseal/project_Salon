@@ -37,6 +37,7 @@
             this.buttonApply = new System.Windows.Forms.Button();
             this.listBoxService = new System.Windows.Forms.ListBox();
             this.buttonAddService = new System.Windows.Forms.Button();
+            this.textBoxServiceName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // masterNameTitle
@@ -60,7 +61,7 @@
             // masterServicesTitle
             // 
             this.masterServicesTitle.AutoSize = true;
-            this.masterServicesTitle.Location = new System.Drawing.Point(30, 185);
+            this.masterServicesTitle.Location = new System.Drawing.Point(30, 194);
             this.masterServicesTitle.Name = "masterServicesTitle";
             this.masterServicesTitle.Size = new System.Drawing.Size(74, 13);
             this.masterServicesTitle.TabIndex = 2;
@@ -103,25 +104,34 @@
             // listBoxService
             // 
             this.listBoxService.FormattingEnabled = true;
-            this.listBoxService.Location = new System.Drawing.Point(172, 185);
+            this.listBoxService.Location = new System.Drawing.Point(172, 228);
             this.listBoxService.Name = "listBoxService";
-            this.listBoxService.Size = new System.Drawing.Size(184, 56);
+            this.listBoxService.Size = new System.Drawing.Size(216, 56);
             this.listBoxService.TabIndex = 8;
             // 
             // buttonAddService
             // 
-            this.buttonAddService.Location = new System.Drawing.Point(362, 185);
+            this.buttonAddService.Location = new System.Drawing.Point(362, 191);
             this.buttonAddService.Name = "buttonAddService";
-            this.buttonAddService.Size = new System.Drawing.Size(26, 22);
+            this.buttonAddService.Size = new System.Drawing.Size(26, 20);
             this.buttonAddService.TabIndex = 9;
             this.buttonAddService.Text = "+";
             this.buttonAddService.UseVisualStyleBackColor = true;
+            this.buttonAddService.Click += new System.EventHandler(this.buttonAddService_Click);
+            // 
+            // textBoxServiceName
+            // 
+            this.textBoxServiceName.Location = new System.Drawing.Point(172, 191);
+            this.textBoxServiceName.Name = "textBoxServiceName";
+            this.textBoxServiceName.Size = new System.Drawing.Size(184, 20);
+            this.textBoxServiceName.TabIndex = 10;
             // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 326);
+            this.Controls.Add(this.textBoxServiceName);
             this.Controls.Add(this.buttonAddService);
             this.Controls.Add(this.listBoxService);
             this.Controls.Add(this.buttonApply);
@@ -154,5 +164,6 @@
         private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.ListBox listBoxService;
         private System.Windows.Forms.Button buttonAddService;
+        private System.Windows.Forms.TextBox textBoxServiceName;
     }
 }

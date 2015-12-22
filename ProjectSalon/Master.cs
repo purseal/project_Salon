@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
-    class Master
+    public class Master
     {
         public String name;
         int salary;
-        String id;
+        public int id;
         Salon[] employerList = new Salon[3];
         List<Service> serviceList;
         List<Record> recordList;
 
-        public Master(String name, int salary, String id)
+        public Master(String name, int salary, int id)
         {
             this.name = name;
             this.salary = salary;

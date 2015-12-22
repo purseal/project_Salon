@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
-    class Client
+    public class Client
     {
         public String name;
         public DateTime birth;

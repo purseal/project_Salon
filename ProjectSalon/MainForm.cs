@@ -12,9 +12,11 @@ namespace ProjectSalon
 {
     public partial class MainForm : Form
     {
+        public Controller mainController;
         public MainForm()
         {
             InitializeComponent();
+            mainController = new Controller();
         }
 
         private void newRecordToolboxButton_Click(object sender, EventArgs e)
@@ -33,7 +35,7 @@ namespace ProjectSalon
 
         private void newMasterToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newMasterForm = new MasterForm();
+            Form newMasterForm = new MasterForm(this);
             newMasterForm.Text = "Добавление мастера";
             newMasterForm.ShowDialog(this);
         }
