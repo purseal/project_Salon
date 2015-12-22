@@ -36,6 +36,9 @@
             this.textBoxServiceDuration = new System.Windows.Forms.TextBox();
             this.buttonApply = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.trackBarDuration = new System.Windows.Forms.TrackBar();
+            this.labelDuration = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDuration)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,7 +84,7 @@
             // 
             // textBoxServiceDuration
             // 
-            this.textBoxServiceDuration.Location = new System.Drawing.Point(112, 126);
+            this.textBoxServiceDuration.Location = new System.Drawing.Point(25, 203);
             this.textBoxServiceDuration.Name = "textBoxServiceDuration";
             this.textBoxServiceDuration.Size = new System.Drawing.Size(126, 20);
             this.textBoxServiceDuration.TabIndex = 5;
@@ -99,17 +102,42 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(248, 129);
+            this.label4.Location = new System.Drawing.Point(289, 129);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "мин";
+            // 
+            // trackBarDuration
+            // 
+            this.trackBarDuration.LargeChange = 10;
+            this.trackBarDuration.Location = new System.Drawing.Point(112, 129);
+            this.trackBarDuration.Maximum = 60;
+            this.trackBarDuration.Minimum = 5;
+            this.trackBarDuration.Name = "trackBarDuration";
+            this.trackBarDuration.Size = new System.Drawing.Size(139, 45);
+            this.trackBarDuration.SmallChange = 5;
+            this.trackBarDuration.TabIndex = 12;
+            this.trackBarDuration.TickFrequency = 5;
+            this.trackBarDuration.Value = 5;
+            this.trackBarDuration.Scroll += new System.EventHandler(this.trackBarDuration_Scroll);
+            // 
+            // labelDuration
+            // 
+            this.labelDuration.AutoSize = true;
+            this.labelDuration.Location = new System.Drawing.Point(270, 129);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(13, 13);
+            this.labelDuration.TabIndex = 13;
+            this.labelDuration.Text = "5";
             // 
             // ServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(347, 244);
+            this.Controls.Add(this.labelDuration);
+            this.Controls.Add(this.trackBarDuration);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.textBoxServiceDuration);
@@ -120,6 +148,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ServiceForm";
             this.Text = "Добавление услуги";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarDuration)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +164,7 @@
         public System.Windows.Forms.TextBox textBoxServiceName;
         public System.Windows.Forms.TextBox textBoxServicePrice;
         public System.Windows.Forms.TextBox textBoxServiceDuration;
+        private System.Windows.Forms.TrackBar trackBarDuration;
+        private System.Windows.Forms.Label labelDuration;
     }
 }

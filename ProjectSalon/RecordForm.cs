@@ -7,24 +7,104 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ProjectSalon
 {
     public partial class RecordForm : Form
     {
-        public RecordForm()
+        Controller mainController;
+        Master currentMaster;
+        List<int> freeHours;
+        public RecordForm(Controller controller)
         {
             InitializeComponent();
+            mainController = controller;
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
+            Service service = (Service)comboBoxService.SelectedItem;
+            Master master = (Master)comboBoxMaster.SelectedItem;
+            Client client = mainController.getClient(textBoxClientNumber.Text);
+            DateTime day = mainMonthCalendar.SelectionStart;
+            int hour = (int)comboBoxTime.SelectedItem;
+            mainController.registerRecord(service, master, client, day, hour);
             this.Close();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonFindClient_Click(object sender, EventArgs e)
+        {
+            String clientNumber = textBoxClientNumber.Text;
+            Client client = mainController.getClient(clientNumber);
+            if (client == null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Еще нет клиента с таким номером.\nЗарегистрировать нового клиента?", "Новый клиент", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    ClientForm newClientForm = new ClientForm(mainController);
+                    newClientForm.textBoxClientNumber.Text = Convert.ToString(clientNumber);
+                    newClientForm.textBoxClientNumber.Enabled = false;
+                    newClientForm.ShowDialog();
+                    client = mainController.getClient(clientNumber);
+                    textBoxClientNumber.Enabled = false;
+                    textBoxClientName.Text = client.name;
+                    textBoxClientName.Enabled = false;
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    textBoxClientNumber.Text = "";
+                }
+            }
+            else
+            {
+                textBoxClientNumber.Enabled = false;
+                textBoxClientName.Text = client.name;
+                textBoxClientName.Enabled = false;
+            }
+
+            List<Service> serviceList = mainController.getServiceList("");
+            foreach (Service service in serviceList)
+            {
+                comboBoxService.Items.Add(service);
+            }
+        }
+
+        private void comboBoxService_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxMaster.Items.Clear();
+            Service selectedService = (Service)comboBoxService.SelectedItem;
+            List<Master> masterList = selectedService.masterList;
+            Debug.WriteLine("Размер листа с мастерами услуги равен " + masterList.Count);
+            foreach (Master master in masterList)
+                comboBoxMaster.Items.Add(master);
+        }
+
+        private void mainMonthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            DateTime day = mainMonthCalendar.SelectionStart;
+            if (currentMaster != null)
+            {
+                freeHours = currentMaster.getFreeHours(day);                
+            }
+            comboBoxTime.Enabled = true;
+            comboBoxTime.Items.Clear();
+            foreach (int hour in freeHours)
+                comboBoxTime.Items.Add(hour);
+                
+        }
+
+        private void comboBoxMaster_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Master selectedMaster = (Master)comboBoxMaster.SelectedItem;
+            mainMonthCalendar.Enabled = true;
+            if (selectedMaster != null)
+                currentMaster = selectedMaster;
         }
     }
 }

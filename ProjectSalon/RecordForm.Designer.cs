@@ -41,12 +41,13 @@
             this.comboBoxTime = new System.Windows.Forms.ComboBox();
             this.buttonApply = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonFindClient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clientNameTitleRecord
             // 
             this.clientNameTitleRecord.AutoSize = true;
-            this.clientNameTitleRecord.Location = new System.Drawing.Point(30, 30);
+            this.clientNameTitleRecord.Location = new System.Drawing.Point(30, 70);
             this.clientNameTitleRecord.Name = "clientNameTitleRecord";
             this.clientNameTitleRecord.Size = new System.Drawing.Size(43, 13);
             this.clientNameTitleRecord.TabIndex = 1;
@@ -55,7 +56,7 @@
             // clientNumberTitleRecord
             // 
             this.clientNumberTitleRecord.AutoSize = true;
-            this.clientNumberTitleRecord.Location = new System.Drawing.Point(30, 70);
+            this.clientNumberTitleRecord.Location = new System.Drawing.Point(30, 30);
             this.clientNumberTitleRecord.Name = "clientNumberTitleRecord";
             this.clientNumberTitleRecord.Size = new System.Drawing.Size(85, 13);
             this.clientNumberTitleRecord.TabIndex = 5;
@@ -94,6 +95,7 @@
             this.mainMonthCalendar.Location = new System.Drawing.Point(242, 190);
             this.mainMonthCalendar.Name = "mainMonthCalendar";
             this.mainMonthCalendar.TabIndex = 9;
+            this.mainMonthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mainMonthCalendar_DateChanged);
             // 
             // comboBoxMaster
             // 
@@ -103,6 +105,7 @@
             this.comboBoxMaster.Name = "comboBoxMaster";
             this.comboBoxMaster.Size = new System.Drawing.Size(257, 21);
             this.comboBoxMaster.TabIndex = 10;
+            this.comboBoxMaster.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaster_SelectedIndexChanged);
             // 
             // comboBoxService
             // 
@@ -112,19 +115,20 @@
             this.comboBoxService.Name = "comboBoxService";
             this.comboBoxService.Size = new System.Drawing.Size(257, 21);
             this.comboBoxService.TabIndex = 11;
+            this.comboBoxService.SelectedIndexChanged += new System.EventHandler(this.comboBoxService_SelectedIndexChanged);
             // 
             // textBoxClientName
             // 
-            this.textBoxClientName.Location = new System.Drawing.Point(149, 27);
+            this.textBoxClientName.Location = new System.Drawing.Point(149, 67);
             this.textBoxClientName.Name = "textBoxClientName";
             this.textBoxClientName.Size = new System.Drawing.Size(257, 20);
             this.textBoxClientName.TabIndex = 12;
             // 
             // textBoxClientNumber
             // 
-            this.textBoxClientNumber.Location = new System.Drawing.Point(149, 67);
+            this.textBoxClientNumber.Location = new System.Drawing.Point(149, 27);
             this.textBoxClientNumber.Name = "textBoxClientNumber";
-            this.textBoxClientNumber.Size = new System.Drawing.Size(257, 20);
+            this.textBoxClientNumber.Size = new System.Drawing.Size(183, 20);
             this.textBoxClientNumber.TabIndex = 13;
             // 
             // comboBoxTime
@@ -156,11 +160,22 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // buttonFindClient
+            // 
+            this.buttonFindClient.Location = new System.Drawing.Point(338, 27);
+            this.buttonFindClient.Name = "buttonFindClient";
+            this.buttonFindClient.Size = new System.Drawing.Size(68, 20);
+            this.buttonFindClient.TabIndex = 17;
+            this.buttonFindClient.Text = "поиск";
+            this.buttonFindClient.UseVisualStyleBackColor = true;
+            this.buttonFindClient.Click += new System.EventHandler(this.buttonFindClient_Click);
+            // 
             // RecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 401);
+            this.Controls.Add(this.buttonFindClient);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.comboBoxTime);
@@ -201,5 +216,6 @@
         private System.Windows.Forms.ComboBox comboBoxTime;
         private System.Windows.Forms.Button buttonApply;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonFindClient;
     }
 }

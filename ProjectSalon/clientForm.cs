@@ -12,9 +12,12 @@ namespace ProjectSalon
 {
     public partial class ClientForm : Form
     {
-        public ClientForm()
+        Controller mainController;
+
+        public ClientForm(Controller controller)
         {
             InitializeComponent();
+            mainController = controller;
         }
 
 
@@ -25,7 +28,10 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            //TODO:Добавить вызов метода Controller.newRecord()
+            String name = textBoxClientName.Text;
+            String birth = textBoxClientBirth.Text;
+            String number = textBoxClientNumber.Text;
+            mainController.registerClient(name, birth, number);
             this.Close();
         }
     }

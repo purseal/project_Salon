@@ -12,8 +12,8 @@ namespace ProjectSalon
         public int price;
         public int duration;
         public int id;
-        List<Record> recordList;
-        List<Master> masterList;
+        public List<Record> recordList;
+        public List<Master> masterList;
 
         public Service(String name, int price, int duration, int id)
         {
@@ -21,6 +21,8 @@ namespace ProjectSalon
             this.price = price;
             this.duration = duration;
             this.id = id;
+            this.recordList = new List<Record>();
+            this.masterList = new List<Master>();
         }
 
         public void addMaster(Master master)

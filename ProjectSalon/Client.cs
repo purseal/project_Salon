@@ -10,14 +10,16 @@ namespace ProjectSalon
     public class Client
     {
         public String name;
-        public DateTime birth;
-        public int number;
+        public String birth;
+        public String number;
         List<Record> recordList;
 
-        public Client(String name, DateTime birth)
+        public Client(String name, String birth, String number)
         {
             this.name = name;
             this.birth = birth;
+            this.number = number;
+            this.recordList = new List<Record>();
         }
 
         /// <summary>

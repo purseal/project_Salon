@@ -8,25 +8,27 @@ namespace ProjectSalon
 {
     public class Record
     {
-        public DateTime date;
         public Boolean status;
         public Service service;
         public Master master;
         public Client client;
+        public DateTime day;
+        public int hour;
         public int id;
 
-        public Record(DateTime date, Service service, Master master, Client client)
-        {
-            this.date = date;
+        public Record(Service service, Master master, Client client, DateTime day, int hour)
+        {            
             this.service = service;
             this.master = master;
             this.client = client;
             status = false;
+            this.day = day;
+            this.hour = hour;
         }
 
         override public String ToString()
         {
-            return "Запись № " + id;
+            return client.name + " - " + service.name + " ( " + day.Day + "." + day.Month + " " + hour + ":00)";
         }
     }
 }

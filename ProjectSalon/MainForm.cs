@@ -21,18 +21,26 @@ namespace ProjectSalon
             mainDataStorage = DataStorage.get();
             mainController.registerSalon("Каширское шоссе, 11", "Красотка");
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
+            mainPanelClient.Visible = false;
+            mainPanelRecord.Visible = false;
+            mainPanelMaster.Visible = false;
+            mainPanelService.Visible = false;
         }
 
         private void newRecordToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newRecordForm = new RecordForm();
+            Form newRecordForm = new RecordForm(mainController);
             newRecordForm.Text = "Добавление записи";
             newRecordForm.ShowDialog(this);
+            textBoxRecordSearch.Text = "";
+            textBoxClientSearch.Text = "";
+            textBoxRecordSearch_TextChanged(sender, e);
+            textBoxClientSearch_TextChanged(sender, e);
         }
 
         private void newClientToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newClientForm = new ClientForm();
+            Form newClientForm = new ClientForm(mainController);
             newClientForm.Text = "Добавление клиента";
             newClientForm.ShowDialog(this);
         }
@@ -86,6 +94,60 @@ namespace ProjectSalon
             {
                 serviceListBox.Items.Add(service);
             }
+        }
+
+        private void clientListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainPanelClient.Visible = true;
+            mainPanelRecord.Visible = false;
+            mainPanelMaster.Visible = false;
+            mainPanelService.Visible = false;
+
+            Client client = (Client)clientListBox.SelectedItem;
+            clientNameLabel.Text = client.name;
+            clientNumberLabel.Text = client.number;
+            clientBirthDayLabel.Text = client.birth;
+        }
+
+        private void recordListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainPanelClient.Visible = false;
+            mainPanelRecord.Visible = true;
+            mainPanelMaster.Visible = false;
+            mainPanelService.Visible = false;
+            Record record = (Record)recordListBox.SelectedItem;
+            labelRecordClientName.Text = record.client.name;
+            labelRecordClientNumber.Text = record.client.number;
+            labelRecordMasterName.Text = record.master.name;
+            labelRecordServiceName.Text = record.service.name;
+            labelRecordDate.Text = record.day.Day + "." + record.day.Month + "." + record.day.Year + " " + record.hour + ":00";
+        }
+
+        private void masterListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainPanelClient.Visible = false;
+            mainPanelRecord.Visible = false;
+            mainPanelMaster.Visible = true;
+            mainPanelService.Visible = false;
+            Master master = (Master)masterListBox.SelectedItem;
+            labelMasterName.Text = master.name;
+            labelMasterSalary.Text = Convert.ToString(master.salary);
+            foreach (Service service in master.serviceList)
+            {
+                listBoxMasterServices.Items.Add(service);
+            }            
+        }
+
+        private void serviceListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mainPanelClient.Visible = false;
+            mainPanelRecord.Visible = false;
+            mainPanelMaster.Visible = false;
+            mainPanelService.Visible = true;
+            Service service = (Service)serviceListBox.SelectedItem;
+            labelServiceDuration.Text = Convert.ToString(service.duration);
+            labelServiceName.Text = service.name;
+            labelServicePrice.Text = Convert.ToString(service.price);
         }
     }
 }

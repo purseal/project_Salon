@@ -40,23 +40,22 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.TabPage = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clientListBox = new System.Windows.Forms.ListBox();
             this.textBoxClientSearch = new System.Windows.Forms.TextBox();
             this.recordTabPage = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.recordListBox = new System.Windows.Forms.ListBox();
             this.textBoxRecordSearch = new System.Windows.Forms.TextBox();
             this.masterTabPage = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.masterListBox = new System.Windows.Forms.ListBox();
             this.textBoxMasterSearch = new System.Windows.Forms.TextBox();
             this.serviceTabPage = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.textBoxServiceSearch = new System.Windows.Forms.TextBox();
             this.serviceListBox = new System.Windows.Forms.ListBox();
             this.mainPanelClient = new System.Windows.Forms.Panel();
-            this.recordGridView = new System.Windows.Forms.DataGridView();
-            this.recordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.service = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.master = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientBirthDayLabel = new System.Windows.Forms.Label();
             this.clientNumberLabel = new System.Windows.Forms.Label();
             this.clientNameLabel = new System.Windows.Forms.Label();
@@ -65,31 +64,48 @@
             this.clientNameTitle = new System.Windows.Forms.Label();
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.statusStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.rightPanel = new System.Windows.Forms.Panel();
             this.mainPanelRecord = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelRecordDate = new System.Windows.Forms.Label();
+            this.labelRecordServiceName = new System.Windows.Forms.Label();
+            this.labelRecordMasterName = new System.Windows.Forms.Label();
+            this.labelRecordClientNumber = new System.Windows.Forms.Label();
+            this.labelRecordClientName = new System.Windows.Forms.Label();
             this.clientNumberTitleRecord = new System.Windows.Forms.Label();
             this.dateTitleRecord = new System.Windows.Forms.Label();
             this.serviceNameTitleRecord = new System.Windows.Forms.Label();
             this.masterNameTitleRecord = new System.Windows.Forms.Label();
             this.clientNameTitleRecord = new System.Windows.Forms.Label();
-            this.textBoxServiceSearch = new System.Windows.Forms.TextBox();
+            this.mainPanelMaster = new System.Windows.Forms.Panel();
+            this.labelMasterName = new System.Windows.Forms.Label();
+            this.labelMasterNameTitle = new System.Windows.Forms.Label();
+            this.mainPanelService = new System.Windows.Forms.Panel();
+            this.labelServiceNameTitle = new System.Windows.Forms.Label();
+            this.labelServiceName = new System.Windows.Forms.Label();
+            this.labelServicePriceTitle = new System.Windows.Forms.Label();
+            this.labelServicePrice = new System.Windows.Forms.Label();
+            this.labelServiceDurationTitle = new System.Windows.Forms.Label();
+            this.labelServiceDuration = new System.Windows.Forms.Label();
+            this.labelMasterSalary = new System.Windows.Forms.Label();
+            this.labelMasterSalaryTitle = new System.Windows.Forms.Label();
+            this.labelMasterServiceTitle = new System.Windows.Forms.Label();
+            this.listBoxMasterServices = new System.Windows.Forms.ListBox();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.TabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.recordTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.masterTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.serviceTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.mainPanelClient.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recordGridView)).BeginInit();
             this.mainStatusStrip.SuspendLayout();
             this.mainPanelRecord.SuspendLayout();
+            this.mainPanelMaster.SuspendLayout();
+            this.mainPanelService.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -100,7 +116,7 @@
             this.справкаToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(1116, 24);
+            this.mainMenuStrip.Size = new System.Drawing.Size(993, 24);
             this.mainMenuStrip.TabIndex = 0;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -149,7 +165,7 @@
             this.newMasterToolboxButton});
             this.mainToolStrip.Location = new System.Drawing.Point(0, 24);
             this.mainToolStrip.Name = "mainToolStrip";
-            this.mainToolStrip.Size = new System.Drawing.Size(1116, 50);
+            this.mainToolStrip.Size = new System.Drawing.Size(993, 50);
             this.mainToolStrip.Stretch = true;
             this.mainToolStrip.TabIndex = 1;
             // 
@@ -193,6 +209,7 @@
             // 
             // TabPage
             // 
+            this.TabPage.Controls.Add(this.pictureBox1);
             this.TabPage.Controls.Add(this.clientListBox);
             this.TabPage.Controls.Add(this.textBoxClientSearch);
             this.TabPage.Location = new System.Drawing.Point(4, 22);
@@ -203,6 +220,17 @@
             this.TabPage.Text = "Клиент";
             this.TabPage.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox1.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // clientListBox
             // 
             this.clientListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -212,17 +240,19 @@
             this.clientListBox.Name = "clientListBox";
             this.clientListBox.Size = new System.Drawing.Size(270, 379);
             this.clientListBox.TabIndex = 1;
+            this.clientListBox.SelectedIndexChanged += new System.EventHandler(this.clientListBox_SelectedIndexChanged);
             // 
             // textBoxClientSearch
             // 
             this.textBoxClientSearch.Location = new System.Drawing.Point(5, 5);
             this.textBoxClientSearch.Name = "textBoxClientSearch";
-            this.textBoxClientSearch.Size = new System.Drawing.Size(270, 20);
+            this.textBoxClientSearch.Size = new System.Drawing.Size(245, 20);
             this.textBoxClientSearch.TabIndex = 0;
             this.textBoxClientSearch.TextChanged += new System.EventHandler(this.textBoxClientSearch_TextChanged);
             // 
             // recordTabPage
             // 
+            this.recordTabPage.Controls.Add(this.pictureBox2);
             this.recordTabPage.Controls.Add(this.recordListBox);
             this.recordTabPage.Controls.Add(this.textBoxRecordSearch);
             this.recordTabPage.Location = new System.Drawing.Point(4, 22);
@@ -233,6 +263,17 @@
             this.recordTabPage.Text = "Запись";
             this.recordTabPage.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox2.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // recordListBox
             // 
             this.recordListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -242,17 +283,19 @@
             this.recordListBox.Name = "recordListBox";
             this.recordListBox.Size = new System.Drawing.Size(270, 379);
             this.recordListBox.TabIndex = 2;
+            this.recordListBox.SelectedIndexChanged += new System.EventHandler(this.recordListBox_SelectedIndexChanged);
             // 
             // textBoxRecordSearch
             // 
             this.textBoxRecordSearch.Location = new System.Drawing.Point(5, 5);
             this.textBoxRecordSearch.Name = "textBoxRecordSearch";
-            this.textBoxRecordSearch.Size = new System.Drawing.Size(263, 20);
+            this.textBoxRecordSearch.Size = new System.Drawing.Size(245, 20);
             this.textBoxRecordSearch.TabIndex = 1;
             this.textBoxRecordSearch.TextChanged += new System.EventHandler(this.textBoxRecordSearch_TextChanged);
             // 
             // masterTabPage
             // 
+            this.masterTabPage.Controls.Add(this.pictureBox3);
             this.masterTabPage.Controls.Add(this.masterListBox);
             this.masterTabPage.Controls.Add(this.textBoxMasterSearch);
             this.masterTabPage.Location = new System.Drawing.Point(4, 22);
@@ -261,6 +304,17 @@
             this.masterTabPage.TabIndex = 2;
             this.masterTabPage.Text = "Мастер";
             this.masterTabPage.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox3.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // masterListBox
             // 
@@ -271,17 +325,19 @@
             this.masterListBox.Name = "masterListBox";
             this.masterListBox.Size = new System.Drawing.Size(270, 379);
             this.masterListBox.TabIndex = 2;
+            this.masterListBox.SelectedIndexChanged += new System.EventHandler(this.masterListBox_SelectedIndexChanged);
             // 
             // textBoxMasterSearch
             // 
             this.textBoxMasterSearch.Location = new System.Drawing.Point(5, 5);
             this.textBoxMasterSearch.Name = "textBoxMasterSearch";
-            this.textBoxMasterSearch.Size = new System.Drawing.Size(263, 20);
+            this.textBoxMasterSearch.Size = new System.Drawing.Size(245, 20);
             this.textBoxMasterSearch.TabIndex = 1;
             this.textBoxMasterSearch.TextChanged += new System.EventHandler(this.textBoxMasterSearch_TextChanged);
             // 
             // serviceTabPage
             // 
+            this.serviceTabPage.Controls.Add(this.pictureBox4);
             this.serviceTabPage.Controls.Add(this.textBoxServiceSearch);
             this.serviceTabPage.Controls.Add(this.serviceListBox);
             this.serviceTabPage.Location = new System.Drawing.Point(4, 22);
@@ -290,6 +346,25 @@
             this.serviceTabPage.TabIndex = 3;
             this.serviceTabPage.Text = "Услуга";
             this.serviceTabPage.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox4.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // textBoxServiceSearch
+            // 
+            this.textBoxServiceSearch.Location = new System.Drawing.Point(5, 5);
+            this.textBoxServiceSearch.Name = "textBoxServiceSearch";
+            this.textBoxServiceSearch.Size = new System.Drawing.Size(245, 20);
+            this.textBoxServiceSearch.TabIndex = 3;
+            this.textBoxServiceSearch.TextChanged += new System.EventHandler(this.textBoxServiceSearch_TextChanged);
             // 
             // serviceListBox
             // 
@@ -300,11 +375,11 @@
             this.serviceListBox.Name = "serviceListBox";
             this.serviceListBox.Size = new System.Drawing.Size(270, 379);
             this.serviceListBox.TabIndex = 2;
+            this.serviceListBox.SelectedIndexChanged += new System.EventHandler(this.serviceListBox_SelectedIndexChanged);
             // 
             // mainPanelClient
             // 
             this.mainPanelClient.BackColor = System.Drawing.SystemColors.Window;
-            this.mainPanelClient.Controls.Add(this.recordGridView);
             this.mainPanelClient.Controls.Add(this.clientBirthDayLabel);
             this.mainPanelClient.Controls.Add(this.clientNumberLabel);
             this.mainPanelClient.Controls.Add(this.clientNameLabel);
@@ -313,69 +388,13 @@
             this.mainPanelClient.Controls.Add(this.clientNameTitle);
             this.mainPanelClient.Location = new System.Drawing.Point(315, 80);
             this.mainPanelClient.Name = "mainPanelClient";
-            this.mainPanelClient.Size = new System.Drawing.Size(465, 465);
+            this.mainPanelClient.Size = new System.Drawing.Size(642, 465);
             this.mainPanelClient.TabIndex = 3;
-            // 
-            // recordGridView
-            // 
-            this.recordGridView.AllowUserToAddRows = false;
-            this.recordGridView.AllowUserToDeleteRows = false;
-            this.recordGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.recordGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.recordGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.recordGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.recordId,
-            this.date,
-            this.service,
-            this.master,
-            this.status});
-            this.recordGridView.Location = new System.Drawing.Point(20, 250);
-            this.recordGridView.Name = "recordGridView";
-            this.recordGridView.ReadOnly = true;
-            this.recordGridView.RowHeadersVisible = false;
-            this.recordGridView.Size = new System.Drawing.Size(430, 165);
-            this.recordGridView.TabIndex = 6;
-            // 
-            // recordId
-            // 
-            this.recordId.Frozen = true;
-            this.recordId.HeaderText = "№ Записи";
-            this.recordId.Name = "recordId";
-            this.recordId.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.Frozen = true;
-            this.date.HeaderText = "Дата";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 60;
-            // 
-            // service
-            // 
-            this.service.Frozen = true;
-            this.service.HeaderText = "Услуга";
-            this.service.Name = "service";
-            this.service.ReadOnly = true;
-            // 
-            // master
-            // 
-            this.master.Frozen = true;
-            this.master.HeaderText = "Мастер";
-            this.master.Name = "master";
-            this.master.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.Frozen = true;
-            this.status.HeaderText = "Статус";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
             // 
             // clientBirthDayLabel
             // 
             this.clientBirthDayLabel.AutoSize = true;
-            this.clientBirthDayLabel.Location = new System.Drawing.Point(260, 140);
+            this.clientBirthDayLabel.Location = new System.Drawing.Point(380, 140);
             this.clientBirthDayLabel.Name = "clientBirthDayLabel";
             this.clientBirthDayLabel.Size = new System.Drawing.Size(61, 13);
             this.clientBirthDayLabel.TabIndex = 5;
@@ -384,7 +403,7 @@
             // clientNumberLabel
             // 
             this.clientNumberLabel.AutoSize = true;
-            this.clientNumberLabel.Location = new System.Drawing.Point(260, 90);
+            this.clientNumberLabel.Location = new System.Drawing.Point(380, 90);
             this.clientNumberLabel.Name = "clientNumberLabel";
             this.clientNumberLabel.Size = new System.Drawing.Size(82, 13);
             this.clientNumberLabel.TabIndex = 4;
@@ -393,7 +412,7 @@
             // clientNameLabel
             // 
             this.clientNameLabel.AutoSize = true;
-            this.clientNameLabel.Location = new System.Drawing.Point(260, 40);
+            this.clientNameLabel.Location = new System.Drawing.Point(380, 40);
             this.clientNameLabel.Name = "clientNameLabel";
             this.clientNameLabel.Size = new System.Drawing.Size(131, 13);
             this.clientNameLabel.TabIndex = 3;
@@ -432,7 +451,7 @@
             this.statusStripLabel});
             this.mainStatusStrip.Location = new System.Drawing.Point(0, 551);
             this.mainStatusStrip.Name = "mainStatusStrip";
-            this.mainStatusStrip.Size = new System.Drawing.Size(1116, 22);
+            this.mainStatusStrip.Size = new System.Drawing.Size(993, 22);
             this.mainStatusStrip.SizingGrip = false;
             this.mainStatusStrip.TabIndex = 4;
             // 
@@ -442,22 +461,14 @@
             this.statusStripLabel.Size = new System.Drawing.Size(45, 17);
             this.statusStripLabel.Text = "Готово";
             // 
-            // rightPanel
-            // 
-            this.rightPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.rightPanel.Location = new System.Drawing.Point(800, 80);
-            this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(286, 465);
-            this.rightPanel.TabIndex = 5;
-            // 
             // mainPanelRecord
             // 
             this.mainPanelRecord.BackColor = System.Drawing.SystemColors.Window;
-            this.mainPanelRecord.Controls.Add(this.label10);
-            this.mainPanelRecord.Controls.Add(this.label9);
-            this.mainPanelRecord.Controls.Add(this.label8);
-            this.mainPanelRecord.Controls.Add(this.label7);
-            this.mainPanelRecord.Controls.Add(this.label6);
+            this.mainPanelRecord.Controls.Add(this.labelRecordDate);
+            this.mainPanelRecord.Controls.Add(this.labelRecordServiceName);
+            this.mainPanelRecord.Controls.Add(this.labelRecordMasterName);
+            this.mainPanelRecord.Controls.Add(this.labelRecordClientNumber);
+            this.mainPanelRecord.Controls.Add(this.labelRecordClientName);
             this.mainPanelRecord.Controls.Add(this.clientNumberTitleRecord);
             this.mainPanelRecord.Controls.Add(this.dateTitleRecord);
             this.mainPanelRecord.Controls.Add(this.serviceNameTitleRecord);
@@ -465,53 +476,53 @@
             this.mainPanelRecord.Controls.Add(this.clientNameTitleRecord);
             this.mainPanelRecord.Location = new System.Drawing.Point(315, 80);
             this.mainPanelRecord.Name = "mainPanelRecord";
-            this.mainPanelRecord.Size = new System.Drawing.Size(465, 465);
+            this.mainPanelRecord.Size = new System.Drawing.Size(642, 465);
             this.mainPanelRecord.TabIndex = 6;
             // 
-            // label10
+            // labelRecordDate
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(260, 240);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "00.00.0000";
+            this.labelRecordDate.AutoSize = true;
+            this.labelRecordDate.Location = new System.Drawing.Point(397, 240);
+            this.labelRecordDate.Name = "labelRecordDate";
+            this.labelRecordDate.Size = new System.Drawing.Size(61, 13);
+            this.labelRecordDate.TabIndex = 9;
+            this.labelRecordDate.Text = "00.00.0000";
             // 
-            // label9
+            // labelRecordServiceName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(260, 190);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Название услуги";
+            this.labelRecordServiceName.AutoSize = true;
+            this.labelRecordServiceName.Location = new System.Drawing.Point(397, 190);
+            this.labelRecordServiceName.Name = "labelRecordServiceName";
+            this.labelRecordServiceName.Size = new System.Drawing.Size(93, 13);
+            this.labelRecordServiceName.TabIndex = 8;
+            this.labelRecordServiceName.Text = "Название услуги";
             // 
-            // label8
+            // labelRecordMasterName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(260, 140);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Фамилия Имя Отчество";
+            this.labelRecordMasterName.AutoSize = true;
+            this.labelRecordMasterName.Location = new System.Drawing.Point(397, 140);
+            this.labelRecordMasterName.Name = "labelRecordMasterName";
+            this.labelRecordMasterName.Size = new System.Drawing.Size(131, 13);
+            this.labelRecordMasterName.TabIndex = 7;
+            this.labelRecordMasterName.Text = "Фамилия Имя Отчество";
             // 
-            // label7
+            // labelRecordClientNumber
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(260, 90);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "00000000000000";
+            this.labelRecordClientNumber.AutoSize = true;
+            this.labelRecordClientNumber.Location = new System.Drawing.Point(397, 90);
+            this.labelRecordClientNumber.Name = "labelRecordClientNumber";
+            this.labelRecordClientNumber.Size = new System.Drawing.Size(91, 13);
+            this.labelRecordClientNumber.TabIndex = 6;
+            this.labelRecordClientNumber.Text = "00000000000000";
             // 
-            // label6
+            // labelRecordClientName
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(260, 40);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Фамилия Имя Отчество";
+            this.labelRecordClientName.AutoSize = true;
+            this.labelRecordClientName.Location = new System.Drawing.Point(397, 40);
+            this.labelRecordClientName.Name = "labelRecordClientName";
+            this.labelRecordClientName.Size = new System.Drawing.Size(131, 13);
+            this.labelRecordClientName.TabIndex = 5;
+            this.labelRecordClientName.Text = "Фамилия Имя Отчество";
             // 
             // clientNumberTitleRecord
             // 
@@ -558,22 +569,150 @@
             this.clientNameTitleRecord.TabIndex = 0;
             this.clientNameTitleRecord.Text = "Клиент";
             // 
-            // textBoxServiceSearch
+            // mainPanelMaster
             // 
-            this.textBoxServiceSearch.Location = new System.Drawing.Point(5, 5);
-            this.textBoxServiceSearch.Name = "textBoxServiceSearch";
-            this.textBoxServiceSearch.Size = new System.Drawing.Size(263, 20);
-            this.textBoxServiceSearch.TabIndex = 3;
-            this.textBoxServiceSearch.TextChanged += new System.EventHandler(this.textBoxServiceSearch_TextChanged);
+            this.mainPanelMaster.BackColor = System.Drawing.SystemColors.Window;
+            this.mainPanelMaster.Controls.Add(this.listBoxMasterServices);
+            this.mainPanelMaster.Controls.Add(this.labelMasterServiceTitle);
+            this.mainPanelMaster.Controls.Add(this.labelMasterSalaryTitle);
+            this.mainPanelMaster.Controls.Add(this.labelMasterSalary);
+            this.mainPanelMaster.Controls.Add(this.labelMasterName);
+            this.mainPanelMaster.Controls.Add(this.labelMasterNameTitle);
+            this.mainPanelMaster.Location = new System.Drawing.Point(315, 80);
+            this.mainPanelMaster.Name = "mainPanelMaster";
+            this.mainPanelMaster.Size = new System.Drawing.Size(642, 465);
+            this.mainPanelMaster.TabIndex = 7;
+            // 
+            // labelMasterName
+            // 
+            this.labelMasterName.AutoSize = true;
+            this.labelMasterName.Location = new System.Drawing.Point(397, 60);
+            this.labelMasterName.Name = "labelMasterName";
+            this.labelMasterName.Size = new System.Drawing.Size(131, 13);
+            this.labelMasterName.TabIndex = 5;
+            this.labelMasterName.Text = "Фамилия Имя Отчество";
+            // 
+            // labelMasterNameTitle
+            // 
+            this.labelMasterNameTitle.AutoSize = true;
+            this.labelMasterNameTitle.Location = new System.Drawing.Point(78, 60);
+            this.labelMasterNameTitle.Name = "labelMasterNameTitle";
+            this.labelMasterNameTitle.Size = new System.Drawing.Size(80, 13);
+            this.labelMasterNameTitle.TabIndex = 0;
+            this.labelMasterNameTitle.Text = "ФИО мастера";
+            // 
+            // mainPanelService
+            // 
+            this.mainPanelService.BackColor = System.Drawing.SystemColors.Window;
+            this.mainPanelService.Controls.Add(this.labelServiceDuration);
+            this.mainPanelService.Controls.Add(this.labelServiceDurationTitle);
+            this.mainPanelService.Controls.Add(this.labelServicePrice);
+            this.mainPanelService.Controls.Add(this.labelServicePriceTitle);
+            this.mainPanelService.Controls.Add(this.labelServiceName);
+            this.mainPanelService.Controls.Add(this.labelServiceNameTitle);
+            this.mainPanelService.Location = new System.Drawing.Point(315, 80);
+            this.mainPanelService.Name = "mainPanelService";
+            this.mainPanelService.Size = new System.Drawing.Size(642, 465);
+            this.mainPanelService.TabIndex = 8;
+            // 
+            // labelServiceNameTitle
+            // 
+            this.labelServiceNameTitle.AutoSize = true;
+            this.labelServiceNameTitle.Location = new System.Drawing.Point(38, 60);
+            this.labelServiceNameTitle.Name = "labelServiceNameTitle";
+            this.labelServiceNameTitle.Size = new System.Drawing.Size(93, 13);
+            this.labelServiceNameTitle.TabIndex = 0;
+            this.labelServiceNameTitle.Text = "Название услуги";
+            // 
+            // labelServiceName
+            // 
+            this.labelServiceName.AutoSize = true;
+            this.labelServiceName.Location = new System.Drawing.Point(427, 60);
+            this.labelServiceName.Name = "labelServiceName";
+            this.labelServiceName.Size = new System.Drawing.Size(93, 13);
+            this.labelServiceName.TabIndex = 1;
+            this.labelServiceName.Text = "Название услуги";
+            // 
+            // labelServicePriceTitle
+            // 
+            this.labelServicePriceTitle.AutoSize = true;
+            this.labelServicePriceTitle.Location = new System.Drawing.Point(40, 127);
+            this.labelServicePriceTitle.Name = "labelServicePriceTitle";
+            this.labelServicePriceTitle.Size = new System.Drawing.Size(33, 13);
+            this.labelServicePriceTitle.TabIndex = 2;
+            this.labelServicePriceTitle.Text = "Цена";
+            // 
+            // labelServicePrice
+            // 
+            this.labelServicePrice.AutoSize = true;
+            this.labelServicePrice.Location = new System.Drawing.Point(427, 127);
+            this.labelServicePrice.Name = "labelServicePrice";
+            this.labelServicePrice.Size = new System.Drawing.Size(33, 13);
+            this.labelServicePrice.TabIndex = 3;
+            this.labelServicePrice.Text = "Цена";
+            // 
+            // labelServiceDurationTitle
+            // 
+            this.labelServiceDurationTitle.AutoSize = true;
+            this.labelServiceDurationTitle.Location = new System.Drawing.Point(40, 190);
+            this.labelServiceDurationTitle.Name = "labelServiceDurationTitle";
+            this.labelServiceDurationTitle.Size = new System.Drawing.Size(145, 13);
+            this.labelServiceDurationTitle.TabIndex = 4;
+            this.labelServiceDurationTitle.Text = "Длительность выполнения";
+            // 
+            // labelServiceDuration
+            // 
+            this.labelServiceDuration.AutoSize = true;
+            this.labelServiceDuration.Location = new System.Drawing.Point(427, 190);
+            this.labelServiceDuration.Name = "labelServiceDuration";
+            this.labelServiceDuration.Size = new System.Drawing.Size(80, 13);
+            this.labelServiceDuration.TabIndex = 5;
+            this.labelServiceDuration.Text = "Длительность";
+            // 
+            // labelMasterSalary
+            // 
+            this.labelMasterSalary.AutoSize = true;
+            this.labelMasterSalary.Location = new System.Drawing.Point(395, 127);
+            this.labelMasterSalary.Name = "labelMasterSalary";
+            this.labelMasterSalary.Size = new System.Drawing.Size(63, 13);
+            this.labelMasterSalary.TabIndex = 6;
+            this.labelMasterSalary.Text = "000000 руб";
+            // 
+            // labelMasterSalaryTitle
+            // 
+            this.labelMasterSalaryTitle.AutoSize = true;
+            this.labelMasterSalaryTitle.Location = new System.Drawing.Point(78, 127);
+            this.labelMasterSalaryTitle.Name = "labelMasterSalaryTitle";
+            this.labelMasterSalaryTitle.Size = new System.Drawing.Size(55, 13);
+            this.labelMasterSalaryTitle.TabIndex = 7;
+            this.labelMasterSalaryTitle.Text = "Зарплата";
+            // 
+            // labelMasterServiceTitle
+            // 
+            this.labelMasterServiceTitle.AutoSize = true;
+            this.labelMasterServiceTitle.Location = new System.Drawing.Point(78, 190);
+            this.labelMasterServiceTitle.Name = "labelMasterServiceTitle";
+            this.labelMasterServiceTitle.Size = new System.Drawing.Size(116, 13);
+            this.labelMasterServiceTitle.TabIndex = 8;
+            this.labelMasterServiceTitle.Text = "Выполняемые услуги";
+            // 
+            // listBoxMasterServices
+            // 
+            this.listBoxMasterServices.FormattingEnabled = true;
+            this.listBoxMasterServices.Location = new System.Drawing.Point(345, 190);
+            this.listBoxMasterServices.Name = "listBoxMasterServices";
+            this.listBoxMasterServices.Size = new System.Drawing.Size(247, 173);
+            this.listBoxMasterServices.TabIndex = 9;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 573);
+            this.ClientSize = new System.Drawing.Size(993, 573);
+            this.Controls.Add(this.mainPanelService);
+            this.Controls.Add(this.mainPanelMaster);
             this.Controls.Add(this.mainPanelRecord);
             this.Controls.Add(this.mainPanelClient);
-            this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.mainStatusStrip);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.mainToolStrip);
@@ -593,19 +732,26 @@
             this.mainTabControl.ResumeLayout(false);
             this.TabPage.ResumeLayout(false);
             this.TabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.recordTabPage.ResumeLayout(false);
             this.recordTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.masterTabPage.ResumeLayout(false);
             this.masterTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.serviceTabPage.ResumeLayout(false);
             this.serviceTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.mainPanelClient.ResumeLayout(false);
             this.mainPanelClient.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recordGridView)).EndInit();
             this.mainStatusStrip.ResumeLayout(false);
             this.mainStatusStrip.PerformLayout();
             this.mainPanelRecord.ResumeLayout(false);
             this.mainPanelRecord.PerformLayout();
+            this.mainPanelMaster.ResumeLayout(false);
+            this.mainPanelMaster.PerformLayout();
+            this.mainPanelService.ResumeLayout(false);
+            this.mainPanelService.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,17 +777,10 @@
         private System.Windows.Forms.TextBox textBoxClientSearch;
         private System.Windows.Forms.TextBox textBoxRecordSearch;
         private System.Windows.Forms.TextBox textBoxMasterSearch;
-        private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.TabPage serviceTabPage;
         private System.Windows.Forms.ListBox recordListBox;
         private System.Windows.Forms.ListBox masterListBox;
         private System.Windows.Forms.ListBox serviceListBox;
-        private System.Windows.Forms.DataGridView recordGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn recordId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn service;
-        private System.Windows.Forms.DataGridViewTextBoxColumn master;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.Label clientBirthDayLabel;
         private System.Windows.Forms.Label clientNumberLabel;
         private System.Windows.Forms.Label clientNameLabel;
@@ -650,11 +789,11 @@
         private System.Windows.Forms.Label clientNameTitle;
         private System.Windows.Forms.Panel mainPanelRecord;
         private System.Windows.Forms.ToolStripStatusLabel statusStripLabel;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelRecordDate;
+        private System.Windows.Forms.Label labelRecordServiceName;
+        private System.Windows.Forms.Label labelRecordMasterName;
+        private System.Windows.Forms.Label labelRecordClientNumber;
+        private System.Windows.Forms.Label labelRecordClientName;
         private System.Windows.Forms.Label clientNumberTitleRecord;
         private System.Windows.Forms.Label dateTitleRecord;
         private System.Windows.Forms.Label serviceNameTitleRecord;
@@ -663,6 +802,24 @@
         private System.Windows.Forms.ToolStripMenuItem добавитьЗаписьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьМастераToolStripMenuItem;
         private System.Windows.Forms.TextBox textBoxServiceSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel mainPanelMaster;
+        private System.Windows.Forms.Label labelMasterName;
+        private System.Windows.Forms.Label labelMasterNameTitle;
+        private System.Windows.Forms.Panel mainPanelService;
+        private System.Windows.Forms.Label labelServiceName;
+        private System.Windows.Forms.Label labelServiceNameTitle;
+        private System.Windows.Forms.Label labelServicePrice;
+        private System.Windows.Forms.Label labelServicePriceTitle;
+        private System.Windows.Forms.Label labelServiceDuration;
+        private System.Windows.Forms.Label labelServiceDurationTitle;
+        private System.Windows.Forms.ListBox listBoxMasterServices;
+        private System.Windows.Forms.Label labelMasterServiceTitle;
+        private System.Windows.Forms.Label labelMasterSalaryTitle;
+        private System.Windows.Forms.Label labelMasterSalary;
     }
 }
 

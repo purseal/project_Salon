@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ProjectSalon
 {
@@ -33,11 +34,15 @@ namespace ProjectSalon
 
         public Master newMaster(String name, int salary)
         {
+            Debug.WriteLine("Создание мастера на DataStorage, размер masterList " + masterList.Count);
+
             int id;
-            if (masterList.Count != 0) id = masterID + (this.masterList.Count() - 1);
+            if (masterList.Count != 0)
+                id = masterID + (this.masterList.Count() - 1);
             else id = masterID;
             Master master = new Master(name, salary, id);
             this.masterList.Add(master);
+            Debug.WriteLine("Мастер добавлен в лист, размер листа " + masterList.Count);
             return master;
         }
 
@@ -51,9 +56,9 @@ namespace ProjectSalon
             return service;
         }
 
-        public Client newClient(String name, DateTime birth)
+        public Client newClient(String name, String birth, String number)
         {
-            Client client = new Client(name, birth);
+            Client client = new Client(name, birth, number);
             this.clientList.Add(client);
             return client;
         }

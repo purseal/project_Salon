@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ProjectSalon
 {
@@ -20,16 +21,19 @@ namespace ProjectSalon
         /// <param name="targetMaster">экземпляр объекта, сгенерированный в интерфейсе</param>
         public void registerMaster(string name, int salary, List<String> serviceNames)
         {
+            Debug.WriteLine("Запущен registerMaster");
             List<Service> finalServiceList = new List<Service>();
+            Debug.WriteLine("Количество названий услуг, полученных контроллером " + serviceNames.Count);
             foreach (String serviceName in serviceNames)
             {
                 Service targetService = getService(serviceName);
                 if (targetService == null)
                 {
-                    //Такого быть не должно
+                    Debug.WriteLine("Запись не найдена при создании мастера");
                 }
                 else
                     finalServiceList.Add(targetService);
+                targetService = null;
             }
             Master master = mainDataStorage.newMaster(name, salary);
             mainDataStorage.getSalon().addMaster(master);
@@ -38,6 +42,7 @@ namespace ProjectSalon
             {
                 master.addService(finalService);
                 finalService.addMaster(master);
+                Debug.WriteLine("Добавили услугу " + finalService.name + " мастеру " + master.name);
             }
         }
 
@@ -45,9 +50,15 @@ namespace ProjectSalon
         /// Проводит создание и начальную подготовку объекта класса Record
         /// </summary>
         /// <param name="targetRecord">экземпляр объекта, сгенерированный в интерфейсе</param>
-        public void registerRecord(Record targetRecord)
+        public void registerRecord(Service service, Master master, Client client, DateTime day, int hour)
         {
+            mainDataStorage.getSalon().addRecord(service, master, client, day, hour);
+        }
 
+        public void registerClient(String name, String birth, String number)
+        {
+            Client client = mainDataStorage.newClient(name, birth, number);
+            //TODO: Здесь явно что-то еще...
         }
 
         public void registerService(String name, int price, int duration)
@@ -125,6 +136,17 @@ namespace ProjectSalon
                 {
                     return tmpService;
                 }
+            }
+            return null;
+        }
+
+        public Client getClient(String number)
+        {
+            List<Client> clientList = getClientList("");
+            foreach (Client client in clientList)
+            {
+                if (client.number == number)
+                    return client;
             }
             return null;
         }

@@ -9,10 +9,10 @@ namespace ProjectSalon
     public class Master
     {
         public String name;
-        int salary;
+        public int salary;
         public int id;
         Salon[] employerList = new Salon[3];
-        List<Service> serviceList;
+        public List<Service> serviceList;
         List<Record> recordList;
 
         public Master(String name, int salary, int id)
@@ -20,6 +20,8 @@ namespace ProjectSalon
             this.name = name;
             this.salary = salary;
             this.id = id;
+            this.serviceList = new List<Service>();
+            this.recordList = new List<Record>();
         }
 
         /// <summary>
@@ -52,6 +54,25 @@ namespace ProjectSalon
                     return;
                 }
             }
+        }
+
+        public List<int> getFreeHours(DateTime day)
+        {
+            List<int> fullHours = new List<int>();
+            List<int> freeHours = new List<int>();
+            foreach (Record record in recordList)
+            {
+                if (record.day == day)
+                {
+                    fullHours.Add(record.hour);
+                }
+            }
+            for (int hour = 0; hour <= 23; hour++)
+            {
+                if (!fullHours.Contains(hour))
+                    freeHours.Add(hour);
+            }
+            return freeHours;
         }
 
         override public String ToString()
