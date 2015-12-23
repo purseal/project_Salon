@@ -213,7 +213,6 @@ namespace ProjectSalon
                 Debug.WriteLine("Загрузка выполнена:");
                 Debug.WriteLine("---загруженный салон в DS " + mainDataStorage.getSalon());
                 Debug.WriteLine("---загруженный салон data " + data.getSalon());
-                //Debug.WriteLine(master);
             }
             textBoxMasterSearch.Text = "";
             textBoxServiceSearch.Text = "";

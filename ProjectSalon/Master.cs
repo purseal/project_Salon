@@ -81,5 +81,16 @@ namespace ProjectSalon
             return name;
         }
 
+        /// <summary>
+        /// Изменяет данные объекта класса Мастер
+        /// </summary>
+        /// <param name="name">ФИО мастера</param>
+        /// <param name="salary">Зарплата мастера</param>
+        public void change(String name, int salary)
+        {
+            this.name = name;
+            this.salary = salary;
+        }
+
     }
 }

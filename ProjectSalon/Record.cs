@@ -31,5 +31,22 @@ namespace ProjectSalon
         {
             return client.name + " - " + service.name + " (" + day.Day + "." + day.Month + "." + day.Year + " " + hour + ":00)";
         }
+
+        /// <summary>
+        /// Изменяет данные объекта класса Запись
+        /// </summary>
+        /// <param name="date">Дата исполнения услуги</param>
+        /// <param name="service">Исполняемая услуга</param>
+        /// <param name="master">Мастер, исполняющий услугу</param>
+        /// <param name="client">Клиент, использующий услугу</param>
+        public void change(Service service, Master master, Client client, DateTime day, int hour, bool status)
+        {
+            this.service = service;
+            this.master = master;
+            this.client = client;
+            this.status = status;
+            this.day = day;
+            this.hour = hour;
+        }
     }
 }

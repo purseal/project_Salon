@@ -150,5 +150,55 @@ namespace ProjectSalon
             }
             return null;
         }
+
+        /// <summary>
+        /// Изменяет данные объекта класса Клиент
+        /// </summary>
+        /// <param name="name">ФИО клиента</param>
+        /// <param name="birth">Дата рождения клиента</param>
+        /// <param name="number">Телефонный номер клиента</param>
+        /// <param name="client">Изменяемый объект</param>
+        public void changeClient(String name, String birth, String number, Client client)
+        {
+            client.change(name, birth, number);
+        }
+
+        /// <summary>
+        /// Изменяет данные объекта класса Клиент
+        /// </summary>
+        /// <param name="name">ФИО мастера</param>
+        /// <param name="salary">Зарплата мастера</param>
+        /// <param name="master">Изменяемый объект</param>
+        public void changeMaster(String name, int salary, Master master)
+        {
+            master.change(name, salary);
+        }
+
+        /// <summary>
+        /// Изменяет параметры объекта
+        /// </summary>
+        /// <param name="service"></param>
+        /// <param name="master"></param>
+        /// <param name="client"></param>
+        /// <param name="day"></param>
+        /// <param name="hour"></param>
+        /// <param name="status"></param>
+        /// <param name="record"></param>
+        public void changeRecord(Service service, Master master, Client client, DateTime day, int hour, bool status, Record record)
+        {
+            record.change(service, master, client, day, hour, status);
+        }
+
+        /// <summary>
+        /// Изменяет данные объекта класса Клиент
+        /// </summary>
+        /// <param name="name">Название услуги</param>
+        /// <param name="price">Стоимость услуги</param>
+        /// <param name="duration">Продолжительность услуги</param>
+        /// <param name="service">Изменяемый объект</param>
+        public void changeService(String name, int price, int duration, Service service)
+        {
+            service.change(name, price, duration);
+        }
     }
 }

@@ -37,5 +37,18 @@ namespace ProjectSalon
             return name;
         }
 
+        /// <summary>
+        /// Изменяет данные объекта класса Клиент
+        /// </summary>
+        /// <param name="name">ФИО клиента</param>
+        /// <param name="birth">Дата рождения клиента</param>
+        /// <param name="number">Телефонный номер клиента</param>
+        public void change(String name, String birth, String number)
+        {
+            this.name = name;
+            this.birth = birth;
+            this.number = number;
+        }
+
     }
 }
