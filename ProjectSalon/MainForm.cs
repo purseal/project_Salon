@@ -6,7 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization;
 
 namespace ProjectSalon
 {
@@ -19,7 +23,7 @@ namespace ProjectSalon
             InitializeComponent();
             mainController = new Controller();
             mainDataStorage = DataStorage.get();
-            mainController.registerSalon("Каширское шоссе, 11", "Красотка");
+            mainController.registerSalon("Рублевское шоссе, 69", "Красотка2");
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
             mainPanelClient.Visible = false;
             mainPanelRecord.Visible = false;
@@ -102,7 +106,8 @@ namespace ProjectSalon
             mainPanelRecord.Visible = false;
             mainPanelMaster.Visible = false;
             mainPanelService.Visible = false;
-
+            if (clientListBox.SelectedItem == null)
+                return;
             Client client = (Client)clientListBox.SelectedItem;
             clientNameLabel.Text = client.name;
             clientNumberLabel.Text = client.number;
@@ -115,6 +120,8 @@ namespace ProjectSalon
             mainPanelRecord.Visible = true;
             mainPanelMaster.Visible = false;
             mainPanelService.Visible = false;
+            if (recordListBox.SelectedItem == null)
+                return;
             Record record = (Record)recordListBox.SelectedItem;
             labelRecordClientName.Text = record.client.name;
             labelRecordClientNumber.Text = record.client.number;
@@ -129,9 +136,12 @@ namespace ProjectSalon
             mainPanelRecord.Visible = false;
             mainPanelMaster.Visible = true;
             mainPanelService.Visible = false;
+            if (masterListBox.SelectedItem == null)
+                return;
             Master master = (Master)masterListBox.SelectedItem;
             labelMasterName.Text = master.name;
             labelMasterSalary.Text = Convert.ToString(master.salary);
+            listBoxMasterServices.Items.Clear();
             foreach (Service service in master.serviceList)
             {
                 listBoxMasterServices.Items.Add(service);
@@ -144,10 +154,76 @@ namespace ProjectSalon
             mainPanelRecord.Visible = false;
             mainPanelMaster.Visible = false;
             mainPanelService.Visible = true;
+            if (serviceListBox.SelectedItem == null)
+                return;
             Service service = (Service)serviceListBox.SelectedItem;
             labelServiceDuration.Text = Convert.ToString(service.duration);
             labelServiceName.Text = service.name;
             labelServicePrice.Text = Convert.ToString(service.price);
+        }
+
+        private void toolStripButtonSave_Click(object sender, EventArgs e)
+        {
+            SaveBinaryFormat(mainDataStorage, "dataStorage.dat");
+        }
+
+        static void SaveBinaryFormat(object objGraph, string fileName)
+        {
+            BinaryFormatter binFormat = new BinaryFormatter();
+            using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                try
+                {
+                    binFormat.Serialize(fStream, objGraph);
+                }
+                catch (SerializationException e)
+                {
+                    Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+                    throw;
+                }
+                finally
+                {
+                    fStream.Close();
+                }
+            }
+            Debug.WriteLine("--> Сохранение объекта в Binary format");
+        }
+
+        private void toolStripButtonLoad_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Запущена загрузка");
+            DataStorage data;
+            using (Stream fStream = File.OpenRead("dataStorage.dat"))
+            {
+                try
+                {
+                    BinaryFormatter binFormat = new BinaryFormatter();
+                    data = (DataStorage)binFormat.Deserialize(fStream);
+                    DataStorage.set(data);
+                }
+                catch (SerializationException ex)
+                {
+                    Console.WriteLine("Failed to deserialize. Reason: " + ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    fStream.Close();
+                }
+                Debug.WriteLine("Загрузка выполнена:");
+                Debug.WriteLine("---загруженный салон в DS " + mainDataStorage.getSalon());
+                Debug.WriteLine("---загруженный салон data " + data.getSalon());
+                //Debug.WriteLine(master);
+            }
+            textBoxMasterSearch.Text = "";
+            textBoxServiceSearch.Text = "";
+            textBoxRecordSearch.Text = "";
+            textBoxClientSearch.Text = "";
+            textBoxMasterSearch_TextChanged(sender, e);
+            textBoxServiceSearch_TextChanged(sender, e);
+            textBoxRecordSearch_TextChanged(sender, e);
+            textBoxClientSearch_TextChanged(sender, e);
+            this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
         }
     }
 }

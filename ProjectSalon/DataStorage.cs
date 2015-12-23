@@ -7,6 +7,7 @@ using System.Diagnostics;
 
 namespace ProjectSalon
 {
+    [Serializable]
     class DataStorage
     {
         private static DataStorage sDataStorage;
@@ -23,6 +24,14 @@ namespace ProjectSalon
             if (sDataStorage == null)
                 sDataStorage = new DataStorage();
             return sDataStorage;
+        }
+
+        public static void set(DataStorage data)
+        {
+            sDataStorage.salon = data.salon;
+            sDataStorage.serviceList = data.serviceList;
+            sDataStorage.masterList = data.masterList;
+            sDataStorage.clientList = data.clientList;
         }
 
         private DataStorage()

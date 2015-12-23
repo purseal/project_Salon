@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
+    [Serializable]
     public class Record
     {
         public Boolean status;
@@ -28,7 +29,7 @@ namespace ProjectSalon
 
         override public String ToString()
         {
-            return client.name + " - " + service.name + " ( " + day.Day + "." + day.Month + " " + hour + ":00)";
+            return client.name + " - " + service.name + " (" + day.Day + "." + day.Month + "." + day.Year + " " + hour + ":00)";
         }
     }
 }

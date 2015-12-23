@@ -129,6 +129,8 @@
     <Content Include="img\addRecord.png" />
     <Content Include="img\addClient.png" />
     <Content Include="img\addMaster.png" />
+    <None Include="Resources\load-icon.png" />
+    <None Include="Resources\save-icon.png" />
     <None Include="Resources\search-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

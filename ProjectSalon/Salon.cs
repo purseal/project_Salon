@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
+    [Serializable]
     public class Salon
     {
         DataStorage mainDataStorage;
@@ -36,6 +37,9 @@ namespace ProjectSalon
         {
             Record newRecord = new Record(service, master, client, day, hour);
             recordList.Add(newRecord);
+            service.linkRecord(newRecord);
+            master.linkRecord(newRecord);
+            client.linkRecord(newRecord);
             return newRecord;
         }
 

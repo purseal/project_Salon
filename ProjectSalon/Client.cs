@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
+    [Serializable]
     public class Client
     {
         public String name;

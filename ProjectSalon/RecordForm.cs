@@ -20,6 +20,12 @@ namespace ProjectSalon
         {
             InitializeComponent();
             mainController = controller;
+
+            List<Service> serviceList = mainController.getServiceList("");
+            foreach (Service service in serviceList)
+            {
+                comboBoxService.Items.Add(service);
+            }
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
@@ -42,6 +48,8 @@ namespace ProjectSalon
         {
             String clientNumber = textBoxClientNumber.Text;
             Client client = mainController.getClient(clientNumber);
+
+
             if (client == null)
             {
                 DialogResult dialogResult = MessageBox.Show("Еще нет клиента с таким номером.\nЗарегистрировать нового клиента?", "Новый клиент", MessageBoxButtons.YesNo);
@@ -66,13 +74,7 @@ namespace ProjectSalon
                 textBoxClientNumber.Enabled = false;
                 textBoxClientName.Text = client.name;
                 textBoxClientName.Enabled = false;
-            }
-
-            List<Service> serviceList = mainController.getServiceList("");
-            foreach (Service service in serviceList)
-            {
-                comboBoxService.Items.Add(service);
-            }
+            }            
         }
 
         private void comboBoxService_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,8 +97,7 @@ namespace ProjectSalon
             comboBoxTime.Enabled = true;
             comboBoxTime.Items.Clear();
             foreach (int hour in freeHours)
-                comboBoxTime.Items.Add(hour);
-                
+                comboBoxTime.Items.Add(hour);                
         }
 
         private void comboBoxMaster_SelectedIndexChanged(object sender, EventArgs e)

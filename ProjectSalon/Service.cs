@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
+    [Serializable]
     public class Service
     {
         public String name;
@@ -30,7 +31,7 @@ namespace ProjectSalon
             masterList.Add(master);
         }
 
-        public void addRecord(Record record)
+        public void linkRecord(Record record)
         {
             recordList.Add(record);
         }

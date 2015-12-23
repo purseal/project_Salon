@@ -92,7 +92,7 @@
             // mainMonthCalendar
             // 
             this.mainMonthCalendar.Enabled = false;
-            this.mainMonthCalendar.Location = new System.Drawing.Point(242, 190);
+            this.mainMonthCalendar.Location = new System.Drawing.Point(149, 190);
             this.mainMonthCalendar.Name = "mainMonthCalendar";
             this.mainMonthCalendar.TabIndex = 9;
             this.mainMonthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mainMonthCalendar_DateChanged);
@@ -135,7 +135,7 @@
             // 
             this.comboBoxTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTime.Enabled = false;
-            this.comboBoxTime.Location = new System.Drawing.Point(149, 190);
+            this.comboBoxTime.Location = new System.Drawing.Point(325, 190);
             this.comboBoxTime.Name = "comboBoxTime";
             this.comboBoxTime.Size = new System.Drawing.Size(81, 21);
             this.comboBoxTime.TabIndex = 14;

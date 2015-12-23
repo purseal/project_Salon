@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectSalon
 {
+    [Serializable]
     public class Master
     {
         public String name;

@@ -35,24 +35,18 @@
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
-            this.newRecordToolboxButton = new System.Windows.Forms.ToolStripButton();
-            this.newMasterToolboxButton = new System.Windows.Forms.ToolStripButton();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.TabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clientListBox = new System.Windows.Forms.ListBox();
             this.textBoxClientSearch = new System.Windows.Forms.TextBox();
             this.recordTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.recordListBox = new System.Windows.Forms.ListBox();
             this.textBoxRecordSearch = new System.Windows.Forms.TextBox();
             this.masterTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.masterListBox = new System.Windows.Forms.ListBox();
             this.textBoxMasterSearch = new System.Windows.Forms.TextBox();
             this.serviceTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBoxServiceSearch = new System.Windows.Forms.TextBox();
             this.serviceListBox = new System.Windows.Forms.ListBox();
             this.mainPanelClient = new System.Windows.Forms.Panel();
@@ -76,36 +70,44 @@
             this.masterNameTitleRecord = new System.Windows.Forms.Label();
             this.clientNameTitleRecord = new System.Windows.Forms.Label();
             this.mainPanelMaster = new System.Windows.Forms.Panel();
+            this.listBoxMasterServices = new System.Windows.Forms.ListBox();
+            this.labelMasterServiceTitle = new System.Windows.Forms.Label();
+            this.labelMasterSalaryTitle = new System.Windows.Forms.Label();
+            this.labelMasterSalary = new System.Windows.Forms.Label();
             this.labelMasterName = new System.Windows.Forms.Label();
             this.labelMasterNameTitle = new System.Windows.Forms.Label();
             this.mainPanelService = new System.Windows.Forms.Panel();
-            this.labelServiceNameTitle = new System.Windows.Forms.Label();
-            this.labelServiceName = new System.Windows.Forms.Label();
-            this.labelServicePriceTitle = new System.Windows.Forms.Label();
-            this.labelServicePrice = new System.Windows.Forms.Label();
-            this.labelServiceDurationTitle = new System.Windows.Forms.Label();
             this.labelServiceDuration = new System.Windows.Forms.Label();
-            this.labelMasterSalary = new System.Windows.Forms.Label();
-            this.labelMasterSalaryTitle = new System.Windows.Forms.Label();
-            this.labelMasterServiceTitle = new System.Windows.Forms.Label();
-            this.listBoxMasterServices = new System.Windows.Forms.ListBox();
+            this.labelServiceDurationTitle = new System.Windows.Forms.Label();
+            this.labelServicePrice = new System.Windows.Forms.Label();
+            this.labelServicePriceTitle = new System.Windows.Forms.Label();
+            this.labelServiceName = new System.Windows.Forms.Label();
+            this.labelServiceNameTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
+            this.newRecordToolboxButton = new System.Windows.Forms.ToolStripButton();
+            this.newMasterToolboxButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.TabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.recordTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.masterTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.serviceTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.mainPanelClient.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
             this.mainPanelRecord.SuspendLayout();
             this.mainPanelMaster.SuspendLayout();
             this.mainPanelService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -161,6 +163,8 @@
             this.mainToolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.mainToolStrip.GripMargin = new System.Windows.Forms.Padding(10, 2, 2, 2);
             this.mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonSave,
+            this.toolStripButtonLoad,
             this.newRecordToolboxButton,
             this.newMasterToolboxButton});
             this.mainToolStrip.Location = new System.Drawing.Point(0, 24);
@@ -168,24 +172,6 @@
             this.mainToolStrip.Size = new System.Drawing.Size(993, 50);
             this.mainToolStrip.Stretch = true;
             this.mainToolStrip.TabIndex = 1;
-            // 
-            // newRecordToolboxButton
-            // 
-            this.newRecordToolboxButton.Image = global::ProjectSalon.Properties.Resources.addRecord;
-            this.newRecordToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newRecordToolboxButton.Name = "newRecordToolboxButton";
-            this.newRecordToolboxButton.Size = new System.Drawing.Size(119, 47);
-            this.newRecordToolboxButton.Text = "Добавить запись";
-            this.newRecordToolboxButton.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
-            // 
-            // newMasterToolboxButton
-            // 
-            this.newMasterToolboxButton.Image = global::ProjectSalon.Properties.Resources.addMaster;
-            this.newMasterToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newMasterToolboxButton.Name = "newMasterToolboxButton";
-            this.newMasterToolboxButton.Size = new System.Drawing.Size(127, 47);
-            this.newMasterToolboxButton.Text = "Добавить мастера";
-            this.newMasterToolboxButton.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
             // 
             // leftPanel
             // 
@@ -220,17 +206,6 @@
             this.TabPage.Text = "Клиент";
             this.TabPage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox1.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // clientListBox
             // 
             this.clientListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -263,17 +238,6 @@
             this.recordTabPage.Text = "Запись";
             this.recordTabPage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox2.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // recordListBox
             // 
             this.recordListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -305,17 +269,6 @@
             this.masterTabPage.Text = "Мастер";
             this.masterTabPage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox3.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // masterListBox
             // 
             this.masterListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -346,17 +299,6 @@
             this.serviceTabPage.TabIndex = 3;
             this.serviceTabPage.Text = "Услуга";
             this.serviceTabPage.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox4.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
             // 
             // textBoxServiceSearch
             // 
@@ -583,6 +525,41 @@
             this.mainPanelMaster.Size = new System.Drawing.Size(642, 465);
             this.mainPanelMaster.TabIndex = 7;
             // 
+            // listBoxMasterServices
+            // 
+            this.listBoxMasterServices.FormattingEnabled = true;
+            this.listBoxMasterServices.Location = new System.Drawing.Point(345, 190);
+            this.listBoxMasterServices.Name = "listBoxMasterServices";
+            this.listBoxMasterServices.Size = new System.Drawing.Size(247, 173);
+            this.listBoxMasterServices.TabIndex = 9;
+            // 
+            // labelMasterServiceTitle
+            // 
+            this.labelMasterServiceTitle.AutoSize = true;
+            this.labelMasterServiceTitle.Location = new System.Drawing.Point(78, 190);
+            this.labelMasterServiceTitle.Name = "labelMasterServiceTitle";
+            this.labelMasterServiceTitle.Size = new System.Drawing.Size(116, 13);
+            this.labelMasterServiceTitle.TabIndex = 8;
+            this.labelMasterServiceTitle.Text = "Выполняемые услуги";
+            // 
+            // labelMasterSalaryTitle
+            // 
+            this.labelMasterSalaryTitle.AutoSize = true;
+            this.labelMasterSalaryTitle.Location = new System.Drawing.Point(78, 127);
+            this.labelMasterSalaryTitle.Name = "labelMasterSalaryTitle";
+            this.labelMasterSalaryTitle.Size = new System.Drawing.Size(55, 13);
+            this.labelMasterSalaryTitle.TabIndex = 7;
+            this.labelMasterSalaryTitle.Text = "Зарплата";
+            // 
+            // labelMasterSalary
+            // 
+            this.labelMasterSalary.AutoSize = true;
+            this.labelMasterSalary.Location = new System.Drawing.Point(395, 127);
+            this.labelMasterSalary.Name = "labelMasterSalary";
+            this.labelMasterSalary.Size = new System.Drawing.Size(63, 13);
+            this.labelMasterSalary.TabIndex = 6;
+            this.labelMasterSalary.Text = "000000 руб";
+            // 
             // labelMasterName
             // 
             this.labelMasterName.AutoSize = true;
@@ -615,41 +592,14 @@
             this.mainPanelService.Size = new System.Drawing.Size(642, 465);
             this.mainPanelService.TabIndex = 8;
             // 
-            // labelServiceNameTitle
+            // labelServiceDuration
             // 
-            this.labelServiceNameTitle.AutoSize = true;
-            this.labelServiceNameTitle.Location = new System.Drawing.Point(38, 60);
-            this.labelServiceNameTitle.Name = "labelServiceNameTitle";
-            this.labelServiceNameTitle.Size = new System.Drawing.Size(93, 13);
-            this.labelServiceNameTitle.TabIndex = 0;
-            this.labelServiceNameTitle.Text = "Название услуги";
-            // 
-            // labelServiceName
-            // 
-            this.labelServiceName.AutoSize = true;
-            this.labelServiceName.Location = new System.Drawing.Point(427, 60);
-            this.labelServiceName.Name = "labelServiceName";
-            this.labelServiceName.Size = new System.Drawing.Size(93, 13);
-            this.labelServiceName.TabIndex = 1;
-            this.labelServiceName.Text = "Название услуги";
-            // 
-            // labelServicePriceTitle
-            // 
-            this.labelServicePriceTitle.AutoSize = true;
-            this.labelServicePriceTitle.Location = new System.Drawing.Point(40, 127);
-            this.labelServicePriceTitle.Name = "labelServicePriceTitle";
-            this.labelServicePriceTitle.Size = new System.Drawing.Size(33, 13);
-            this.labelServicePriceTitle.TabIndex = 2;
-            this.labelServicePriceTitle.Text = "Цена";
-            // 
-            // labelServicePrice
-            // 
-            this.labelServicePrice.AutoSize = true;
-            this.labelServicePrice.Location = new System.Drawing.Point(427, 127);
-            this.labelServicePrice.Name = "labelServicePrice";
-            this.labelServicePrice.Size = new System.Drawing.Size(33, 13);
-            this.labelServicePrice.TabIndex = 3;
-            this.labelServicePrice.Text = "Цена";
+            this.labelServiceDuration.AutoSize = true;
+            this.labelServiceDuration.Location = new System.Drawing.Point(427, 190);
+            this.labelServiceDuration.Name = "labelServiceDuration";
+            this.labelServiceDuration.Size = new System.Drawing.Size(80, 13);
+            this.labelServiceDuration.TabIndex = 5;
+            this.labelServiceDuration.Text = "Длительность";
             // 
             // labelServiceDurationTitle
             // 
@@ -660,49 +610,121 @@
             this.labelServiceDurationTitle.TabIndex = 4;
             this.labelServiceDurationTitle.Text = "Длительность выполнения";
             // 
-            // labelServiceDuration
+            // labelServicePrice
             // 
-            this.labelServiceDuration.AutoSize = true;
-            this.labelServiceDuration.Location = new System.Drawing.Point(427, 190);
-            this.labelServiceDuration.Name = "labelServiceDuration";
-            this.labelServiceDuration.Size = new System.Drawing.Size(80, 13);
-            this.labelServiceDuration.TabIndex = 5;
-            this.labelServiceDuration.Text = "Длительность";
+            this.labelServicePrice.AutoSize = true;
+            this.labelServicePrice.Location = new System.Drawing.Point(427, 127);
+            this.labelServicePrice.Name = "labelServicePrice";
+            this.labelServicePrice.Size = new System.Drawing.Size(33, 13);
+            this.labelServicePrice.TabIndex = 3;
+            this.labelServicePrice.Text = "Цена";
             // 
-            // labelMasterSalary
+            // labelServicePriceTitle
             // 
-            this.labelMasterSalary.AutoSize = true;
-            this.labelMasterSalary.Location = new System.Drawing.Point(395, 127);
-            this.labelMasterSalary.Name = "labelMasterSalary";
-            this.labelMasterSalary.Size = new System.Drawing.Size(63, 13);
-            this.labelMasterSalary.TabIndex = 6;
-            this.labelMasterSalary.Text = "000000 руб";
+            this.labelServicePriceTitle.AutoSize = true;
+            this.labelServicePriceTitle.Location = new System.Drawing.Point(40, 127);
+            this.labelServicePriceTitle.Name = "labelServicePriceTitle";
+            this.labelServicePriceTitle.Size = new System.Drawing.Size(33, 13);
+            this.labelServicePriceTitle.TabIndex = 2;
+            this.labelServicePriceTitle.Text = "Цена";
             // 
-            // labelMasterSalaryTitle
+            // labelServiceName
             // 
-            this.labelMasterSalaryTitle.AutoSize = true;
-            this.labelMasterSalaryTitle.Location = new System.Drawing.Point(78, 127);
-            this.labelMasterSalaryTitle.Name = "labelMasterSalaryTitle";
-            this.labelMasterSalaryTitle.Size = new System.Drawing.Size(55, 13);
-            this.labelMasterSalaryTitle.TabIndex = 7;
-            this.labelMasterSalaryTitle.Text = "Зарплата";
+            this.labelServiceName.AutoSize = true;
+            this.labelServiceName.Location = new System.Drawing.Point(427, 60);
+            this.labelServiceName.Name = "labelServiceName";
+            this.labelServiceName.Size = new System.Drawing.Size(93, 13);
+            this.labelServiceName.TabIndex = 1;
+            this.labelServiceName.Text = "Название услуги";
             // 
-            // labelMasterServiceTitle
+            // labelServiceNameTitle
             // 
-            this.labelMasterServiceTitle.AutoSize = true;
-            this.labelMasterServiceTitle.Location = new System.Drawing.Point(78, 190);
-            this.labelMasterServiceTitle.Name = "labelMasterServiceTitle";
-            this.labelMasterServiceTitle.Size = new System.Drawing.Size(116, 13);
-            this.labelMasterServiceTitle.TabIndex = 8;
-            this.labelMasterServiceTitle.Text = "Выполняемые услуги";
+            this.labelServiceNameTitle.AutoSize = true;
+            this.labelServiceNameTitle.Location = new System.Drawing.Point(38, 60);
+            this.labelServiceNameTitle.Name = "labelServiceNameTitle";
+            this.labelServiceNameTitle.Size = new System.Drawing.Size(93, 13);
+            this.labelServiceNameTitle.TabIndex = 0;
+            this.labelServiceNameTitle.Text = "Название услуги";
             // 
-            // listBoxMasterServices
+            // pictureBox1
             // 
-            this.listBoxMasterServices.FormattingEnabled = true;
-            this.listBoxMasterServices.Location = new System.Drawing.Point(345, 190);
-            this.listBoxMasterServices.Name = "listBoxMasterServices";
-            this.listBoxMasterServices.Size = new System.Drawing.Size(247, 173);
-            this.listBoxMasterServices.TabIndex = 9;
+            this.pictureBox1.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox1.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox2.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox3.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox4.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // toolStripButtonSave
+            // 
+            this.toolStripButtonSave.Image = global::ProjectSalon.Properties.Resources.save_icon;
+            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSave.Name = "toolStripButtonSave";
+            this.toolStripButtonSave.Size = new System.Drawing.Size(85, 47);
+            this.toolStripButtonSave.Text = "Сохранить";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
+            // 
+            // newRecordToolboxButton
+            // 
+            this.newRecordToolboxButton.Image = global::ProjectSalon.Properties.Resources.addRecord;
+            this.newRecordToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newRecordToolboxButton.Name = "newRecordToolboxButton";
+            this.newRecordToolboxButton.Size = new System.Drawing.Size(119, 47);
+            this.newRecordToolboxButton.Text = "Добавить запись";
+            this.newRecordToolboxButton.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
+            // 
+            // newMasterToolboxButton
+            // 
+            this.newMasterToolboxButton.Image = global::ProjectSalon.Properties.Resources.addMaster;
+            this.newMasterToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newMasterToolboxButton.Name = "newMasterToolboxButton";
+            this.newMasterToolboxButton.Size = new System.Drawing.Size(127, 47);
+            this.newMasterToolboxButton.Text = "Добавить мастера";
+            this.newMasterToolboxButton.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
+            // 
+            // toolStripButtonLoad
+            // 
+            this.toolStripButtonLoad.Image = global::ProjectSalon.Properties.Resources.load_icon;
+            this.toolStripButtonLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonLoad.Name = "toolStripButtonLoad";
+            this.toolStripButtonLoad.Size = new System.Drawing.Size(81, 47);
+            this.toolStripButtonLoad.Text = "Загрузить";
+            this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
             // MainForm
             // 
@@ -732,16 +754,12 @@
             this.mainTabControl.ResumeLayout(false);
             this.TabPage.ResumeLayout(false);
             this.TabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.recordTabPage.ResumeLayout(false);
             this.recordTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.masterTabPage.ResumeLayout(false);
             this.masterTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.serviceTabPage.ResumeLayout(false);
             this.serviceTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.mainPanelClient.ResumeLayout(false);
             this.mainPanelClient.PerformLayout();
             this.mainStatusStrip.ResumeLayout(false);
@@ -752,6 +770,10 @@
             this.mainPanelMaster.PerformLayout();
             this.mainPanelService.ResumeLayout(false);
             this.mainPanelService.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -820,6 +842,8 @@
         private System.Windows.Forms.Label labelMasterServiceTitle;
         private System.Windows.Forms.Label labelMasterSalaryTitle;
         private System.Windows.Forms.Label labelMasterSalary;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSave;
+        private System.Windows.Forms.ToolStripButton toolStripButtonLoad;
     }
 }
 
