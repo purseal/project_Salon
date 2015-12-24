@@ -32,6 +32,7 @@ namespace ProjectSalon
             if (textBoxClientName.Text.Length < 1 || !textBoxClientBirth.MaskCompleted)
             {
                 MessageBox.Show("Необходимо полностью заполнить все поля", "Ошибка", MessageBoxButtons.OK);
+                return;
             }
             if (edit)
             {

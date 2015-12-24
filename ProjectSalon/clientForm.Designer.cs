@@ -104,6 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 296);
+            this.ControlBox = false;
             this.Controls.Add(this.textBoxClientBirth);
             this.Controls.Add(this.textBoxClientNumber);
             this.Controls.Add(this.buttonApply);
