@@ -155,15 +155,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label masterNameTitle;
-        private System.Windows.Forms.Label masterSalaryTitle;
-        private System.Windows.Forms.Label masterServicesTitle;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxSalary;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonApply;
-        private System.Windows.Forms.ListBox listBoxService;
-        private System.Windows.Forms.Button buttonAddService;
-        private System.Windows.Forms.TextBox textBoxServiceName;
+        public System.Windows.Forms.Label masterNameTitle;
+        public System.Windows.Forms.Label masterSalaryTitle;
+        public System.Windows.Forms.Label masterServicesTitle;
+        public System.Windows.Forms.TextBox textBoxName;
+        public System.Windows.Forms.TextBox textBoxSalary;
+        public System.Windows.Forms.Button buttonCancel;
+        public System.Windows.Forms.Button buttonApply;
+        public System.Windows.Forms.ListBox listBoxService;
+        public System.Windows.Forms.Button buttonAddService;
+        public System.Windows.Forms.TextBox textBoxServiceName;
     }
 }

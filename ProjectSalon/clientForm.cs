@@ -13,11 +13,12 @@ namespace ProjectSalon
     public partial class ClientForm : Form
     {
         Controller mainController;
-
-        public ClientForm(Controller controller)
+        bool edit;
+        public ClientForm(Controller controller, bool edit)
         {
             InitializeComponent();
             mainController = controller;
+            this.edit = edit;
         }
 
 
@@ -28,11 +29,23 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            String name = textBoxClientName.Text;
-            String birth = textBoxClientBirth.Text;
-            String number = textBoxClientNumber.Text;
-            mainController.registerClient(name, birth, number);
-            this.Close();
+            if (edit)
+            {
+                String name = textBoxClientName.Text;
+                String birth = textBoxClientBirth.Text;
+                String number = textBoxClientNumber.Text;
+                mainController.changeClient(name, birth, number, mainController.getClient(number));
+                this.Close();
+            }
+            else
+            {
+                String name = textBoxClientName.Text;
+                String birth = textBoxClientBirth.Text;
+                String number = textBoxClientNumber.Text;
+                mainController.registerClient(name, birth, number);
+                this.Close();
+            }
+            
         }
     }
 }

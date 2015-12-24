@@ -164,7 +164,7 @@
         public System.Windows.Forms.TextBox textBoxServiceName;
         public System.Windows.Forms.TextBox textBoxServicePrice;
         public System.Windows.Forms.TextBox textBoxServiceDuration;
-        private System.Windows.Forms.TrackBar trackBarDuration;
+        public System.Windows.Forms.TrackBar trackBarDuration;
         private System.Windows.Forms.Label labelDuration;
     }
 }

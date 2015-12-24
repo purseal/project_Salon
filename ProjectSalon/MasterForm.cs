@@ -15,21 +15,38 @@ namespace ProjectSalon
     {
         List<String> serviceNames;
         Controller mainController;
-        public MasterForm(MainForm mainForm)
+        bool edit;
+        Master inputMaster;
+        public MasterForm(MainForm mainForm, bool edit, Master master)
         {
             InitializeComponent();
             serviceNames = new List<String>();
             this.mainController = mainForm.mainController;
+            this.edit = edit;
+            inputMaster = master;
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            this.Close();
-            string name = textBoxName.Text;
-            int salary = Convert.ToInt32(textBoxSalary.Text);
-            //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
-            Debug.WriteLine("Вызов registerMaster из формы");
-            mainController.registerMaster(name, salary, serviceNames);
+            if (edit)
+            {
+                string name = textBoxName.Text;
+                int salary = Convert.ToInt32(textBoxSalary.Text);
+                //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
+                Debug.WriteLine("Вызов registerMaster из формы");
+                mainController.changeMaster(name, salary, inputMaster);
+                this.Close();
+            }
+            else
+            {               
+                string name = textBoxName.Text;
+                int salary = Convert.ToInt32(textBoxSalary.Text);
+                //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
+                Debug.WriteLine("Вызов registerMaster из формы");
+                mainController.registerMaster(name, salary, serviceNames);
+                this.Close();
+            }
+
             
         }
 
@@ -59,7 +76,7 @@ namespace ProjectSalon
                 DialogResult dialogResult = MessageBox.Show("Еще нет ни одного мастера, оказывающего данную услугу.\nДобавить новую услугу?", "Новая услуга", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    ServiceForm newServiceForm = new ServiceForm(mainController);
+                    ServiceForm newServiceForm = new ServiceForm(mainController, false);
                     newServiceForm.textBoxServiceName.Text = serviceName;
                     newServiceForm.textBoxServiceName.Enabled = false;
                     newServiceForm.ShowDialog();

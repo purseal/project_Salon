@@ -16,7 +16,9 @@ namespace ProjectSalon
         Controller mainController;
         Master currentMaster;
         List<int> freeHours;
-        public RecordForm(Controller controller)
+        bool edit;
+        Record inputRecord;
+        public RecordForm(Controller controller, bool edit, Record record)
         {
             InitializeComponent();
             mainController = controller;
@@ -26,17 +28,33 @@ namespace ProjectSalon
             {
                 comboBoxService.Items.Add(service);
             }
+            this.edit = edit;
+            inputRecord = record;
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            Service service = (Service)comboBoxService.SelectedItem;
-            Master master = (Master)comboBoxMaster.SelectedItem;
-            Client client = mainController.getClient(textBoxClientNumber.Text);
-            DateTime day = mainMonthCalendar.SelectionStart;
-            int hour = (int)comboBoxTime.SelectedItem;
-            mainController.registerRecord(service, master, client, day, hour);
-            this.Close();
+            if (edit)
+            {
+                Service service = (Service)comboBoxService.SelectedItem;
+                Master master = (Master)comboBoxMaster.SelectedItem;
+                Client client = mainController.getClient(textBoxClientNumber.Text);
+                DateTime day = mainMonthCalendar.SelectionStart;
+                int hour = (int)comboBoxTime.SelectedItem;
+                mainController.changeRecord(service, master, client, day, hour, true, inputRecord);
+                this.Close();
+            }
+            else
+            {
+                Service service = (Service)comboBoxService.SelectedItem;
+                Master master = (Master)comboBoxMaster.SelectedItem;
+                Client client = mainController.getClient(textBoxClientNumber.Text);
+                DateTime day = mainMonthCalendar.SelectionStart;
+                int hour = (int)comboBoxTime.SelectedItem;
+                mainController.registerRecord(service, master, client, day, hour);
+                this.Close();
+            }
+            
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -55,7 +73,7 @@ namespace ProjectSalon
                 DialogResult dialogResult = MessageBox.Show("Еще нет клиента с таким номером.\nЗарегистрировать нового клиента?", "Новый клиент", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    ClientForm newClientForm = new ClientForm(mainController);
+                    ClientForm newClientForm = new ClientForm(mainController, false);
                     newClientForm.textBoxClientNumber.Text = Convert.ToString(clientNumber);
                     newClientForm.textBoxClientNumber.Enabled = false;
                     newClientForm.ShowDialog();

@@ -203,19 +203,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Label clientNameTitleRecord;
-        private System.Windows.Forms.Label clientNumberTitleRecord;
-        private System.Windows.Forms.Label masterNameTitleRecord;
-        private System.Windows.Forms.Label serviceNameTitleRecord;
-        private System.Windows.Forms.Label dateTitleRecord;
-        private System.Windows.Forms.MonthCalendar mainMonthCalendar;
-        private System.Windows.Forms.ComboBox comboBoxMaster;
-        private System.Windows.Forms.ComboBox comboBoxService;
-        private System.Windows.Forms.TextBox textBoxClientName;
-        private System.Windows.Forms.TextBox textBoxClientNumber;
-        private System.Windows.Forms.ComboBox comboBoxTime;
-        private System.Windows.Forms.Button buttonApply;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonFindClient;
+        public System.Windows.Forms.Label clientNameTitleRecord;
+        public System.Windows.Forms.Label clientNumberTitleRecord;
+        public System.Windows.Forms.Label masterNameTitleRecord;
+        public System.Windows.Forms.Label serviceNameTitleRecord;
+        public System.Windows.Forms.Label dateTitleRecord;
+        public System.Windows.Forms.MonthCalendar mainMonthCalendar;
+        public System.Windows.Forms.ComboBox comboBoxMaster;
+        public System.Windows.Forms.ComboBox comboBoxService;
+        public System.Windows.Forms.TextBox textBoxClientName;
+        public System.Windows.Forms.TextBox textBoxClientNumber;
+        public System.Windows.Forms.ComboBox comboBoxTime;
+        public System.Windows.Forms.Button buttonApply;
+        public System.Windows.Forms.Button buttonCancel;
+        public System.Windows.Forms.Button buttonFindClient;
     }
 }

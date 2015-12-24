@@ -23,7 +23,7 @@ namespace ProjectSalon
             InitializeComponent();
             mainController = new Controller();
             mainDataStorage = DataStorage.get();
-            mainController.registerSalon("Рублевское шоссе, 69", "Красотка2");
+            mainController.registerSalon("Каширское шоссе, 11", "Красотка");
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
             mainPanelClient.Visible = false;
             mainPanelRecord.Visible = false;
@@ -33,7 +33,7 @@ namespace ProjectSalon
 
         private void newRecordToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newRecordForm = new RecordForm(mainController);
+            Form newRecordForm = new RecordForm(mainController, false, null);
             newRecordForm.Text = "Добавление записи";
             newRecordForm.ShowDialog(this);
             textBoxRecordSearch.Text = "";
@@ -44,14 +44,14 @@ namespace ProjectSalon
 
         private void newClientToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newClientForm = new ClientForm(mainController);
+            Form newClientForm = new ClientForm(mainController, false);
             newClientForm.Text = "Добавление клиента";
             newClientForm.ShowDialog(this);
         }
 
         private void newMasterToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newMasterForm = new MasterForm(this);
+            Form newMasterForm = new MasterForm(this, false, null);
             newMasterForm.Text = "Добавление мастера";
             newMasterForm.ShowDialog(this);
             textBoxMasterSearch.Text = "";
@@ -223,6 +223,89 @@ namespace ProjectSalon
             textBoxRecordSearch_TextChanged(sender, e);
             textBoxClientSearch_TextChanged(sender, e);
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
+        }
+
+        private void toolStripButtonEdit_Click(object sender, EventArgs e)
+        {
+            int selectedTab = mainTabControl.SelectedIndex;
+            switch (selectedTab)
+            {
+                //clientTab
+                case 0:
+                    if (clientListBox.SelectedItem != null)
+                    {
+                        Client client = (Client)clientListBox.SelectedItem;
+                        ClientForm editClientForm = new ClientForm(mainController, true);
+                        editClientForm.Text = "Изменение клиента";
+                        editClientForm.textBoxClientName.Text = client.name;
+                        editClientForm.textBoxClientNumber.Text = client.number;
+                        editClientForm.textBoxClientBirth.Text = client.birth;
+                        editClientForm.ShowDialog();
+                        textBoxClientSearch.Text = "";
+                        textBoxClientSearch_TextChanged(sender, e);
+                        clientListBox_SelectedIndexChanged(sender, e);
+                    }
+                    break;
+
+                //recordTab
+                case 1:
+                    if (recordListBox.SelectedItem != null)
+                    {
+                        Record record = (Record)recordListBox.SelectedItem;
+                        RecordForm editRecordForm = new RecordForm(mainController, true, record);
+                        editRecordForm.Text = "Изменение записи";
+                        editRecordForm.textBoxClientName.Text = record.client.name;
+                        editRecordForm.textBoxClientNumber.Text = record.client.number;
+                        editRecordForm.textBoxClientName.Enabled = false;
+                        editRecordForm.textBoxClientNumber.Enabled = false;
+                        editRecordForm.ShowDialog();
+                        textBoxRecordSearch.Text = "";
+                        textBoxRecordSearch_TextChanged(sender, e);
+                        recordListBox_SelectedIndexChanged(sender, e);
+                    }
+                    break;
+
+                //masterTab
+                case 2:
+                    if (masterListBox.SelectedItem != null)
+                    {
+                        Master master = (Master)masterListBox.SelectedItem;
+                        MasterForm editMasterForm = new MasterForm(this, true, master);
+                        editMasterForm.Text = "Изменение мастера";
+                        editMasterForm.textBoxName.Text = master.name;
+                        editMasterForm.textBoxSalary.Text = master.salary.ToString();
+                        foreach (Service service in master.serviceList)
+                        {
+                            editMasterForm.listBoxService.Items.Add(service);
+                        }
+                        editMasterForm.ShowDialog();
+                        textBoxMasterSearch.Text = "";
+                        textBoxServiceSearch.Text = "";
+                        textBoxMasterSearch_TextChanged(sender, e);
+                        textBoxServiceSearch_TextChanged(sender, e);
+                        masterListBox_SelectedIndexChanged(sender, e);
+                    }
+
+                    break;
+
+                //serviceTab
+                case 3:
+                    if (serviceListBox.SelectedItem != null)
+                    {
+                        Service service = (Service)serviceListBox.SelectedItem;
+                        ServiceForm editServiceForm = new ServiceForm(mainController, true);
+                        editServiceForm.Text = "Изменение услуги";
+                        editServiceForm.textBoxServiceName.Text = service.name;
+                        editServiceForm.trackBarDuration.Value = service.duration;
+                        editServiceForm.textBoxServicePrice.Text = service.price.ToString();
+                        editServiceForm.ShowDialog();                        
+                        textBoxServiceSearch.Text = "";                        
+                        textBoxServiceSearch_TextChanged(sender, e);
+                        serviceListBox_SelectedIndexChanged(sender, e);
+                    }
+                    break;
+
+            }
         }
     }
 }
