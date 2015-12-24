@@ -28,6 +28,11 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
+            if  (textBoxSalary.Text.Length < 1)
+            {
+                MessageBox.Show("Необходимо полностью ввести номер телефона", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
             if (edit)
             {
                 string name = textBoxName.Text;

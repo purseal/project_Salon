@@ -29,6 +29,10 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
+            if (textBoxClientName.Text.Length < 1 || !textBoxClientBirth.MaskCompleted)
+            {
+                MessageBox.Show("Необходимо полностью заполнить все поля", "Ошибка", MessageBoxButtons.OK);
+            }
             if (edit)
             {
                 String name = textBoxClientName.Text;

@@ -25,6 +25,11 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
+            if (textBoxServicePrice.Text.Length < 1)
+            {
+                MessageBox.Show("Необходимо ввести стоимость услуги", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
             if (edit)
             {
                 String name = textBoxServiceName.Text;
@@ -49,6 +54,16 @@ namespace ProjectSalon
         private void trackBarDuration_Scroll(object sender, EventArgs e)
         {
             labelDuration.Text = Convert.ToString(trackBarDuration.Value);
+        }
+
+        private void textBoxServicePrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

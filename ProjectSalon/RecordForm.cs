@@ -30,10 +30,18 @@ namespace ProjectSalon
             }
             this.edit = edit;
             inputRecord = record;
+            mainMonthCalendar.MinDate = mainMonthCalendar.TodayDate;
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
+            if (comboBoxService.Items.Count < 1 || comboBoxMaster.Items.Count < 1 
+                || comboBoxMaster.SelectedItem == null || comboBoxService.SelectedItem == null 
+                    || textBoxClientName.Text == "" || comboBoxTime.SelectedItem == null)
+            {
+                DialogResult dialogResult = MessageBox.Show("Не выбрано одно из полей", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
             if (edit)
             {
                 Service service = (Service)comboBoxService.SelectedItem;
@@ -65,12 +73,18 @@ namespace ProjectSalon
         private void buttonFindClient_Click(object sender, EventArgs e)
         {
             String clientNumber = textBoxClientNumber.Text;
+            if (!textBoxClientNumber.MaskCompleted)
+            {
+                MessageBox.Show("Необходимо полностью ввести номер телефона", "Ошибка", MessageBoxButtons.OK);
+                return;
+            }
             Client client = mainController.getClient(clientNumber);
 
 
             if (client == null)
             {
-                DialogResult dialogResult = MessageBox.Show("Еще нет клиента с таким номером.\nЗарегистрировать нового клиента?", "Новый клиент", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Еще нет клиента с таким номером.\nЗарегистрировать нового клиента?"
+                    , "Новый клиент", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     ClientForm newClientForm = new ClientForm(mainController, false);
@@ -108,14 +122,16 @@ namespace ProjectSalon
         private void mainMonthCalendar_DateChanged(object sender, DateRangeEventArgs e)
         {
             DateTime day = mainMonthCalendar.SelectionStart;
+
             if (currentMaster != null)
             {
-                freeHours = currentMaster.getFreeHours(day);                
+                freeHours = currentMaster.getFreeHours(day);
+                comboBoxTime.Items.Clear();
+                foreach (int hour in freeHours)
+                    comboBoxTime.Items.Add(hour);
             }
-            comboBoxTime.Enabled = true;
-            comboBoxTime.Items.Clear();
-            foreach (int hour in freeHours)
-                comboBoxTime.Items.Add(hour);                
+
+
         }
 
         private void comboBoxMaster_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,6 +140,19 @@ namespace ProjectSalon
             mainMonthCalendar.Enabled = true;
             if (selectedMaster != null)
                 currentMaster = selectedMaster;
+
+            DateTime day = mainMonthCalendar.SelectionStart;
+
+            if (day != null && currentMaster != null)
+            {
+                freeHours = currentMaster.getFreeHours(day);
+                comboBoxTime.Enabled = true;
+                comboBoxTime.Items.Clear();
+                foreach (int hour in freeHours)
+                    comboBoxTime.Items.Add(hour);
+            }
+            
         }
+
     }
 }

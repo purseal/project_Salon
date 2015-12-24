@@ -37,11 +37,11 @@
             this.comboBoxMaster = new System.Windows.Forms.ComboBox();
             this.comboBoxService = new System.Windows.Forms.ComboBox();
             this.textBoxClientName = new System.Windows.Forms.TextBox();
-            this.textBoxClientNumber = new System.Windows.Forms.TextBox();
             this.comboBoxTime = new System.Windows.Forms.ComboBox();
             this.buttonApply = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonFindClient = new System.Windows.Forms.Button();
+            this.textBoxClientNumber = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // clientNameTitleRecord
@@ -91,9 +91,10 @@
             // 
             // mainMonthCalendar
             // 
-            this.mainMonthCalendar.Enabled = false;
             this.mainMonthCalendar.Location = new System.Drawing.Point(149, 190);
+            this.mainMonthCalendar.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
             this.mainMonthCalendar.Name = "mainMonthCalendar";
+            this.mainMonthCalendar.ShowTodayCircle = false;
             this.mainMonthCalendar.TabIndex = 9;
             this.mainMonthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.mainMonthCalendar_DateChanged);
             // 
@@ -119,22 +120,15 @@
             // 
             // textBoxClientName
             // 
+            this.textBoxClientName.Enabled = false;
             this.textBoxClientName.Location = new System.Drawing.Point(149, 67);
             this.textBoxClientName.Name = "textBoxClientName";
             this.textBoxClientName.Size = new System.Drawing.Size(257, 20);
             this.textBoxClientName.TabIndex = 12;
             // 
-            // textBoxClientNumber
-            // 
-            this.textBoxClientNumber.Location = new System.Drawing.Point(149, 27);
-            this.textBoxClientNumber.Name = "textBoxClientNumber";
-            this.textBoxClientNumber.Size = new System.Drawing.Size(183, 20);
-            this.textBoxClientNumber.TabIndex = 13;
-            // 
             // comboBoxTime
             // 
             this.comboBoxTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTime.Enabled = false;
             this.comboBoxTime.Location = new System.Drawing.Point(325, 190);
             this.comboBoxTime.Name = "comboBoxTime";
             this.comboBoxTime.Size = new System.Drawing.Size(81, 21);
@@ -170,16 +164,24 @@
             this.buttonFindClient.UseVisualStyleBackColor = true;
             this.buttonFindClient.Click += new System.EventHandler(this.buttonFindClient_Click);
             // 
+            // textBoxClientNumber
+            // 
+            this.textBoxClientNumber.Location = new System.Drawing.Point(149, 27);
+            this.textBoxClientNumber.Mask = "+7(000)000-00-00";
+            this.textBoxClientNumber.Name = "textBoxClientNumber";
+            this.textBoxClientNumber.Size = new System.Drawing.Size(183, 20);
+            this.textBoxClientNumber.TabIndex = 18;
+            // 
             // RecordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 401);
+            this.Controls.Add(this.textBoxClientNumber);
             this.Controls.Add(this.buttonFindClient);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.comboBoxTime);
-            this.Controls.Add(this.textBoxClientNumber);
             this.Controls.Add(this.textBoxClientName);
             this.Controls.Add(this.comboBoxService);
             this.Controls.Add(this.comboBoxMaster);
@@ -212,10 +214,10 @@
         public System.Windows.Forms.ComboBox comboBoxMaster;
         public System.Windows.Forms.ComboBox comboBoxService;
         public System.Windows.Forms.TextBox textBoxClientName;
-        public System.Windows.Forms.TextBox textBoxClientNumber;
         public System.Windows.Forms.ComboBox comboBoxTime;
         public System.Windows.Forms.Button buttonApply;
         public System.Windows.Forms.Button buttonCancel;
         public System.Windows.Forms.Button buttonFindClient;
+        public System.Windows.Forms.MaskedTextBox textBoxClientNumber;
     }
 }

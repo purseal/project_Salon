@@ -72,6 +72,7 @@
             this.textBoxServicePrice.Name = "textBoxServicePrice";
             this.textBoxServicePrice.Size = new System.Drawing.Size(204, 20);
             this.textBoxServicePrice.TabIndex = 3;
+            this.textBoxServicePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxServicePrice_KeyPress);
             // 
             // label3
             // 

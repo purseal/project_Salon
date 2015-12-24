@@ -66,6 +66,7 @@
             // 
             // textBoxClientName
             // 
+            this.textBoxClientName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxClientName.Location = new System.Drawing.Point(172, 42);
             this.textBoxClientName.Name = "textBoxClientName";
             this.textBoxClientName.Size = new System.Drawing.Size(216, 20);
