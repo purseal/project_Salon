@@ -32,9 +32,9 @@
             this.clientNumberTitle = new System.Windows.Forms.Label();
             this.birthDayTitle = new System.Windows.Forms.Label();
             this.textBoxClientName = new System.Windows.Forms.TextBox();
-            this.textBoxClientNumber = new System.Windows.Forms.TextBox();
-            this.textBoxClientBirth = new System.Windows.Forms.TextBox();
             this.buttonApply = new System.Windows.Forms.Button();
+            this.textBoxClientNumber = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxClientBirth = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // clientNameTitle
@@ -71,20 +71,6 @@
             this.textBoxClientName.Size = new System.Drawing.Size(216, 20);
             this.textBoxClientName.TabIndex = 4;
             // 
-            // textBoxClientNumber
-            // 
-            this.textBoxClientNumber.Location = new System.Drawing.Point(256, 112);
-            this.textBoxClientNumber.Name = "textBoxClientNumber";
-            this.textBoxClientNumber.Size = new System.Drawing.Size(132, 20);
-            this.textBoxClientNumber.TabIndex = 5;
-            // 
-            // textBoxClientBirth
-            // 
-            this.textBoxClientBirth.Location = new System.Drawing.Point(256, 182);
-            this.textBoxClientBirth.Name = "textBoxClientBirth";
-            this.textBoxClientBirth.Size = new System.Drawing.Size(132, 20);
-            this.textBoxClientBirth.TabIndex = 6;
-            // 
             // buttonApply
             // 
             this.buttonApply.Location = new System.Drawing.Point(302, 246);
@@ -95,14 +81,31 @@
             this.buttonApply.UseVisualStyleBackColor = true;
             this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
+            // textBoxClientNumber
+            // 
+            this.textBoxClientNumber.Location = new System.Drawing.Point(295, 112);
+            this.textBoxClientNumber.Mask = "+7(000)000-00-00";
+            this.textBoxClientNumber.Name = "textBoxClientNumber";
+            this.textBoxClientNumber.Size = new System.Drawing.Size(93, 20);
+            this.textBoxClientNumber.TabIndex = 8;
+            // 
+            // textBoxClientBirth
+            // 
+            this.textBoxClientBirth.Location = new System.Drawing.Point(324, 182);
+            this.textBoxClientBirth.Mask = "00.00.0000";
+            this.textBoxClientBirth.Name = "textBoxClientBirth";
+            this.textBoxClientBirth.Size = new System.Drawing.Size(64, 20);
+            this.textBoxClientBirth.TabIndex = 9;
+            this.textBoxClientBirth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxClientBirth_KeyPress);
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 296);
-            this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.textBoxClientBirth);
             this.Controls.Add(this.textBoxClientNumber);
+            this.Controls.Add(this.buttonApply);
             this.Controls.Add(this.textBoxClientName);
             this.Controls.Add(this.birthDayTitle);
             this.Controls.Add(this.clientNumberTitle);
@@ -125,8 +128,8 @@
         private System.Windows.Forms.Label clientNumberTitle;
         private System.Windows.Forms.Label birthDayTitle;
         public System.Windows.Forms.TextBox textBoxClientName;
-        public System.Windows.Forms.TextBox textBoxClientNumber;
-        public System.Windows.Forms.TextBox textBoxClientBirth;
         private System.Windows.Forms.Button buttonApply;
+        public System.Windows.Forms.MaskedTextBox textBoxClientNumber;
+        public System.Windows.Forms.MaskedTextBox textBoxClientBirth;
     }
 }

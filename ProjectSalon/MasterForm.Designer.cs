@@ -69,6 +69,7 @@
             // 
             // textBoxName
             // 
+            this.textBoxName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBoxName.Location = new System.Drawing.Point(172, 42);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(216, 20);
@@ -80,6 +81,7 @@
             this.textBoxSalary.Name = "textBoxSalary";
             this.textBoxSalary.Size = new System.Drawing.Size(132, 20);
             this.textBoxSalary.TabIndex = 4;
+            this.textBoxSalary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSalary_KeyPress);
             // 
             // buttonCancel
             // 
@@ -121,6 +123,7 @@
             // 
             // textBoxServiceName
             // 
+            this.textBoxServiceName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.textBoxServiceName.Location = new System.Drawing.Point(172, 191);
             this.textBoxServiceName.Name = "textBoxServiceName";
             this.textBoxServiceName.Size = new System.Drawing.Size(184, 20);
