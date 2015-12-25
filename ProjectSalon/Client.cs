@@ -50,5 +50,40 @@ namespace ProjectSalon
             this.number = number;
         }
 
+        /// <summary>
+        /// Формирует статистику по клиенту 
+        /// </summary>
+        /// <returns>Статистика в текстовом виде</returns>
+        public String getStatistic()
+        {
+            Dictionary<String, int> serviceDict = new Dictionary<string, int>();
+            Dictionary<String, int> masterDict = new Dictionary<string, int>();
+            int spendMoney = 0;
+            foreach (Record record in recordList)
+            {
+                spendMoney += record.service.price;
+                if (serviceDict.ContainsKey(record.service.name))
+                {
+                    serviceDict[record.service.name]++;
+                }
+                else
+                {
+                    serviceDict.Add(record.service.name, 0);
+                }
+
+                if (masterDict.ContainsKey(record.master.name))
+                {
+                    masterDict[record.master.name]++;
+                }
+                else
+                {
+                    masterDict.Add(record.master.name, 0);
+                }
+
+            }
+            String clientStatistic = "Деньги, потраченные в салоне: " + spendMoney + " руб\n";
+            return clientStatistic;
+        }
+
     }
 }

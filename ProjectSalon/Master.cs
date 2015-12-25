@@ -16,6 +16,8 @@ namespace ProjectSalon
         public List<Service> serviceList;
         List<Record> recordList;
 
+        DataStorage mainDataStorage;
+
         public Master(String name, int salary, int id)
         {
             this.name = name;
@@ -45,6 +47,10 @@ namespace ProjectSalon
             this.serviceList.Add(serviceToAdd);
         }
 
+        /// <summary>
+        /// Добавляет салон в список салонов мастера
+        /// </summary>
+        /// <param name="salon">Салон, который будет добавлен</param>
         public void addSalon(Salon salon)
         {
             for (int i=0; i<=employerList.Length; i++)
@@ -59,6 +65,7 @@ namespace ProjectSalon
 
         public List<int> getFreeHours(DateTime day)
         {
+            mainDataStorage = DataStorage.get();
             List<int> fullHours = new List<int>();
             List<int> freeHours = new List<int>();
             foreach (Record record in recordList)
@@ -68,7 +75,7 @@ namespace ProjectSalon
                     fullHours.Add(record.hour);
                 }
             }
-            for (int hour = 0; hour <= 23; hour++)
+            for (int hour = mainDataStorage.getSalon().openHour; hour <= mainDataStorage.getSalon().closeHour; hour++)
             {
                 if (!fullHours.Contains(hour))
                     freeHours.Add(hour);

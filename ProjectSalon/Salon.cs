@@ -9,12 +9,16 @@ namespace ProjectSalon
     [Serializable]
     public class Salon
     {
+        public const int DEFAUILT_OPEN_TIME = 10;
+        public const int DEFAUILT_CLOSE_TIME = 20;
         DataStorage mainDataStorage;
         public String address;
         public String name;
         int id;
         List<Master> masterList;
         List<Record> recordList;
+        public int openHour;
+        public int closeHour;
 
         public Salon(String address, String name, int id)
         {
@@ -24,6 +28,8 @@ namespace ProjectSalon
             this.masterList = new List<Master>();
             this.recordList = new List<Record>();
             mainDataStorage = DataStorage.get();
+            openHour = DEFAUILT_OPEN_TIME;
+            closeHour = DEFAUILT_CLOSE_TIME;
         }
 
         /// <summary>

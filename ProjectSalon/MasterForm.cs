@@ -28,29 +28,39 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            if  (textBoxSalary.Text.Length < 1)
+            try
             {
-                MessageBox.Show("Необходимо полностью ввести номер телефона", "Ошибка", MessageBoxButtons.OK);
-                return;
+                if (textBoxSalary.Text.Length < 1)
+                {
+                    MessageBox.Show("Необходимо полностью ввести номер телефона", "Ошибка", MessageBoxButtons.OK);
+                    return;
+                }
+                if (edit)
+                {
+                    string name = textBoxName.Text;
+                    int salary = Convert.ToInt32(textBoxSalary.Text);
+                    //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
+                    Debug.WriteLine("Вызов registerMaster из формы");
+                    mainController.changeMaster(name, salary, inputMaster);
+                    this.Close();
+                }
+                else
+                {
+                    string name = textBoxName.Text;
+                    int salary = Convert.ToInt32(textBoxSalary.Text);
+                    //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
+                    Debug.WriteLine("Вызов registerMaster из формы");
+                    mainController.registerMaster(name, salary, serviceNames);
+                    this.Close();
+                }
             }
-            if (edit)
+            catch (OverflowException ex)
             {
-                string name = textBoxName.Text;
-                int salary = Convert.ToInt32(textBoxSalary.Text);
-                //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
-                Debug.WriteLine("Вызов registerMaster из формы");
-                mainController.changeMaster(name, salary, inputMaster);
-                this.Close();
+                Console.WriteLine("Overflow Exception: " + ex.Message);
+                textBoxSalary.Text = "";
+                MessageBox.Show("Введено слишком большое значение в поле Зарплата", "Ошибка", MessageBoxButtons.OK);
             }
-            else
-            {               
-                string name = textBoxName.Text;
-                int salary = Convert.ToInt32(textBoxSalary.Text);
-                //XXX: Возможно, нужно сделать проверку размера serviceList перед созданием с предупреждением пользователя
-                Debug.WriteLine("Вызов registerMaster из формы");
-                mainController.registerMaster(name, salary, serviceNames);
-                this.Close();
-            }
+            
 
             
         }

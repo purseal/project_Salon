@@ -25,29 +25,39 @@ namespace ProjectSalon
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            if (textBoxServicePrice.Text.Length < 1)
+            try
             {
-                MessageBox.Show("Необходимо ввести стоимость услуги", "Ошибка", MessageBoxButtons.OK);
-                return;
+                if (textBoxServicePrice.Text.Length < 1)
+                {
+                    MessageBox.Show("Необходимо ввести стоимость услуги", "Ошибка", MessageBoxButtons.OK);
+                    return;
+                }
+                if (edit)
+                {
+                    String name = textBoxServiceName.Text;
+                    int price = Convert.ToInt32(textBoxServicePrice.Text);
+                    //int duration = Convert.ToInt32(textBoxServiceDuration.Text);
+                    int duration = trackBarDuration.Value;
+                    mainController.changeService(name, price, duration, mainController.getService(name));
+                    this.Close();
+                }
+                else
+                {
+                    String name = textBoxServiceName.Text;
+                    int price = Convert.ToInt32(textBoxServicePrice.Text);
+                    //int duration = Convert.ToInt32(textBoxServiceDuration.Text);
+                    int duration = trackBarDuration.Value;
+                    mainController.registerService(name, price, duration);
+                    this.Close();
+                }
             }
-            if (edit)
+            catch (OverflowException ex)
             {
-                String name = textBoxServiceName.Text;
-                int price = Convert.ToInt32(textBoxServicePrice.Text);
-                //int duration = Convert.ToInt32(textBoxServiceDuration.Text);
-                int duration = trackBarDuration.Value;
-                mainController.changeService(name, price, duration, mainController.getService(name));
-                this.Close();
+                Console.WriteLine("Faild to convert string to Int32: " + ex.Message);
+                textBoxServicePrice.Text = "";
+                MessageBox.Show("Введено слишком большое число в поле Стоимость.", "Ошибка", MessageBoxButtons.OK);
             }
-            else
-            {
-                String name = textBoxServiceName.Text;
-                int price = Convert.ToInt32(textBoxServicePrice.Text);
-                //int duration = Convert.ToInt32(textBoxServiceDuration.Text);
-                int duration = trackBarDuration.Value;
-                mainController.registerService(name, price, duration);
-                this.Close();
-            }
+            
             
         }
 
