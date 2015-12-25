@@ -184,9 +184,14 @@ namespace ProjectSalon
         /// <param name="hour"></param>
         /// <param name="status"></param>
         /// <param name="record"></param>
-        public void changeRecord(Service service, Master master, Client client, DateTime day, int hour, bool status, Record record)
+        public void changeRecord(Service service, Master master, Client client, DateTime day, int hour, Record record)
         {
-            record.change(service, master, client, day, hour, status);
+            record.change(service, master, client, day, hour);
+        }
+
+        public void changeRecordStatus(Record record)
+        {
+            record.changeStatus();
         }
 
         /// <summary>

@@ -49,7 +49,7 @@ namespace ProjectSalon
                 Client client = mainController.getClient(textBoxClientNumber.Text);
                 DateTime day = mainMonthCalendar.SelectionStart;
                 int hour = (int)comboBoxTime.SelectedItem;
-                mainController.changeRecord(service, master, client, day, hour, true, inputRecord);
+                mainController.changeRecord(service, master, client, day, hour, inputRecord);
                 this.Close();
             }
             else

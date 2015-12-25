@@ -123,11 +123,26 @@ namespace ProjectSalon
             if (recordListBox.SelectedItem == null)
                 return;
             Record record = (Record)recordListBox.SelectedItem;
+            if (!record.status && DateTime.Today < record.day)
+                buttonRecordCompleted.Visible = true;
+            else
+                buttonRecordCompleted.Visible = false;
             labelRecordClientName.Text = record.client.name;
             labelRecordClientNumber.Text = record.client.number;
             labelRecordMasterName.Text = record.master.name;
             labelRecordServiceName.Text = record.service.name;
             labelRecordDate.Text = record.day.Day + "." + record.day.Month + "." + record.day.Year + " " + record.hour + ":00";
+            if (record.status)
+            {
+                statusLabel.Text = "Выполнена";
+            }
+            else
+            {
+                if (DateTime.Today < record.day)
+                    statusLabel.Text = "Ожидает выполнения";
+                else
+                    statusLabel.Text = "Клиент не пришел к назначенному времени";
+            }
         }
 
         private void masterListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -252,16 +267,29 @@ namespace ProjectSalon
                     if (recordListBox.SelectedItem != null)
                     {
                         Record record = (Record)recordListBox.SelectedItem;
-                        RecordForm editRecordForm = new RecordForm(mainController, true, record);
-                        editRecordForm.Text = "Изменение записи";
-                        editRecordForm.textBoxClientName.Text = record.client.name;
-                        editRecordForm.textBoxClientNumber.Text = record.client.number;
-                        editRecordForm.textBoxClientName.Enabled = false;
-                        editRecordForm.textBoxClientNumber.Enabled = false;
-                        editRecordForm.ShowDialog();
-                        textBoxRecordSearch.Text = "";
-                        textBoxRecordSearch_TextChanged(sender, e);
-                        recordListBox_SelectedIndexChanged(sender, e);
+                        if (!record.status && (DateTime.Today < record.day))
+                        {
+                            RecordForm editRecordForm = new RecordForm(mainController, true, record);
+                            editRecordForm.Text = "Изменение записи";
+                            editRecordForm.textBoxClientName.Text = record.client.name;
+                            editRecordForm.textBoxClientNumber.Text = record.client.number;
+                            editRecordForm.textBoxClientName.Enabled = false;
+                            editRecordForm.textBoxClientNumber.Enabled = false;
+                            editRecordForm.ShowDialog();
+                            textBoxRecordSearch.Text = "";
+                            textBoxRecordSearch_TextChanged(sender, e);
+                            recordListBox_SelectedIndexChanged(sender, e);
+                        }
+                        else
+                        {
+                            if (record.status)
+                                MessageBox.Show("Нельзя редактировать выполненную запись", "Ошибка", MessageBoxButtons.OK);
+                            else
+                                MessageBox.Show("Нельзя редактировать запись с истекшим сроком", "Ошибка", MessageBoxButtons.OK);
+                            return;
+                        }
+                        
+                        
                     }
                     break;
 
@@ -305,6 +333,17 @@ namespace ProjectSalon
                     }
                     break;
 
+            }
+        }
+
+        private void buttonRecordCompleted_Click(object sender, EventArgs e)
+        {
+            Record record = (Record)recordListBox.SelectedItem;
+            if (record != null)
+            {
+                mainController.changeRecordStatus(record);
+                recordListBox_SelectedIndexChanged(sender, e);
+                buttonRecordCompleted.Visible = false;
             }
         }
     }

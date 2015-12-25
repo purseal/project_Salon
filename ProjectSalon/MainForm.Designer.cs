@@ -92,6 +92,9 @@
             this.labelServicePriceTitle = new System.Windows.Forms.Label();
             this.labelServiceName = new System.Windows.Forms.Label();
             this.labelServiceNameTitle = new System.Windows.Forms.Label();
+            this.statusTitleLabel = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.buttonRecordCompleted = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -497,6 +500,9 @@
             // mainPanelRecord
             // 
             this.mainPanelRecord.BackColor = System.Drawing.SystemColors.Window;
+            this.mainPanelRecord.Controls.Add(this.buttonRecordCompleted);
+            this.mainPanelRecord.Controls.Add(this.statusLabel);
+            this.mainPanelRecord.Controls.Add(this.statusTitleLabel);
             this.mainPanelRecord.Controls.Add(this.labelRecordDate);
             this.mainPanelRecord.Controls.Add(this.labelRecordServiceName);
             this.mainPanelRecord.Controls.Add(this.labelRecordMasterName);
@@ -517,45 +523,45 @@
             this.labelRecordDate.AutoSize = true;
             this.labelRecordDate.Location = new System.Drawing.Point(397, 240);
             this.labelRecordDate.Name = "labelRecordDate";
-            this.labelRecordDate.Size = new System.Drawing.Size(61, 13);
+            this.labelRecordDate.Size = new System.Drawing.Size(78, 13);
             this.labelRecordDate.TabIndex = 9;
-            this.labelRecordDate.Text = "00.00.0000";
+            this.labelRecordDate.Text = "Не загружено";
             // 
             // labelRecordServiceName
             // 
             this.labelRecordServiceName.AutoSize = true;
             this.labelRecordServiceName.Location = new System.Drawing.Point(397, 190);
             this.labelRecordServiceName.Name = "labelRecordServiceName";
-            this.labelRecordServiceName.Size = new System.Drawing.Size(93, 13);
+            this.labelRecordServiceName.Size = new System.Drawing.Size(78, 13);
             this.labelRecordServiceName.TabIndex = 8;
-            this.labelRecordServiceName.Text = "Название услуги";
+            this.labelRecordServiceName.Text = "Не загружено";
             // 
             // labelRecordMasterName
             // 
             this.labelRecordMasterName.AutoSize = true;
             this.labelRecordMasterName.Location = new System.Drawing.Point(397, 140);
             this.labelRecordMasterName.Name = "labelRecordMasterName";
-            this.labelRecordMasterName.Size = new System.Drawing.Size(131, 13);
+            this.labelRecordMasterName.Size = new System.Drawing.Size(78, 13);
             this.labelRecordMasterName.TabIndex = 7;
-            this.labelRecordMasterName.Text = "Фамилия Имя Отчество";
+            this.labelRecordMasterName.Text = "Не загружено";
             // 
             // labelRecordClientNumber
             // 
             this.labelRecordClientNumber.AutoSize = true;
             this.labelRecordClientNumber.Location = new System.Drawing.Point(397, 90);
             this.labelRecordClientNumber.Name = "labelRecordClientNumber";
-            this.labelRecordClientNumber.Size = new System.Drawing.Size(91, 13);
+            this.labelRecordClientNumber.Size = new System.Drawing.Size(78, 13);
             this.labelRecordClientNumber.TabIndex = 6;
-            this.labelRecordClientNumber.Text = "00000000000000";
+            this.labelRecordClientNumber.Text = "Не загружено";
             // 
             // labelRecordClientName
             // 
             this.labelRecordClientName.AutoSize = true;
             this.labelRecordClientName.Location = new System.Drawing.Point(397, 40);
             this.labelRecordClientName.Name = "labelRecordClientName";
-            this.labelRecordClientName.Size = new System.Drawing.Size(131, 13);
+            this.labelRecordClientName.Size = new System.Drawing.Size(78, 13);
             this.labelRecordClientName.TabIndex = 5;
-            this.labelRecordClientName.Text = "Фамилия Имя Отчество";
+            this.labelRecordClientName.Text = "Не загружено";
             // 
             // clientNumberTitleRecord
             // 
@@ -737,6 +743,35 @@
             this.labelServiceNameTitle.TabIndex = 0;
             this.labelServiceNameTitle.Text = "Название услуги";
             // 
+            // statusTitleLabel
+            // 
+            this.statusTitleLabel.AutoSize = true;
+            this.statusTitleLabel.Location = new System.Drawing.Point(40, 290);
+            this.statusTitleLabel.Name = "statusTitleLabel";
+            this.statusTitleLabel.Size = new System.Drawing.Size(106, 13);
+            this.statusTitleLabel.TabIndex = 10;
+            this.statusTitleLabel.Text = "Статус выполнения";
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(397, 290);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(78, 13);
+            this.statusLabel.TabIndex = 11;
+            this.statusLabel.Text = "Не загружено";
+            // 
+            // buttonRecordCompleted
+            // 
+            this.buttonRecordCompleted.Location = new System.Drawing.Point(400, 338);
+            this.buttonRecordCompleted.Name = "buttonRecordCompleted";
+            this.buttonRecordCompleted.Size = new System.Drawing.Size(216, 25);
+            this.buttonRecordCompleted.TabIndex = 12;
+            this.buttonRecordCompleted.Text = "услуга выполнена";
+            this.buttonRecordCompleted.UseVisualStyleBackColor = true;
+            this.buttonRecordCompleted.Visible = false;
+            this.buttonRecordCompleted.Click += new System.EventHandler(this.buttonRecordCompleted_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -856,6 +891,9 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonSave;
         private System.Windows.Forms.ToolStripButton toolStripButtonLoad;
         private System.Windows.Forms.ToolStripButton toolStripButtonEdit;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label statusTitleLabel;
+        private System.Windows.Forms.Button buttonRecordCompleted;
     }
 }
 

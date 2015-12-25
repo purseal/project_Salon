@@ -39,14 +39,18 @@ namespace ProjectSalon
         /// <param name="service">Исполняемая услуга</param>
         /// <param name="master">Мастер, исполняющий услугу</param>
         /// <param name="client">Клиент, использующий услугу</param>
-        public void change(Service service, Master master, Client client, DateTime day, int hour, bool status)
+        public void change(Service service, Master master, Client client, DateTime day, int hour)
         {
             this.service = service;
             this.master = master;
             this.client = client;
-            this.status = status;
             this.day = day;
             this.hour = hour;
+        }
+
+        public void changeStatus()
+        {
+            status = !status;
         }
     }
 }
