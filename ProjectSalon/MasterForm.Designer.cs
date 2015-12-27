@@ -54,9 +54,9 @@
             this.masterSalaryTitle.AutoSize = true;
             this.masterSalaryTitle.Location = new System.Drawing.Point(30, 115);
             this.masterSalaryTitle.Name = "masterSalaryTitle";
-            this.masterSalaryTitle.Size = new System.Drawing.Size(55, 13);
+            this.masterSalaryTitle.Size = new System.Drawing.Size(84, 13);
             this.masterSalaryTitle.TabIndex = 1;
-            this.masterSalaryTitle.Text = "Зарплата";
+            this.masterSalaryTitle.Text = "Зарплата (руб.)";
             // 
             // masterServicesTitle
             // 

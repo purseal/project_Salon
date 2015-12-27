@@ -16,7 +16,7 @@ namespace ProjectSalon
 {
     public partial class MainForm : Form
     {
-        public const String VERSION = "v0.4.9";
+        public const String VERSION = "v0.4.10";
         public const String DEFAULT_SALON_NAME = "Красотка";
         public const String DEFAULT_SALON_ADRESS = "Каширское шоссе, 11";
         public const String DATASTORAGE_FILE_NAME = "dataStorage.dat";
@@ -408,7 +408,20 @@ namespace ProjectSalon
         {
             MessageBox.Show("Управление салоном " + VERSION + "\n\nРуководитель - Сергиевский М.В.\n\nВыполнили:\n"
                 + "Вахания Геннадий\nГилемзянов Руслан\nКоревых Мария\nМайоров Анатолий\nФаталиев Саид\n\n"
-                + "НИЯУ МИФИ, Кафедра №28, 2015 год", "О программе");
+                + "НИЯУ МИФИ, Кафедра №28, Р05-281", "О программе");
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Сохранить измения перед закрытием?", "Управление салоном", MessageBoxButtons.YesNoCancel);
+            if (dialogResult == DialogResult.Yes)
+            {
+                toolStripButtonSave_Click(sender, e);
+            }
+            if (dialogResult == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

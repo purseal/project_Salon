@@ -52,9 +52,9 @@
             // 
             // textBoxServiceName
             // 
-            this.textBoxServiceName.Location = new System.Drawing.Point(112, 26);
+            this.textBoxServiceName.Location = new System.Drawing.Point(145, 26);
             this.textBoxServiceName.Name = "textBoxServiceName";
-            this.textBoxServiceName.Size = new System.Drawing.Size(204, 20);
+            this.textBoxServiceName.Size = new System.Drawing.Size(171, 20);
             this.textBoxServiceName.TabIndex = 1;
             // 
             // label2
@@ -62,15 +62,15 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Стоимость:";
+            this.label2.Text = "Стоимость (руб.)";
             // 
             // textBoxServicePrice
             // 
-            this.textBoxServicePrice.Location = new System.Drawing.Point(112, 80);
+            this.textBoxServicePrice.Location = new System.Drawing.Point(145, 80);
             this.textBoxServicePrice.Name = "textBoxServicePrice";
-            this.textBoxServicePrice.Size = new System.Drawing.Size(204, 20);
+            this.textBoxServicePrice.Size = new System.Drawing.Size(171, 20);
             this.textBoxServicePrice.TabIndex = 3;
             this.textBoxServicePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxServicePrice_KeyPress);
             // 
@@ -79,9 +79,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 129);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
+            this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Длительность:";
+            this.label3.Text = "Длительность";
             // 
             // textBoxServiceDuration
             // 
@@ -112,11 +112,11 @@
             // trackBarDuration
             // 
             this.trackBarDuration.LargeChange = 10;
-            this.trackBarDuration.Location = new System.Drawing.Point(112, 129);
+            this.trackBarDuration.Location = new System.Drawing.Point(135, 129);
             this.trackBarDuration.Maximum = 60;
             this.trackBarDuration.Minimum = 5;
             this.trackBarDuration.Name = "trackBarDuration";
-            this.trackBarDuration.Size = new System.Drawing.Size(139, 45);
+            this.trackBarDuration.Size = new System.Drawing.Size(129, 45);
             this.trackBarDuration.SmallChange = 5;
             this.trackBarDuration.TabIndex = 12;
             this.trackBarDuration.TickFrequency = 5;

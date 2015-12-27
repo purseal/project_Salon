@@ -85,9 +85,9 @@
             this.dateTitleRecord.AutoSize = true;
             this.dateTitleRecord.Location = new System.Drawing.Point(30, 190);
             this.dateTitleRecord.Name = "dateTitleRecord";
-            this.dateTitleRecord.Size = new System.Drawing.Size(33, 13);
+            this.dateTitleRecord.Size = new System.Drawing.Size(77, 13);
             this.dateTitleRecord.TabIndex = 8;
-            this.dateTitleRecord.Text = "Дата";
+            this.dateTitleRecord.Text = "Дата и время";
             // 
             // mainMonthCalendar
             // 

@@ -68,8 +68,12 @@
             this.Controls.Add(this.buttonCreateReport);
             this.Controls.Add(this.labelCalendarTitle);
             this.Controls.Add(this.monthCalendarReport);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SalonStatisticsForm";
-            this.Text = "SalonStatisticsForm";
+            this.ShowIcon = false;
+            this.Text = "Формирование статистики салона";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -192,7 +192,7 @@
             // изменитьToolStripMenuItem
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.изменитьToolStripMenuItem.Text = "Изменить...";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
             // 
@@ -207,7 +207,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -756,9 +756,9 @@
             this.labelMasterSalaryTitle.AutoSize = true;
             this.labelMasterSalaryTitle.Location = new System.Drawing.Point(78, 127);
             this.labelMasterSalaryTitle.Name = "labelMasterSalaryTitle";
-            this.labelMasterSalaryTitle.Size = new System.Drawing.Size(55, 13);
+            this.labelMasterSalaryTitle.Size = new System.Drawing.Size(84, 13);
             this.labelMasterSalaryTitle.TabIndex = 7;
-            this.labelMasterSalaryTitle.Text = "Зарплата";
+            this.labelMasterSalaryTitle.Text = "Зарплата (руб.)";
             // 
             // labelMasterSalary
             // 
@@ -815,9 +815,9 @@
             this.labelServiceDurationTitle.AutoSize = true;
             this.labelServiceDurationTitle.Location = new System.Drawing.Point(40, 190);
             this.labelServiceDurationTitle.Name = "labelServiceDurationTitle";
-            this.labelServiceDurationTitle.Size = new System.Drawing.Size(145, 13);
+            this.labelServiceDurationTitle.Size = new System.Drawing.Size(177, 13);
             this.labelServiceDurationTitle.TabIndex = 4;
-            this.labelServiceDurationTitle.Text = "Длительность выполнения";
+            this.labelServiceDurationTitle.Text = "Длительность выполнения (мин.)";
             // 
             // labelServicePrice
             // 
@@ -833,9 +833,9 @@
             this.labelServicePriceTitle.AutoSize = true;
             this.labelServicePriceTitle.Location = new System.Drawing.Point(40, 127);
             this.labelServicePriceTitle.Name = "labelServicePriceTitle";
-            this.labelServicePriceTitle.Size = new System.Drawing.Size(33, 13);
+            this.labelServicePriceTitle.Size = new System.Drawing.Size(62, 13);
             this.labelServicePriceTitle.TabIndex = 2;
-            this.labelServicePriceTitle.Text = "Цена";
+            this.labelServicePriceTitle.Text = "Цена (руб.)";
             // 
             // labelServiceName
             // 
@@ -875,6 +875,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Project Salon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
             this.mainToolStrip.ResumeLayout(false);
