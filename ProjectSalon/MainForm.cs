@@ -16,6 +16,10 @@ namespace ProjectSalon
 {
     public partial class MainForm : Form
     {
+        public const String VERSION = "v0.4.9";
+        public const String DEFAULT_SALON_NAME = "Красотка";
+        public const String DEFAULT_SALON_ADRESS = "Каширское шоссе, 11";
+        public const String DATASTORAGE_FILE_NAME = "dataStorage.dat";
         public Controller mainController;
         DataStorage mainDataStorage;
         public MainForm()
@@ -23,7 +27,7 @@ namespace ProjectSalon
             InitializeComponent();
             mainController = new Controller();
             mainDataStorage = DataStorage.get();
-            mainController.registerSalon("Каширское шоссе, 11", "Красотка");
+            mainController.registerSalon(DEFAULT_SALON_ADRESS, DEFAULT_SALON_NAME);
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
             showPanel(0);
         }
@@ -175,7 +179,7 @@ namespace ProjectSalon
 
         private void toolStripButtonSave_Click(object sender, EventArgs e)
         {
-            SaveBinaryFormat(mainDataStorage, "dataStorage.dat");
+            SaveBinaryFormat(mainDataStorage, DATASTORAGE_FILE_NAME);
         }
 
         private void SaveBinaryFormat(object objGraph, string fileName)
@@ -206,7 +210,7 @@ namespace ProjectSalon
             DataStorage data;
             try
             {
-                using (Stream fStream = File.OpenRead("dataStorage.dat"))
+                using (Stream fStream = File.OpenRead(DATASTORAGE_FILE_NAME))
                 {
                     try
                     {
@@ -228,13 +232,13 @@ namespace ProjectSalon
             }
             catch (FileNotFoundException ex)
             {
-                Debug.WriteLine("Не найден dataStorage.dat - " + ex.Message);
+                Debug.WriteLine("Не найден " + DATASTORAGE_FILE_NAME + " - " + ex.Message);
                 MessageBox.Show("Файл с данными не найден", "Ошибка", MessageBoxButtons.OK);
             }
             catch (IOException ex)
             {
                 Debug.WriteLine("Ошибка ввода/вывода - " + ex.Message);
-                MessageBox.Show("Ошибка программы при работе с файлом данных", "Ошибка", MessageBoxButtons.OK);
+                MessageBox.Show("Ошибка программы при работе с файлом данных " + DATASTORAGE_FILE_NAME, "Ошибка", MessageBoxButtons.OK);
             }
             
             textBoxMasterSearch.Text = "";
@@ -393,6 +397,18 @@ namespace ProjectSalon
             SalonStatisticsForm salonStatisticsForm = new SalonStatisticsForm();
             salonStatisticsForm.ShowDialog();
             statusStripLabel.Text = "Формирование статистики завершено";
+        }
+
+        private void сформироватьСтатистикуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButtonCreateReport_Click(sender, e);
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Управление салоном " + VERSION + "\n\nРуководитель - Сергиевский М.В.\n\nВыполнили:\n"
+                + "Вахания Геннадий\nГилемзянов Руслан\nКоревых Мария\nМайоров Анатолий\nФаталиев Саид\n\n"
+                + "НИЯУ МИФИ, Кафедра №28, 2015 год", "О программе");
         }
     }
 }

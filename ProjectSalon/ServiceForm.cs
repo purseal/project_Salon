@@ -20,7 +20,6 @@ namespace ProjectSalon
         public ServiceForm(Controller controller, bool edit, Service service)
         {
             InitializeComponent();
-            MessageBox.Show("DAMN SON", "asdasda");
             mainController = controller;
             textBoxServiceDuration.Visible = false;
             this.edit = edit;
