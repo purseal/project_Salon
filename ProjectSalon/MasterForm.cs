@@ -92,7 +92,7 @@ namespace ProjectSalon
                 DialogResult dialogResult = MessageBox.Show("Еще нет ни одного мастера, оказывающего данную услугу.\nДобавить новую услугу?", "Новая услуга", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    ServiceForm newServiceForm = new ServiceForm(mainController, false);
+                    ServiceForm newServiceForm = new ServiceForm(mainController, false, null);
                     newServiceForm.textBoxServiceName.Text = serviceName;
                     newServiceForm.textBoxServiceName.Enabled = false;
                     newServiceForm.ShowDialog();

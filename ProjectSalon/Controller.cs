@@ -49,7 +49,6 @@ namespace ProjectSalon
         /// <summary>
         /// Проводит создание и начальную подготовку объекта класса Record
         /// </summary>
-        /// <param name="targetRecord">экземпляр объекта, сгенерированный в интерфейсе</param>
         public void registerRecord(Service service, Master master, Client client, DateTime day, int hour)
         {
             mainDataStorage.getSalon().addRecord(service, master, client, day, hour);
@@ -58,31 +57,28 @@ namespace ProjectSalon
         public void registerClient(String name, String birth, String number)
         {
             Client client = mainDataStorage.newClient(name, birth, number);
-            //TODO: Здесь явно что-то еще...
         }
 
+        /// <summary>
+        /// Проводит создание и начальную подготовку объекта класса Service
+        /// </summary>
         public void registerService(String name, int price, int duration)
         {
             Service newService = mainDataStorage.newService(name, price, duration);
         }
-
-
-
+        
         /// <summary>
         /// Проводит создание и начальную подготовку объекта класса Salon
         /// </summary>
-        /// <param name="targetRecord">экземпляр объекта, сгенерированный в интерфейсе</param>
         public void registerSalon(String adress, String name)
         {
             Salon newSalon = mainDataStorage.newSalon(adress, name);
         }
 
-
-
         /// <summary>
         /// Выводит список клиентов салона 
         /// </summary>
-        /// <param name="request">запрос для поиска, если request==null, возвращает полный список</param>
+        /// <param name="request">Запрос для поиска, если request==null, возвращает полный список</param>
         /// <returns>Список клиентов, содержащих в своих полях подстроку request</returns>
         public List<Client> getClientList(string request)
         {
@@ -94,7 +90,7 @@ namespace ProjectSalon
         /// <summary>
         /// Выводит список мастеров салона 
         /// </summary>
-        /// <param name="request">запрос для поиска, если request==null, возвращает полный список</param>
+        /// <param name="request">Запрос для поиска, если request==null, возвращает полный список</param>
         /// <returns>Список мастеров, содержащих в своих полях подстроку request</returns>
         public List<Master> getMasterList(string request)
         {
@@ -106,27 +102,30 @@ namespace ProjectSalon
         /// <summary>
         /// Выводит список записей салона 
         /// </summary>
-        /// <param name="request">запрос для поиска, если request==null, возвращает полный список</param>
+        /// <param name="request">Запрос для поиска, если request==null, возвращает полный список</param>
         /// <returns>Список записей, содержащих в своих полях подстроку request</returns>
         public List<Record> getRecordList(string request)
         {
             Salon salon = mainDataStorage.getSalon();
-
             return salon.getRecordList(request);
         }
 
         /// <summary>
         /// Выводит список услуг салона 
         /// </summary>
-        /// <param name="request">запрос для поиска, если request==null, возвращает полный список</param>
+        /// <param name="request">Запрос для поиска, если request==null, возвращает полный список</param>
         /// <returns>Список услуг, содержащих в своих полях подстроку request</returns>
         public List<Service> getServiceList(string request)
         {
-            Salon salon = mainDataStorage.getSalon();
-            
+            Salon salon = mainDataStorage.getSalon();            
             return salon.getServiceList(request);
         }
 
+        /// <summary>
+        /// Возвращает улугу по её названию
+        /// </summary>
+        /// <param name="name">Точное название услуги</param>
+        /// <returns>Услуга с заданным названием, если услуга не найдена - null</returns>
         public Service getService(string name)
         {
             List<Service> tmpServiceList = getServiceList(name);
@@ -175,20 +174,17 @@ namespace ProjectSalon
         }
 
         /// <summary>
-        /// Изменяет параметры объекта
+        /// Изменяет параметры объекта Record
         /// </summary>
-        /// <param name="service"></param>
-        /// <param name="master"></param>
-        /// <param name="client"></param>
-        /// <param name="day"></param>
-        /// <param name="hour"></param>
-        /// <param name="status"></param>
-        /// <param name="record"></param>
         public void changeRecord(Service service, Master master, Client client, DateTime day, int hour, Record record)
         {
             record.change(service, master, client, day, hour);
         }
 
+        /// <summary>
+        /// Изменяет статус записи Record
+        /// </summary>
+        /// <param name="record"></param>
         public void changeRecordStatus(Record record)
         {
             record.changeStatus();
@@ -203,9 +199,16 @@ namespace ProjectSalon
         /// <param name="service">Изменяемый объект</param>
         public void changeService(String name, int price, int duration, Service service)
         {
-            service.change(name, price, duration);
+            if (service != null)
+            {
+                service.change(name, price, duration);
+            }
+            
         }
 
+        /// <summary>
+        /// Инициализирует удаление временных или более не нужных объектов в DataStorage
+        /// </summary>
         public void cleanDataStorage()
         {
             mainDataStorage.cleanTrashObject();

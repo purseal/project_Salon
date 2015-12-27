@@ -59,26 +59,39 @@ namespace ProjectSalon
             Dictionary<String, int> serviceDict = new Dictionary<string, int>();
             Dictionary<String, int> masterDict = new Dictionary<string, int>();
             int spendMoney = 0;
+            int recordCount = 0;
+            String clientStatistic;
             foreach (Record record in recordList)
             {
-                spendMoney += record.service.price;
-                if (serviceDict.ContainsKey(record.service.name))
+                if (record.status)
                 {
-                    serviceDict[record.service.name]++;
-                }
-                else
-                {
-                    serviceDict.Add(record.service.name, 0);
-                }
+                    spendMoney += record.service.price;
+                    if (serviceDict.ContainsKey(record.service.name))
+                    {
+                        serviceDict[record.service.name]++;
+                    }
+                    else
+                    {
+                        serviceDict.Add(record.service.name, 0);
+                    }
 
-                if (masterDict.ContainsKey(record.master.name))
-                {
-                    masterDict[record.master.name]++;
+                    if (masterDict.ContainsKey(record.master.name))
+                    {
+                        masterDict[record.master.name]++;
+                    }
+                    else
+                    {
+                        masterDict.Add(record.master.name, 0);
+                    }
+                    recordCount++;
                 }
-                else
-                {
-                    masterDict.Add(record.master.name, 0);
-                }
+                
+            }
+
+            if (recordCount < 1)
+            {
+                clientStatistic = "Клиент еще не воспользовался ни одной услугой";
+                return clientStatistic;
             }
             var maxServices = serviceDict.Values.Max();
             var maxMasters = masterDict.Values.Max();
@@ -86,7 +99,7 @@ namespace ProjectSalon
                 .Select(pair => pair.Key);
             var relevantKeysMaster = masterDict.Where(pair => maxMasters.Equals(pair.Value))
                 .Select(pair => pair.Key);
-            String clientStatistic = "Деньги, потраченные в салоне: " + spendMoney + " руб\n";
+            clientStatistic = "Деньги, потраченные в салоне: " + spendMoney + " руб\n";
             clientStatistic += "Наиболее часто используемые услуги:\n";
             foreach (String keys in relevantKeysService)
             {

@@ -15,12 +15,16 @@ namespace ProjectSalon
     {
         Controller mainController;
         bool edit;
-        public ServiceForm(Controller controller, bool edit)
+        Service inputService;
+
+        public ServiceForm(Controller controller, bool edit, Service service)
         {
             InitializeComponent();
-            this.mainController = controller;
+            MessageBox.Show("DAMN SON", "asdasda");
+            mainController = controller;
             textBoxServiceDuration.Visible = false;
             this.edit = edit;
+            inputService = service;
         }
 
         private void buttonApply_Click(object sender, EventArgs e)
@@ -38,14 +42,13 @@ namespace ProjectSalon
                     int price = Convert.ToInt32(textBoxServicePrice.Text);
                     //int duration = Convert.ToInt32(textBoxServiceDuration.Text);
                     int duration = trackBarDuration.Value;
-                    mainController.changeService(name, price, duration, mainController.getService(name));
+                    mainController.changeService(name, price, duration, inputService);
                     this.Close();
                 }
                 else
                 {
                     String name = textBoxServiceName.Text;
                     int price = Convert.ToInt32(textBoxServicePrice.Text);
-                    //int duration = Convert.ToInt32(textBoxServiceDuration.Text);
                     int duration = trackBarDuration.Value;
                     mainController.registerService(name, price, duration);
                     this.Close();

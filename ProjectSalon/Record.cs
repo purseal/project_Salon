@@ -48,6 +48,9 @@ namespace ProjectSalon
             this.hour = hour;
         }
 
+        /// <summary>
+        /// Изменяет статус записи
+        /// </summary>
         public void changeStatus()
         {
             status = !status;

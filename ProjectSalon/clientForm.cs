@@ -14,11 +14,13 @@ namespace ProjectSalon
     {
         Controller mainController;
         bool edit;
-        public ClientForm(Controller controller, bool edit)
+        Client inputClient;
+        public ClientForm(Controller controller, bool edit, Client client)
         {
             InitializeComponent();
             mainController = controller;
             this.edit = edit;
+            inputClient = client;
         }
 
 
@@ -39,7 +41,7 @@ namespace ProjectSalon
                 String name = textBoxClientName.Text;
                 String birth = textBoxClientBirth.Text;
                 String number = textBoxClientNumber.Text;
-                mainController.changeClient(name, birth, number, mainController.getClient(number));
+                mainController.changeClient(name, birth, number, inputClient);
                 this.Close();
             }
             else

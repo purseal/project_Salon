@@ -24,6 +24,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -80,6 +82,12 @@
       <DependentUpon>RecordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Salon.cs" />
+    <Compile Include="SalonStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalonStatisticsForm.Designer.cs">
+      <DependentUpon>SalonStatisticsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service.cs" />
     <Compile Include="ServiceForm.cs">
       <SubType>Form</SubType>
@@ -109,6 +117,9 @@
     <EmbeddedResource Include="RecordForm.resx">
       <DependentUpon>RecordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SalonStatisticsForm.resx">
+      <DependentUpon>SalonStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ServiceForm.resx">
       <DependentUpon>ServiceForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +140,7 @@
     <Content Include="img\addRecord.png" />
     <Content Include="img\addClient.png" />
     <Content Include="img\addMaster.png" />
+    <None Include="Resources\report-icon.png" />
     <None Include="Resources\edit-icon.png" />
     <None Include="Resources\load-icon.png" />
     <None Include="Resources\save-icon.png" />

@@ -63,6 +63,10 @@ namespace ProjectSalon
             }
         }
 
+        /// <summary>
+        /// Возвращает список часов, свободных для записи
+        /// </summary>
+        /// <param name="day">Дата, для которой ищутся свободные часы</param>
         public List<int> getFreeHours(DateTime day)
         {
             mainDataStorage = DataStorage.get();
@@ -83,11 +87,6 @@ namespace ProjectSalon
             return freeHours;
         }
 
-        override public String ToString()
-        {
-            return name;
-        }
-
         /// <summary>
         /// Изменяет данные объекта класса Мастер
         /// </summary>
@@ -99,5 +98,9 @@ namespace ProjectSalon
             this.salary = salary;
         }
 
+        override public String ToString()
+        {
+            return name;
+        }
     }
 }

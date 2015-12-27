@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProjectSalon
 {
@@ -134,6 +135,109 @@ namespace ProjectSalon
                 if ((client.name.ToLower().Contains(text.ToLower())) || (client.number.Contains(text))) result.Add(client);
             }
             return result;
+        }
+
+        /// <summary>
+        /// Формирование статистики по салону
+        /// </summary>
+        /// <param name="from">левая временная граница анализа</param>
+        /// <param name="to">правая временная граница анализа</param>
+        public List<String> getStatistics(DateTime from, DateTime to)
+        {
+            int recordCount = 0;
+            int salarySum = 0;
+            int recordsSum = 0;
+            int maxMast, maxServ;
+            List<String> output = new List<string>();
+            Dictionary<Service, int> popularService = new Dictionary<Service, int>();
+            Dictionary<Master, int> popularMaster = new Dictionary<Master, int>();
+            Dictionary<Master, int> masterMoney = new Dictionary<Master, int>();
+            foreach (Master master in this.getMasterList(""))
+            {
+                if (!(popularMaster.ContainsKey(master)))
+                {
+                    popularMaster.Add(master, 0);
+                    masterMoney.Add(master, 0);
+                    salarySum += master.salary;
+                }
+            }
+
+            foreach (Record record in this.getRecordList(""))
+            {
+                if ((from <= record.day) && (to >= record.day) && (record.status))
+                {
+                    recordCount++;
+                    if (popularService.ContainsKey(record.service))
+                        popularService[record.service]++;
+                    else
+                        popularService.Add(record.service, 0);
+
+                    if (popularMaster.ContainsKey(record.master))
+                        popularMaster[record.master]++;
+
+                    if (masterMoney.ContainsKey(record.master))
+                        masterMoney[record.master] += record.service.price;
+
+                    recordsSum += record.service.price;
+                }
+            }
+
+            if (recordCount < 1)
+            {
+                output.Add("<p> <b>СТАТИСТИКА ПО САЛОНУ \"" + name + "\" </b></p>");
+                output.Add("Общее количество записей за выбранный период времени : " + recordCount + "<br />");
+                output.Add("Общая сумма на зарплаты : " + salarySum + "<br />");
+                output.Add("Общая сумма с оказанных услуг : " + recordsSum + "<br />");
+                output.Add("Прибыль за выбранный период времени : " + (recordsSum - salarySum) + "<br />");
+                output.Insert(0, "<HTML><meta charset=\"utf-8\"><BODY>");
+                output.Add("</BODY></HTML>");
+                return output;
+            }
+                
+
+            maxMast = popularMaster.Values.Max();
+            maxServ = popularService.Values.Max();
+
+            String bestMasters = "", bestServices = "";
+            for (int i = 0; i < popularMaster.Count; i++)
+            {
+                if (popularMaster.ElementAt(i).Value == maxMast)
+                {
+                    if (bestMasters == "")
+                        bestMasters += popularMaster.ElementAt(i).Key.name;
+                    else
+                        bestMasters += ", " + popularMaster.ElementAt(i).Key.name;
+                }
+            }
+            for (int i = 0; i < popularService.Count; i++)
+            {
+                if (popularService.ElementAt(i).Value == maxServ)
+                {
+                    if (bestServices == "")
+                        bestServices += popularService.ElementAt(i).Key;
+                    else
+                        bestServices += ", " + popularService.ElementAt(i).Key;
+                }
+            }
+            output.Add("<p> <b>СТАТИСТИКА ПО САЛОНУ \"" + name + "\" </b></p>");
+            output.Add("Общее количество записей за выбранный период времени : " + recordCount + "<br />");
+            output.Add("Наиболее популярный мастер : " + bestMasters + "<br />");
+            output.Add("Наиболее популярная услуга : " + bestServices + "<br />");
+            output.Add("Общая сумма на зарплаты : " + salarySum + "<br />");
+            output.Add("Общая сумма с оказанных услуг : " + recordsSum + "<br />");
+            output.Add("Прибыль за выбранный период времени : " + (recordsSum - salarySum) + "<br />");
+
+            output.Add("<br /><b>СТАТИСТИКА ПО МАСТЕРАМ</b>" + "<br /><br />");
+            for (int i = 0; i < masterMoney.Count; i++)
+            {
+                output.Add("<b>" + masterMoney.ElementAt(i).Key.name + "</b>" + "(Количество записей: " + popularMaster.ElementAt(i).Value + ")" + "<br />");
+                output.Add("    -Зарплата : " + masterMoney.ElementAt(i).Key.salary + " рублей" + "<br />");
+                output.Add("    -Сумма с оказанных услуг : " + masterMoney.ElementAt(i).Value + " рублей" + "<br />");
+                output.Add("    -Прибыль : " + (masterMoney.ElementAt(i).Value - masterMoney.ElementAt(i).Key.salary) + " рублей" + "<br /><br />");
+            }
+            output.Insert(0, "<HTML><meta charset=\"utf-8\"><BODY>");
+            output.Add("</BODY></HTML>");
+            return output;            
         }
 
         override public String ToString()

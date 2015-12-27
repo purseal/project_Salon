@@ -19,6 +19,10 @@ namespace ProjectSalon
         private readonly int serviceID = 200;
         private readonly int salonDefaultID = 1;
 
+        /// <summary>
+        /// Возвращает ссылку на DataStorage
+        /// </summary>
+        /// <returns></returns>
         public static DataStorage get()
         {
             if (sDataStorage == null)
@@ -26,6 +30,10 @@ namespace ProjectSalon
             return sDataStorage;
         }
 
+        /// <summary>
+        /// Заменяет информацию текущего DataStorage информацией data
+        /// </summary>
+        /// <param name="data">Новая информация для DataStorage</param>
         public static void set(DataStorage data)
         {
             sDataStorage.salon = data.salon;
@@ -41,6 +49,10 @@ namespace ProjectSalon
             this.serviceList = new List<Service>();
         }
 
+        /// <summary>
+        /// Инициализирует создание объекта класса Master
+        /// </summary>
+        /// <returns>Созданный мастер</returns>
         public Master newMaster(String name, int salary)
         {
             Debug.WriteLine("Создание мастера на DataStorage, размер masterList " + masterList.Count);
@@ -55,6 +67,10 @@ namespace ProjectSalon
             return master;
         }
 
+        /// <summary>
+        /// Инициализирует создание объекта класса Service
+        /// </summary>
+        /// <returns>Созданная услуга</returns>
         public Service newService(String name, int price, int duration)
         {
             int id;
@@ -65,6 +81,10 @@ namespace ProjectSalon
             return service;
         }
 
+        /// <summary>
+        /// Инициализирует создание объекта класса Client
+        /// </summary>
+        /// <returns>Созданный клиент</returns>
         public Client newClient(String name, String birth, String number)
         {
             Client client = new Client(name, birth, number);
@@ -72,12 +92,19 @@ namespace ProjectSalon
             return client;
         }
 
+        /// <summary>
+        /// Инициализирует создание объекта класса Salon
+        /// </summary>
+        /// <returns>Созданный салон</returns>
         public Salon newSalon(String address, String name)
         {
             this.salon = new Salon(address, name, salonDefaultID);
             return this.salon;
         }
 
+        /// <summary>
+        /// Проводит удаление временных или более не нужных записей, хранящихся в DataStorage
+        /// </summary>
         public void cleanTrashObject()
         {
             List<Client> clientToRemove = new List<Client>();
@@ -106,26 +133,41 @@ namespace ProjectSalon
             
         }
 
+        /// <summary>
+        /// Возвращает список услуг, хранящихся в DataStorage
+        /// </summary>
         public List<Service> getServices()
         {
             return serviceList;
         }
 
+        /// <summary>
+        /// Возвращает список мастеров, хранящихся в DataStorage
+        /// </summary>
         public List<Master> getMasters()
         {
             return masterList;
         }
 
+        /// <summary>
+        /// Возвращает список клиентов, хранящихся в DataStorage
+        /// </summary>
         public List<Client> getClients()
         {
             return clientList;
         }
 
+        /// <summary>
+        /// Возвращает салон, хранящийся в DataStorage
+        /// </summary>
         public Salon getSalon()
         {
             return salon;
         }
 
+        /// <summary>
+        /// Возвращает конкретного мастера по его id
+        /// </summary>
         public Master getMaster(int id)
         {
             foreach (Master master in masterList)
@@ -138,6 +180,9 @@ namespace ProjectSalon
             return null;
         }
 
+        /// <summary>
+        /// Возвращает конкретного клиента по его номеру
+        /// </summary>
         public Client getClient(int number)
         {
             foreach (Client client in clientList)
@@ -150,6 +195,9 @@ namespace ProjectSalon
             return null;
         }
 
+        /// <summary>
+        /// Возвращает конкретную услугу по её id
+        /// </summary>
         public Service getService(int id)
         {
             foreach (Service service in serviceList)

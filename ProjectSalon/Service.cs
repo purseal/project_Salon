@@ -26,19 +26,20 @@ namespace ProjectSalon
             this.masterList = new List<Master>();
         }
 
+        /// <summary>
+        /// Добавляет мастера, оказывающего услугу
+        /// </summary>
         public void addMaster(Master master)
         {
             masterList.Add(master);
         }
 
+        /// <summary>
+        /// Добавляет запись, в которой указана услуга
+        /// </summary>
         public void linkRecord(Record record)
         {
             recordList.Add(record);
-        }
-
-        override public String ToString()
-        {
-            return name;
         }
 
         /// <summary>
@@ -52,6 +53,11 @@ namespace ProjectSalon
             this.name = name;
             this.price = price;
             this.duration = duration;
+        }
+
+        override public String ToString()
+        {
+            return name;
         }
     }
 }

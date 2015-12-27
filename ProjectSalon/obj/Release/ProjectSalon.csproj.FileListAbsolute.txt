@@ -1,0 +1,14 @@
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\bin\Release\ProjectSalon.exe.config
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\bin\Release\ProjectSalon.exe
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\bin\Release\ProjectSalon.pdb
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.csprojResolveAssemblyReference.cache
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.ClientForm.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.MainForm.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.MasterForm.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.Properties.Resources.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.RecordForm.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.SalonStatisticsForm.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.ServiceForm.resources
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.csproj.GenerateResource.Cache
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.exe
+C:\Users\Анатолий\Documents\Visual Studio 2015\Projects\project_Salon\ProjectSalon\obj\Release\ProjectSalon.pdb

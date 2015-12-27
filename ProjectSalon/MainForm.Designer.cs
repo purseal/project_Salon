@@ -35,30 +35,23 @@
             this.правкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
-            this.newRecordToolboxButton = new System.Windows.Forms.ToolStripButton();
-            this.newMasterToolboxButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonEdit = new System.Windows.Forms.ToolStripButton();
             this.leftPanel = new System.Windows.Forms.Panel();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.TabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clientListBox = new System.Windows.Forms.ListBox();
             this.textBoxClientSearch = new System.Windows.Forms.TextBox();
             this.recordTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.recordListBox = new System.Windows.Forms.ListBox();
             this.textBoxRecordSearch = new System.Windows.Forms.TextBox();
             this.masterTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.masterListBox = new System.Windows.Forms.ListBox();
             this.textBoxMasterSearch = new System.Windows.Forms.TextBox();
             this.serviceTabPage = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBoxServiceSearch = new System.Windows.Forms.TextBox();
             this.serviceListBox = new System.Windows.Forms.ListBox();
             this.mainPanelClient = new System.Windows.Forms.Panel();
+            this.richTextBoxStatistic = new System.Windows.Forms.RichTextBox();
+            this.linkLabelStatistic = new System.Windows.Forms.LinkLabel();
             this.clientBirthDayLabel = new System.Windows.Forms.Label();
             this.clientNumberLabel = new System.Windows.Forms.Label();
             this.clientNameLabel = new System.Windows.Forms.Label();
@@ -95,25 +88,38 @@
             this.labelServicePriceTitle = new System.Windows.Forms.Label();
             this.labelServiceName = new System.Windows.Forms.Label();
             this.labelServiceNameTitle = new System.Windows.Forms.Label();
-            this.linkLabelStatistic = new System.Windows.Forms.LinkLabel();
-            this.richTextBoxStatistic = new System.Windows.Forms.RichTextBox();
+            this.загрузитьИнформациюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьИнформациюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сформироватьСтатистикуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
+            this.newRecordToolboxButton = new System.Windows.Forms.ToolStripButton();
+            this.newMasterToolboxButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonEdit = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCreateReport = new System.Windows.Forms.ToolStripButton();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.TabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.recordTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.masterTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.serviceTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.mainPanelClient.SuspendLayout();
             this.mainStatusStrip.SuspendLayout();
             this.mainPanelRecord.SuspendLayout();
             this.mainPanelMaster.SuspendLayout();
             this.mainPanelService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -131,34 +137,41 @@
             // добавлениеToolStripMenuItem
             // 
             this.добавлениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.загрузитьИнформациюToolStripMenuItem,
+            this.сохранитьИнформациюToolStripMenuItem,
             this.добавитьЗаписьToolStripMenuItem,
-            this.добавитьМастераToolStripMenuItem});
+            this.добавитьМастераToolStripMenuItem,
+            this.сформироватьСтатистикуToolStripMenuItem});
             this.добавлениеToolStripMenuItem.Name = "добавлениеToolStripMenuItem";
-            this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.добавлениеToolStripMenuItem.Text = "Добавление";
+            this.добавлениеToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.добавлениеToolStripMenuItem.Text = "Салон";
             // 
             // добавитьЗаписьToolStripMenuItem
             // 
             this.добавитьЗаписьToolStripMenuItem.Name = "добавитьЗаписьToolStripMenuItem";
-            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.добавитьЗаписьToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.добавитьЗаписьToolStripMenuItem.Text = "Добавить запись";
             this.добавитьЗаписьToolStripMenuItem.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
             // 
             // добавитьМастераToolStripMenuItem
             // 
             this.добавитьМастераToolStripMenuItem.Name = "добавитьМастераToolStripMenuItem";
-            this.добавитьМастераToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.добавитьМастераToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.добавитьМастераToolStripMenuItem.Text = "Добавить мастера";
             this.добавитьМастераToolStripMenuItem.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
             // 
             // правкаToolStripMenuItem
             // 
+            this.правкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.изменитьToolStripMenuItem});
             this.правкаToolStripMenuItem.Name = "правкаToolStripMenuItem";
             this.правкаToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.правкаToolStripMenuItem.Text = "Правка";
             // 
             // справкаToolStripMenuItem
             // 
+            this.справкаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.оПрограммеToolStripMenuItem});
             this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
@@ -173,57 +186,13 @@
             this.toolStripButtonLoad,
             this.newRecordToolboxButton,
             this.newMasterToolboxButton,
-            this.toolStripButtonEdit});
+            this.toolStripButtonEdit,
+            this.toolStripButtonCreateReport});
             this.mainToolStrip.Location = new System.Drawing.Point(0, 24);
             this.mainToolStrip.Name = "mainToolStrip";
             this.mainToolStrip.Size = new System.Drawing.Size(993, 50);
             this.mainToolStrip.Stretch = true;
             this.mainToolStrip.TabIndex = 1;
-            // 
-            // toolStripButtonSave
-            // 
-            this.toolStripButtonSave.Image = global::ProjectSalon.Properties.Resources.save_icon;
-            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSave.Name = "toolStripButtonSave";
-            this.toolStripButtonSave.Size = new System.Drawing.Size(85, 47);
-            this.toolStripButtonSave.Text = "Сохранить";
-            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
-            // 
-            // toolStripButtonLoad
-            // 
-            this.toolStripButtonLoad.Image = global::ProjectSalon.Properties.Resources.load_icon;
-            this.toolStripButtonLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonLoad.Name = "toolStripButtonLoad";
-            this.toolStripButtonLoad.Size = new System.Drawing.Size(81, 47);
-            this.toolStripButtonLoad.Text = "Загрузить";
-            this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
-            // 
-            // newRecordToolboxButton
-            // 
-            this.newRecordToolboxButton.Image = global::ProjectSalon.Properties.Resources.addRecord;
-            this.newRecordToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newRecordToolboxButton.Name = "newRecordToolboxButton";
-            this.newRecordToolboxButton.Size = new System.Drawing.Size(119, 47);
-            this.newRecordToolboxButton.Text = "Добавить запись";
-            this.newRecordToolboxButton.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
-            // 
-            // newMasterToolboxButton
-            // 
-            this.newMasterToolboxButton.Image = global::ProjectSalon.Properties.Resources.addMaster;
-            this.newMasterToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newMasterToolboxButton.Name = "newMasterToolboxButton";
-            this.newMasterToolboxButton.Size = new System.Drawing.Size(127, 47);
-            this.newMasterToolboxButton.Text = "Добавить мастера";
-            this.newMasterToolboxButton.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
-            // 
-            // toolStripButtonEdit
-            // 
-            this.toolStripButtonEdit.Image = global::ProjectSalon.Properties.Resources.edit_icon;
-            this.toolStripButtonEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonEdit.Name = "toolStripButtonEdit";
-            this.toolStripButtonEdit.Size = new System.Drawing.Size(81, 47);
-            this.toolStripButtonEdit.Text = "Изменить";
-            this.toolStripButtonEdit.Click += new System.EventHandler(this.toolStripButtonEdit_Click);
             // 
             // leftPanel
             // 
@@ -258,17 +227,6 @@
             this.TabPage.Text = "Клиент";
             this.TabPage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox1.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // clientListBox
             // 
             this.clientListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -301,17 +259,6 @@
             this.recordTabPage.Text = "Запись";
             this.recordTabPage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox2.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
             // recordListBox
             // 
             this.recordListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -343,17 +290,6 @@
             this.masterTabPage.Text = "Мастер";
             this.masterTabPage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox3.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // masterListBox
             // 
             this.masterListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -384,17 +320,6 @@
             this.serviceTabPage.TabIndex = 3;
             this.serviceTabPage.Text = "Услуга";
             this.serviceTabPage.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox4.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(260, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
             // 
             // textBoxServiceSearch
             // 
@@ -430,6 +355,27 @@
             this.mainPanelClient.Name = "mainPanelClient";
             this.mainPanelClient.Size = new System.Drawing.Size(642, 465);
             this.mainPanelClient.TabIndex = 3;
+            // 
+            // richTextBoxStatistic
+            // 
+            this.richTextBoxStatistic.Location = new System.Drawing.Point(40, 220);
+            this.richTextBoxStatistic.Name = "richTextBoxStatistic";
+            this.richTextBoxStatistic.ReadOnly = true;
+            this.richTextBoxStatistic.Size = new System.Drawing.Size(351, 180);
+            this.richTextBoxStatistic.TabIndex = 7;
+            this.richTextBoxStatistic.Text = "";
+            this.richTextBoxStatistic.Visible = false;
+            // 
+            // linkLabelStatistic
+            // 
+            this.linkLabelStatistic.AutoSize = true;
+            this.linkLabelStatistic.Location = new System.Drawing.Point(40, 190);
+            this.linkLabelStatistic.Name = "linkLabelStatistic";
+            this.linkLabelStatistic.Size = new System.Drawing.Size(123, 13);
+            this.linkLabelStatistic.TabIndex = 6;
+            this.linkLabelStatistic.TabStop = true;
+            this.linkLabelStatistic.Text = "Статистика по клиенту";
+            this.linkLabelStatistic.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelStatistic_LinkClicked);
             // 
             // clientBirthDayLabel
             // 
@@ -776,26 +722,136 @@
             this.labelServiceNameTitle.TabIndex = 0;
             this.labelServiceNameTitle.Text = "Название услуги";
             // 
-            // linkLabelStatistic
+            // загрузитьИнформациюToolStripMenuItem
             // 
-            this.linkLabelStatistic.AutoSize = true;
-            this.linkLabelStatistic.Location = new System.Drawing.Point(40, 190);
-            this.linkLabelStatistic.Name = "linkLabelStatistic";
-            this.linkLabelStatistic.Size = new System.Drawing.Size(123, 13);
-            this.linkLabelStatistic.TabIndex = 6;
-            this.linkLabelStatistic.TabStop = true;
-            this.linkLabelStatistic.Text = "Статистика по клиенту";
-            this.linkLabelStatistic.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelStatistic_LinkClicked);
+            this.загрузитьИнформациюToolStripMenuItem.Name = "загрузитьИнформациюToolStripMenuItem";
+            this.загрузитьИнформациюToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.загрузитьИнформациюToolStripMenuItem.Text = "Загрузить информацию";
+            this.загрузитьИнформациюToolStripMenuItem.Click += new System.EventHandler(this.загрузитьИнформациюToolStripMenuItem_Click);
             // 
-            // richTextBoxStatistic
+            // сохранитьИнформациюToolStripMenuItem
             // 
-            this.richTextBoxStatistic.Location = new System.Drawing.Point(40, 220);
-            this.richTextBoxStatistic.Name = "richTextBoxStatistic";
-            this.richTextBoxStatistic.ReadOnly = true;
-            this.richTextBoxStatistic.Size = new System.Drawing.Size(351, 180);
-            this.richTextBoxStatistic.TabIndex = 7;
-            this.richTextBoxStatistic.Text = "";
-            this.richTextBoxStatistic.Visible = false;
+            this.сохранитьИнформациюToolStripMenuItem.Name = "сохранитьИнформациюToolStripMenuItem";
+            this.сохранитьИнформациюToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.сохранитьИнформациюToolStripMenuItem.Text = "Сохранить информацию";
+            this.сохранитьИнформациюToolStripMenuItem.Click += new System.EventHandler(this.сохранитьИнформациюToolStripMenuItem_Click);
+            // 
+            // изменитьToolStripMenuItem
+            // 
+            this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.изменитьToolStripMenuItem.Text = "Изменить...";
+            this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.изменитьToolStripMenuItem_Click);
+            // 
+            // сформироватьСтатистикуToolStripMenuItem
+            // 
+            this.сформироватьСтатистикуToolStripMenuItem.Name = "сформироватьСтатистикуToolStripMenuItem";
+            this.сформироватьСтатистикуToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.сформироватьСтатистикуToolStripMenuItem.Text = "Сформировать статистику";
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox1.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox2.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox3.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox4.InitialImage = global::ProjectSalon.Properties.Resources.search_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(260, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // toolStripButtonSave
+            // 
+            this.toolStripButtonSave.Image = global::ProjectSalon.Properties.Resources.save_icon;
+            this.toolStripButtonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSave.Name = "toolStripButtonSave";
+            this.toolStripButtonSave.Size = new System.Drawing.Size(85, 47);
+            this.toolStripButtonSave.Text = "Сохранить";
+            this.toolStripButtonSave.Click += new System.EventHandler(this.toolStripButtonSave_Click);
+            // 
+            // toolStripButtonLoad
+            // 
+            this.toolStripButtonLoad.Image = global::ProjectSalon.Properties.Resources.load_icon;
+            this.toolStripButtonLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonLoad.Name = "toolStripButtonLoad";
+            this.toolStripButtonLoad.Size = new System.Drawing.Size(81, 47);
+            this.toolStripButtonLoad.Text = "Загрузить";
+            this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
+            // 
+            // newRecordToolboxButton
+            // 
+            this.newRecordToolboxButton.Image = global::ProjectSalon.Properties.Resources.addRecord;
+            this.newRecordToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newRecordToolboxButton.Name = "newRecordToolboxButton";
+            this.newRecordToolboxButton.Size = new System.Drawing.Size(119, 47);
+            this.newRecordToolboxButton.Text = "Добавить запись";
+            this.newRecordToolboxButton.Click += new System.EventHandler(this.newRecordToolboxButton_Click);
+            // 
+            // newMasterToolboxButton
+            // 
+            this.newMasterToolboxButton.Image = global::ProjectSalon.Properties.Resources.addMaster;
+            this.newMasterToolboxButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newMasterToolboxButton.Name = "newMasterToolboxButton";
+            this.newMasterToolboxButton.Size = new System.Drawing.Size(127, 47);
+            this.newMasterToolboxButton.Text = "Добавить мастера";
+            this.newMasterToolboxButton.Click += new System.EventHandler(this.newMasterToolboxButton_Click);
+            // 
+            // toolStripButtonEdit
+            // 
+            this.toolStripButtonEdit.Image = global::ProjectSalon.Properties.Resources.edit_icon;
+            this.toolStripButtonEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonEdit.Name = "toolStripButtonEdit";
+            this.toolStripButtonEdit.Size = new System.Drawing.Size(81, 47);
+            this.toolStripButtonEdit.Text = "Изменить";
+            this.toolStripButtonEdit.Click += new System.EventHandler(this.toolStripButtonEdit_Click);
+            // 
+            // toolStripButtonCreateReport
+            // 
+            this.toolStripButtonCreateReport.Image = global::ProjectSalon.Properties.Resources.report_icon;
+            this.toolStripButtonCreateReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCreateReport.Name = "toolStripButtonCreateReport";
+            this.toolStripButtonCreateReport.Size = new System.Drawing.Size(144, 47);
+            this.toolStripButtonCreateReport.Text = "Сформировать отчет";
+            this.toolStripButtonCreateReport.Click += new System.EventHandler(this.toolStripButtonCreateReport_Click);
             // 
             // MainForm
             // 
@@ -825,16 +881,12 @@
             this.mainTabControl.ResumeLayout(false);
             this.TabPage.ResumeLayout(false);
             this.TabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.recordTabPage.ResumeLayout(false);
             this.recordTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.masterTabPage.ResumeLayout(false);
             this.masterTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.serviceTabPage.ResumeLayout(false);
             this.serviceTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.mainPanelClient.ResumeLayout(false);
             this.mainPanelClient.PerformLayout();
             this.mainStatusStrip.ResumeLayout(false);
@@ -845,6 +897,10 @@
             this.mainPanelMaster.PerformLayout();
             this.mainPanelService.ResumeLayout(false);
             this.mainPanelService.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -921,6 +977,12 @@
         private System.Windows.Forms.Button buttonRecordCompleted;
         private System.Windows.Forms.RichTextBox richTextBoxStatistic;
         private System.Windows.Forms.LinkLabel linkLabelStatistic;
+        private System.Windows.Forms.ToolStripMenuItem загрузитьИнформациюToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьИнформациюToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem изменитьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сформироватьСтатистикуToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCreateReport;
     }
 }
 

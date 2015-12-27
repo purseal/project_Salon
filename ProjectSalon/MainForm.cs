@@ -50,7 +50,7 @@ namespace ProjectSalon
 
         private void newClientToolboxButton_Click(object sender, EventArgs e)
         {
-            Form newClientForm = new ClientForm(mainController, false);
+            Form newClientForm = new ClientForm(mainController, false, null);
             newClientForm.Text = "Добавление клиента";
             newClientForm.ShowDialog(this);
         }
@@ -189,7 +189,7 @@ namespace ProjectSalon
                 }
                 catch (SerializationException e)
                 {
-                    Console.WriteLine("Не удалось провести сериализацию, причина - " + e.Message);
+                    Debug.WriteLine("Не удалось провести сериализацию, ошибка - " + e.Message);
                     throw;
                 }
                 finally
@@ -197,7 +197,6 @@ namespace ProjectSalon
                     fStream.Close();
                 }
             }
-            Debug.WriteLine("--> Сохранение объекта в Binary format");
             statusStripLabel.Text = "Сохранение успешно выполнено";
         }
 
@@ -205,28 +204,39 @@ namespace ProjectSalon
         {
             Debug.WriteLine("Запущена загрузка");
             DataStorage data;
-            using (Stream fStream = File.OpenRead("dataStorage.dat"))
+            try
             {
-                try
+                using (Stream fStream = File.OpenRead("dataStorage.dat"))
                 {
-                    BinaryFormatter binFormat = new BinaryFormatter();
-                    data = (DataStorage)binFormat.Deserialize(fStream);
-                    DataStorage.set(data);
+                    try
+                    {
+                        BinaryFormatter binFormat = new BinaryFormatter();
+                        data = (DataStorage)binFormat.Deserialize(fStream);
+                        DataStorage.set(data);
+                        statusStripLabel.Text = "Загрузка информации для салона " + "\"" + mainDataStorage.getSalon().name + "\" успешно завершена";
+                    }
+                    catch (SerializationException ex)
+                    {
+                        Debug.WriteLine("Не удалось провести сериализацию - " + ex.Message);
+                        throw;
+                    }
+                    finally
+                    {
+                        fStream.Close();
+                    }
                 }
-                catch (SerializationException ex)
-                {
-                    Console.WriteLine("Failed to deserialize. Reason: " + ex.Message);
-                    throw;
-                }
-                finally
-                {
-                    fStream.Close();
-                }
-                Debug.WriteLine("Загрузка выполнена:");
-                Debug.WriteLine("---загруженный салон в DS " + mainDataStorage.getSalon());
-                Debug.WriteLine("---загруженный салон data " + data.getSalon());
-                statusStripLabel.Text = "Загрузка информации для салона " + "\"" + mainDataStorage.getSalon().name + "\" успешно завершена";
             }
+            catch (FileNotFoundException ex)
+            {
+                Debug.WriteLine("Не найден dataStorage.dat - " + ex.Message);
+                MessageBox.Show("Файл с данными не найден", "Ошибка", MessageBoxButtons.OK);
+            }
+            catch (IOException ex)
+            {
+                Debug.WriteLine("Ошибка ввода/вывода - " + ex.Message);
+                MessageBox.Show("Ошибка программы при работе с файлом данных", "Ошибка", MessageBoxButtons.OK);
+            }
+            
             textBoxMasterSearch.Text = "";
             textBoxServiceSearch.Text = "";
             textBoxRecordSearch.Text = "";
@@ -265,7 +275,7 @@ namespace ProjectSalon
                     if (clientListBox.SelectedItem != null)
                     {
                         Client client = (Client)clientListBox.SelectedItem;
-                        ClientForm editClientForm = new ClientForm(mainController, true);
+                        ClientForm editClientForm = new ClientForm(mainController, true, client);
                         editClientForm.Text = "Изменение клиента";
                         editClientForm.textBoxClientName.Text = client.name;
                         editClientForm.textBoxClientNumber.Text = client.number;
@@ -327,7 +337,7 @@ namespace ProjectSalon
                     if (serviceListBox.SelectedItem != null)
                     {
                         Service service = (Service)serviceListBox.SelectedItem;
-                        ServiceForm editServiceForm = new ServiceForm(mainController, true);
+                        ServiceForm editServiceForm = new ServiceForm(mainController, true, service);
                         editServiceForm.Text = "Изменение услуги";
                         editServiceForm.textBoxServiceName.Text = service.name;
                         editServiceForm.trackBarDuration.Value = service.duration;
@@ -361,6 +371,28 @@ namespace ProjectSalon
                 richTextBoxStatistic.Visible = !richTextBoxStatistic.Visible;
             }
             
+        }
+
+        private void загрузитьИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButtonLoad_Click(sender, e);
+        }
+
+        private void сохранитьИнформациюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButtonSave_Click(sender, e);
+        }
+
+        private void изменитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButtonEdit_Click(sender, e);
+        }
+
+        private void toolStripButtonCreateReport_Click(object sender, EventArgs e)
+        {
+            SalonStatisticsForm salonStatisticsForm = new SalonStatisticsForm();
+            salonStatisticsForm.ShowDialog();
+            statusStripLabel.Text = "Формирование статистики завершено";
         }
     }
 }

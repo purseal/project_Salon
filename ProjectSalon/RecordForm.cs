@@ -88,7 +88,7 @@ namespace ProjectSalon
                     , "Новый клиент", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    ClientForm newClientForm = new ClientForm(mainController, false);
+                    ClientForm newClientForm = new ClientForm(mainController, false, null);
                     newClientForm.textBoxClientNumber.Text = Convert.ToString(clientNumber);
                     newClientForm.textBoxClientNumber.Enabled = false;
                     newClientForm.ShowDialog();
