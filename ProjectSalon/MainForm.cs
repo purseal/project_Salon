@@ -25,10 +25,15 @@ namespace ProjectSalon
             mainDataStorage = DataStorage.get();
             mainController.registerSalon("Каширское шоссе, 11", "Красотка");
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
-            mainPanelClient.Visible = false;
-            mainPanelRecord.Visible = false;
-            mainPanelMaster.Visible = false;
-            mainPanelService.Visible = false;
+            showPanel(0);
+        }
+
+        public void showPanel(int panelNum)
+        {
+            mainPanelClient.Visible = (panelNum == 1);
+            mainPanelRecord.Visible = (panelNum == 2);
+            mainPanelMaster.Visible = (panelNum == 3);
+            mainPanelService.Visible = (panelNum == 4);
         }
 
         private void newRecordToolboxButton_Click(object sender, EventArgs e)
@@ -40,6 +45,7 @@ namespace ProjectSalon
             textBoxClientSearch.Text = "";
             textBoxRecordSearch_TextChanged(sender, e);
             textBoxClientSearch_TextChanged(sender, e);
+            statusStripLabel.Text = "Добавление записи завершено";
         }
 
         private void newClientToolboxButton_Click(object sender, EventArgs e)
@@ -58,6 +64,7 @@ namespace ProjectSalon
             textBoxServiceSearch.Text = "";
             textBoxMasterSearch_TextChanged(sender, e);            
             textBoxServiceSearch_TextChanged(sender, e);
+            statusStripLabel.Text = "Добавление мастера завершено";
         }
 
         private void textBoxClientSearch_TextChanged(object sender, EventArgs e)
@@ -102,24 +109,19 @@ namespace ProjectSalon
 
         private void clientListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mainPanelClient.Visible = true;
-            mainPanelRecord.Visible = false;
-            mainPanelMaster.Visible = false;
-            mainPanelService.Visible = false;
+            showPanel(1);
             if (clientListBox.SelectedItem == null)
                 return;
             Client client = (Client)clientListBox.SelectedItem;
             clientNameLabel.Text = client.name;
             clientNumberLabel.Text = client.number;
             clientBirthDayLabel.Text = client.birth;
+            richTextBoxStatistic.Text = client.getStatistic();
         }
 
         private void recordListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mainPanelClient.Visible = false;
-            mainPanelRecord.Visible = true;
-            mainPanelMaster.Visible = false;
-            mainPanelService.Visible = false;
+            showPanel(2);
             if (recordListBox.SelectedItem == null)
                 return;
             Record record = (Record)recordListBox.SelectedItem;
@@ -147,10 +149,7 @@ namespace ProjectSalon
 
         private void masterListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mainPanelClient.Visible = false;
-            mainPanelRecord.Visible = false;
-            mainPanelMaster.Visible = true;
-            mainPanelService.Visible = false;
+            showPanel(3);
             if (masterListBox.SelectedItem == null)
                 return;
             Master master = (Master)masterListBox.SelectedItem;
@@ -165,10 +164,7 @@ namespace ProjectSalon
 
         private void serviceListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mainPanelClient.Visible = false;
-            mainPanelRecord.Visible = false;
-            mainPanelMaster.Visible = false;
-            mainPanelService.Visible = true;
+            showPanel(4);
             if (serviceListBox.SelectedItem == null)
                 return;
             Service service = (Service)serviceListBox.SelectedItem;
@@ -182,7 +178,7 @@ namespace ProjectSalon
             SaveBinaryFormat(mainDataStorage, "dataStorage.dat");
         }
 
-        static void SaveBinaryFormat(object objGraph, string fileName)
+        private void SaveBinaryFormat(object objGraph, string fileName)
         {
             BinaryFormatter binFormat = new BinaryFormatter();
             using (Stream fStream = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.None))
@@ -193,7 +189,7 @@ namespace ProjectSalon
                 }
                 catch (SerializationException e)
                 {
-                    Console.WriteLine("Failed to serialize. Reason: " + e.Message);
+                    Console.WriteLine("Не удалось провести сериализацию, причина - " + e.Message);
                     throw;
                 }
                 finally
@@ -202,6 +198,7 @@ namespace ProjectSalon
                 }
             }
             Debug.WriteLine("--> Сохранение объекта в Binary format");
+            statusStripLabel.Text = "Сохранение успешно выполнено";
         }
 
         private void toolStripButtonLoad_Click(object sender, EventArgs e)
@@ -228,6 +225,7 @@ namespace ProjectSalon
                 Debug.WriteLine("Загрузка выполнена:");
                 Debug.WriteLine("---загруженный салон в DS " + mainDataStorage.getSalon());
                 Debug.WriteLine("---загруженный салон data " + data.getSalon());
+                statusStripLabel.Text = "Загрузка информации для салона " + "\"" + mainDataStorage.getSalon().name + "\" успешно завершена";
             }
             textBoxMasterSearch.Text = "";
             textBoxServiceSearch.Text = "";
@@ -240,6 +238,23 @@ namespace ProjectSalon
             this.Text = "Управление салоном \"" + mainDataStorage.getSalon().name + "\" (" + mainDataStorage.getSalon().address + ")";
         }
 
+        private void updateAllListBox(object sender, EventArgs e)
+        {
+            textBoxMasterSearch.Text = "";
+            textBoxServiceSearch.Text = "";
+            textBoxRecordSearch.Text = "";
+            textBoxClientSearch.Text = "";
+            textBoxMasterSearch_TextChanged(sender, e);
+            textBoxServiceSearch_TextChanged(sender, e);
+            textBoxRecordSearch_TextChanged(sender, e);
+            textBoxClientSearch_TextChanged(sender, e);
+            masterListBox_SelectedIndexChanged(sender, e);
+            serviceListBox_SelectedIndexChanged(sender, e);
+            recordListBox_SelectedIndexChanged(sender, e);
+            clientListBox_SelectedIndexChanged(sender, e);
+            showPanel(0);
+            statusStripLabel.Text = "Изменения применены";
+        }
         private void toolStripButtonEdit_Click(object sender, EventArgs e)
         {
             int selectedTab = mainTabControl.SelectedIndex;
@@ -254,11 +269,10 @@ namespace ProjectSalon
                         editClientForm.Text = "Изменение клиента";
                         editClientForm.textBoxClientName.Text = client.name;
                         editClientForm.textBoxClientNumber.Text = client.number;
+                        editClientForm.textBoxClientNumber.Enabled = false;
                         editClientForm.textBoxClientBirth.Text = client.birth;
                         editClientForm.ShowDialog();
-                        textBoxClientSearch.Text = "";
-                        textBoxClientSearch_TextChanged(sender, e);
-                        clientListBox_SelectedIndexChanged(sender, e);
+                        updateAllListBox(sender, e);
                     }
                     break;
 
@@ -276,9 +290,7 @@ namespace ProjectSalon
                             editRecordForm.textBoxClientName.Enabled = false;
                             editRecordForm.textBoxClientNumber.Enabled = false;
                             editRecordForm.ShowDialog();
-                            textBoxRecordSearch.Text = "";
-                            textBoxRecordSearch_TextChanged(sender, e);
-                            recordListBox_SelectedIndexChanged(sender, e);
+                            updateAllListBox(sender, e);
                         }
                         else
                         {
@@ -288,8 +300,6 @@ namespace ProjectSalon
                                 MessageBox.Show("Нельзя редактировать запись с истекшим сроком", "Ошибка", MessageBoxButtons.OK);
                             return;
                         }
-                        
-                        
                     }
                     break;
 
@@ -307,11 +317,7 @@ namespace ProjectSalon
                             editMasterForm.listBoxService.Items.Add(service);
                         }
                         editMasterForm.ShowDialog();
-                        textBoxMasterSearch.Text = "";
-                        textBoxServiceSearch.Text = "";
-                        textBoxMasterSearch_TextChanged(sender, e);
-                        textBoxServiceSearch_TextChanged(sender, e);
-                        masterListBox_SelectedIndexChanged(sender, e);
+                        updateAllListBox(sender, e);
                     }
 
                     break;
@@ -326,10 +332,8 @@ namespace ProjectSalon
                         editServiceForm.textBoxServiceName.Text = service.name;
                         editServiceForm.trackBarDuration.Value = service.duration;
                         editServiceForm.textBoxServicePrice.Text = service.price.ToString();
-                        editServiceForm.ShowDialog();                        
-                        textBoxServiceSearch.Text = "";                        
-                        textBoxServiceSearch_TextChanged(sender, e);
-                        serviceListBox_SelectedIndexChanged(sender, e);
+                        editServiceForm.ShowDialog();
+                        updateAllListBox(sender, e);
                     }
                     break;
 
@@ -342,9 +346,21 @@ namespace ProjectSalon
             if (record != null)
             {
                 mainController.changeRecordStatus(record);
+                statusStripLabel.Text = "Изменен статус записи";
                 recordListBox_SelectedIndexChanged(sender, e);
                 buttonRecordCompleted.Visible = false;
             }
+            
+        }
+
+        private void linkLabelStatistic_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Client client = (Client)clientListBox.SelectedItem;
+            if (client != null)
+            {
+                richTextBoxStatistic.Visible = !richTextBoxStatistic.Visible;
+            }
+            
         }
     }
 }

@@ -30,9 +30,9 @@ namespace ProjectSalon
         {
             try
             {
-                if (textBoxSalary.Text.Length < 1)
+                if (textBoxSalary.Text.Length < 1 || textBoxName.Text.Length < 1)
                 {
-                    MessageBox.Show("Необходимо полностью ввести номер телефона", "Ошибка", MessageBoxButtons.OK);
+                    MessageBox.Show("Необходимо заполнить все поля", "Ошибка", MessageBoxButtons.OK);
                     return;
                 }
                 if (edit)
@@ -67,6 +67,7 @@ namespace ProjectSalon
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            mainController.cleanDataStorage();
             this.Close();
         }
 

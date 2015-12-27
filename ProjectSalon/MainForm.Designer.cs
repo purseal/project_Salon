@@ -68,6 +68,9 @@
             this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.statusStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.mainPanelRecord = new System.Windows.Forms.Panel();
+            this.buttonRecordCompleted = new System.Windows.Forms.Button();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.statusTitleLabel = new System.Windows.Forms.Label();
             this.labelRecordDate = new System.Windows.Forms.Label();
             this.labelRecordServiceName = new System.Windows.Forms.Label();
             this.labelRecordMasterName = new System.Windows.Forms.Label();
@@ -92,9 +95,8 @@
             this.labelServicePriceTitle = new System.Windows.Forms.Label();
             this.labelServiceName = new System.Windows.Forms.Label();
             this.labelServiceNameTitle = new System.Windows.Forms.Label();
-            this.statusTitleLabel = new System.Windows.Forms.Label();
-            this.statusLabel = new System.Windows.Forms.Label();
-            this.buttonRecordCompleted = new System.Windows.Forms.Button();
+            this.linkLabelStatistic = new System.Windows.Forms.LinkLabel();
+            this.richTextBoxStatistic = new System.Windows.Forms.RichTextBox();
             this.mainMenuStrip.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -416,6 +418,8 @@
             // mainPanelClient
             // 
             this.mainPanelClient.BackColor = System.Drawing.SystemColors.Window;
+            this.mainPanelClient.Controls.Add(this.richTextBoxStatistic);
+            this.mainPanelClient.Controls.Add(this.linkLabelStatistic);
             this.mainPanelClient.Controls.Add(this.clientBirthDayLabel);
             this.mainPanelClient.Controls.Add(this.clientNumberLabel);
             this.mainPanelClient.Controls.Add(this.clientNameLabel);
@@ -517,6 +521,35 @@
             this.mainPanelRecord.Name = "mainPanelRecord";
             this.mainPanelRecord.Size = new System.Drawing.Size(642, 465);
             this.mainPanelRecord.TabIndex = 6;
+            // 
+            // buttonRecordCompleted
+            // 
+            this.buttonRecordCompleted.Location = new System.Drawing.Point(400, 338);
+            this.buttonRecordCompleted.Name = "buttonRecordCompleted";
+            this.buttonRecordCompleted.Size = new System.Drawing.Size(216, 25);
+            this.buttonRecordCompleted.TabIndex = 12;
+            this.buttonRecordCompleted.Text = "услуга выполнена";
+            this.buttonRecordCompleted.UseVisualStyleBackColor = true;
+            this.buttonRecordCompleted.Visible = false;
+            this.buttonRecordCompleted.Click += new System.EventHandler(this.buttonRecordCompleted_Click);
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(397, 290);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(78, 13);
+            this.statusLabel.TabIndex = 11;
+            this.statusLabel.Text = "Не загружено";
+            // 
+            // statusTitleLabel
+            // 
+            this.statusTitleLabel.AutoSize = true;
+            this.statusTitleLabel.Location = new System.Drawing.Point(40, 290);
+            this.statusTitleLabel.Name = "statusTitleLabel";
+            this.statusTitleLabel.Size = new System.Drawing.Size(106, 13);
+            this.statusTitleLabel.TabIndex = 10;
+            this.statusTitleLabel.Text = "Статус выполнения";
             // 
             // labelRecordDate
             // 
@@ -743,34 +776,26 @@
             this.labelServiceNameTitle.TabIndex = 0;
             this.labelServiceNameTitle.Text = "Название услуги";
             // 
-            // statusTitleLabel
+            // linkLabelStatistic
             // 
-            this.statusTitleLabel.AutoSize = true;
-            this.statusTitleLabel.Location = new System.Drawing.Point(40, 290);
-            this.statusTitleLabel.Name = "statusTitleLabel";
-            this.statusTitleLabel.Size = new System.Drawing.Size(106, 13);
-            this.statusTitleLabel.TabIndex = 10;
-            this.statusTitleLabel.Text = "Статус выполнения";
+            this.linkLabelStatistic.AutoSize = true;
+            this.linkLabelStatistic.Location = new System.Drawing.Point(40, 190);
+            this.linkLabelStatistic.Name = "linkLabelStatistic";
+            this.linkLabelStatistic.Size = new System.Drawing.Size(123, 13);
+            this.linkLabelStatistic.TabIndex = 6;
+            this.linkLabelStatistic.TabStop = true;
+            this.linkLabelStatistic.Text = "Статистика по клиенту";
+            this.linkLabelStatistic.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelStatistic_LinkClicked);
             // 
-            // statusLabel
+            // richTextBoxStatistic
             // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(397, 290);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(78, 13);
-            this.statusLabel.TabIndex = 11;
-            this.statusLabel.Text = "Не загружено";
-            // 
-            // buttonRecordCompleted
-            // 
-            this.buttonRecordCompleted.Location = new System.Drawing.Point(400, 338);
-            this.buttonRecordCompleted.Name = "buttonRecordCompleted";
-            this.buttonRecordCompleted.Size = new System.Drawing.Size(216, 25);
-            this.buttonRecordCompleted.TabIndex = 12;
-            this.buttonRecordCompleted.Text = "услуга выполнена";
-            this.buttonRecordCompleted.UseVisualStyleBackColor = true;
-            this.buttonRecordCompleted.Visible = false;
-            this.buttonRecordCompleted.Click += new System.EventHandler(this.buttonRecordCompleted_Click);
+            this.richTextBoxStatistic.Location = new System.Drawing.Point(40, 220);
+            this.richTextBoxStatistic.Name = "richTextBoxStatistic";
+            this.richTextBoxStatistic.ReadOnly = true;
+            this.richTextBoxStatistic.Size = new System.Drawing.Size(351, 180);
+            this.richTextBoxStatistic.TabIndex = 7;
+            this.richTextBoxStatistic.Text = "";
+            this.richTextBoxStatistic.Visible = false;
             // 
             // MainForm
             // 
@@ -894,6 +919,8 @@
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label statusTitleLabel;
         private System.Windows.Forms.Button buttonRecordCompleted;
+        private System.Windows.Forms.RichTextBox richTextBoxStatistic;
+        private System.Windows.Forms.LinkLabel linkLabelStatistic;
     }
 }
 

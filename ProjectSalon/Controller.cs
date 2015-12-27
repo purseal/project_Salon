@@ -205,5 +205,10 @@ namespace ProjectSalon
         {
             service.change(name, price, duration);
         }
+
+        public void cleanDataStorage()
+        {
+            mainDataStorage.cleanTrashObject();
+        }
     }
 }

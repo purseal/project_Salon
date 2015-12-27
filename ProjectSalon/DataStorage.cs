@@ -78,6 +78,34 @@ namespace ProjectSalon
             return this.salon;
         }
 
+        public void cleanTrashObject()
+        {
+            List<Client> clientToRemove = new List<Client>();
+            List<Service> serviceToRemove = new List<Service>();
+            foreach (Service service in serviceList)
+            {
+                if (service.masterList.Count == 0 & service.recordList.Count == 0)
+                    serviceToRemove.Add(service);
+            }
+
+            foreach (Client client in clientList)
+            {
+                if (client.recordList.Count == 0)
+                    clientToRemove.Add(client);
+            }
+
+            foreach (Client client in clientToRemove)
+            {
+                clientList.Remove(client);
+            }
+
+            foreach (Service service in serviceToRemove)
+            {
+                serviceList.Remove(service);
+            }
+            
+        }
+
         public List<Service> getServices()
         {
             return serviceList;

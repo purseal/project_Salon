@@ -13,7 +13,7 @@ namespace ProjectSalon
         public String name;
         public String birth;
         public String number;
-        List<Record> recordList;
+        public List<Record> recordList;
 
         public Client(String name, String birth, String number)
         {
@@ -79,9 +79,24 @@ namespace ProjectSalon
                 {
                     masterDict.Add(record.master.name, 0);
                 }
-
             }
+            var maxServices = serviceDict.Values.Max();
+            var maxMasters = masterDict.Values.Max();
+            var relevantKeysService = serviceDict.Where(pair => maxServices.Equals(pair.Value))
+                .Select(pair => pair.Key);
+            var relevantKeysMaster = masterDict.Where(pair => maxMasters.Equals(pair.Value))
+                .Select(pair => pair.Key);
             String clientStatistic = "Деньги, потраченные в салоне: " + spendMoney + " руб\n";
+            clientStatistic += "Наиболее часто используемые услуги:\n";
+            foreach (String keys in relevantKeysService)
+            {
+                clientStatistic += keys + " ";
+            }
+            clientStatistic += "\nНаиболее часто посещаемые мастеры:\n";
+            foreach (String keys in relevantKeysMaster)
+            {
+                clientStatistic += keys + " ";
+            }
             return clientStatistic;
         }
 
